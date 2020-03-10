@@ -11,8 +11,18 @@
       "external": false
     },
     {
-      "name": "Getting started",
-      "link": "/category/getting-started",
+      "name": "Projects",
+      "link": "/projects",
+      "external": false
+    },
+    {
+      "name": "Blog",
+      "link": "/blog",
+      "external": false
+    },
+    {
+      "name": "Doc",
+      "link": "/doc",
       "external": false
     }
   ],

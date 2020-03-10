@@ -1,9 +1,11 @@
 <template>
-  <div id="app" dark>
-    <HeaderPartial v-if="hideHeader!=true" @setTheme="setTheme" :theme="this.theme"></HeaderPartial>
-    <slot/>
-    <NavbarPartial :disableScroll="disableScroll" @setTheme="setTheme" :theme="this.theme"></NavbarPartial>
-    <FooterPartial></FooterPartial>
+  <div id="app" class="flex flex-col min-h-screen">
+    <HeaderPartial v-if="hideHeader!=true" @setTheme="setTheme" :theme="this.theme" ></HeaderPartial>
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <NavbarPartial :disableScroll="disableScroll" @setTheme="setTheme" :theme="this.theme" class="flex-1"></NavbarPartial>
+    <FooterPartial class="flex-initial"></FooterPartial>
   </div>
 </template>
 
