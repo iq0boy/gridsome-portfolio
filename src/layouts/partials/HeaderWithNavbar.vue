@@ -47,13 +47,14 @@
 
     <div class="logo pt-0 pb-16 md:pb-32 md:pt-16 container mx-auto text-center text-white">
       <h2 class="m-0">
-        <span class="text-4xl">
-          <font-awesome :icon="['fas', 'ghost']" class="mb-1 mr-3"></font-awesome>
-        </span>
         <span class="text-5xl text-white">{{ $static.metadata.siteName }}</span>
+        <span class="text-4xl">
+          <font-awesome :icon="['fas', 'code']" class="mb-1 ml-3"></font-awesome>
+        </span>
       </h2>
       <div class="text-gray-400 font-thin text-xl">{{ $static.metadata.siteDescription }}</div>
     </div>
+    
   </header>
 </template>
 
