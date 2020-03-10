@@ -27,7 +27,7 @@ module.exports = {
     {
       use: 'gridsome-source-static-meta',
       options: {
-        path: 'content/site/*.json'
+        path: './content/site/*.json'
       }
     }, 
     {

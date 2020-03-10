@@ -33,7 +33,7 @@ export default {
   },
   data: function() {
     return {
-      theme: 'light'
+      theme: 'dark'
     };
   },
   methods: {
