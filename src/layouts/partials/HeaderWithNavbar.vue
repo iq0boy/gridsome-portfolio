@@ -8,7 +8,7 @@
               :key="element.name"
               v-for="(element,index) in $static.metadata.navigation"
               class="hover:text-white"
-              v-bind:class="{'mr-4' : index != Object.keys($static.metadata.navigation).length - 1}"
+              v-bind:class="{'mr-4' : index !== Object.keys($static.metadata.navigation).length - 1}"
             >
               <a
                 :href="element.link"
@@ -31,7 +31,7 @@
               :key="element.name"
               v-for="(element,index) in $static.metadata.social"
               class="hover:text-white hidden sm:block"
-              v-bind:class="{'mr-6' : index != Object.keys($static.metadata.social).length - 1}"
+              v-bind:class="{'mr-6' : index !== Object.keys($static.metadata.social).length - 1}"
             >
               <span class="text-sm">
                 <a :href="element.link" target="_blank" rel="noopener noreferrer">
@@ -47,10 +47,14 @@
 
     <div class="logo pt-0 pb-16 md:pb-32 md:pt-16 container mx-auto text-center text-white">
       <h2 class="m-0">
-        <span class="text-5xl text-white">{{ $static.metadata.siteName }}</span>
-        <span class="text-4xl">
-          <font-awesome :icon="['fas', 'code']" class="mb-1 ml-3"></font-awesome>
+
+        <span class="text-5xl text-white">
+          <span>👋</span>
+          <span> am {{ $static.metadata.siteAuthor }}</span>
         </span>
+<!--        <span class="text-4xl">
+          <font-awesome :icon="['fas', 'code']" class="mb-1 ml-3"></font-awesome>
+        </span>-->
       </h2>
       <div class="text-gray-400 font-thin text-xl">{{ $static.metadata.siteDescription }}</div>
     </div>
@@ -78,6 +82,7 @@ export default {
 query {
   metadata {
     siteName
+    siteAuthor
     siteDescription
     navigation : headerNavigation {
       name
