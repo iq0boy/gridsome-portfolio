@@ -1,5 +1,6 @@
 {
-  "headerNavigation": [
+  "headerNavigation":
+  [
     {
       "name": "Home",
       "link": "/",
@@ -16,35 +17,22 @@
       "external": false
     },
     {
-      "name": "Blog",
-      "link": "/blog",
-      "external": false
-    },
-    {
-      "name": "Doc",
-      "link": "/doc",
+      "name": "Contact",
+      "link": "/contact",
       "external": false
     }
   ],
-  "footerNavigation": [{
-      "name": "Latest Posts",
-      "link": "/",
-      "external" : false
-    },
-    {
-      "name": "Facebook",
-      "link": "https://www.facebook.com",
-      "external": true
-    },
+  "footerNavigation":
+  [
     {
       "name": "Gridsome",
       "link": "https://www.gridsome.org",
       "external": true
     },
     {
-      "name": "RSS",
-      "link": "/rss.xml",
-      "external": false
+      "name": "Tailwind",
+      "link": "https://tailwindcss.com/",
+      "external": true
     }
   ]
 }
