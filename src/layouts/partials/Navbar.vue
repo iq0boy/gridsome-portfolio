@@ -13,7 +13,7 @@
           <font-awesome :icon="['fas', 'code']" class="ml-3"></font-awesome>
         </div>
 
-        <div class="text-sm w-full sm:w-auto flex-grow uppercase">
+        <div class="text-sm pb-2 sm:py-0 w-full sm:w-auto flex-grow uppercase">
           <ul 
           class="list-none m-0 flex justify-center sm:justify-start text-gray-300 uppercase transition-all transition-500">
             <li
