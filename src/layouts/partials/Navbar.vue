@@ -1,19 +1,21 @@
 <template>
-  <div class="fixed inset-0 h-16 bg-black">
+  <div class="fixed inset-0 h-20 sm:h-16 bg-black">
     <nav 
-    class="flex items-center justify-between flex-wrap container mx-auto px-4 sm:px-0 py-4 transition-all transition-500" 
+    class="container mx-auto px-4 sm:px-0 py-4 transition-all transition-500"
     v-bind:class="{
       'opacity-100': !disableScroll && scrollPosition > headerHeight, 
       'opacity-0': !disableScroll && scrollPosition < headerHeight
     }">
-      <div class="block flex-grow flex items-center w-auto">
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-          <font-awesome :icon="['fas', 'ghost']" class="mr-3"></font-awesome>
-          <span class="font-semibold text-xl tracking-tight">{{ $static.metadata.siteName }}</span>
+      <div class="flex flex-col sm:flex-row flex-grow items-center w-auto">
+
+        <div class="hidden md:flex items-center flex-shrink-0 text-white mr-6">
+          <span class="font-semibold text-xl tracking-tight">{{ $static.metadata.siteAuthor }}</span>
+          <font-awesome :icon="['fas', 'code']" class="ml-3"></font-awesome>
         </div>
-        <div class="text-sm flex-grow uppercase">
+
+        <div class="text-sm w-full sm:w-auto flex-grow uppercase">
           <ul 
-          class="list-none flex justify-left text-gray-300 uppercase transition-all transition-500">
+          class="list-none m-0 flex justify-center sm:justify-start text-gray-300 uppercase transition-all transition-500">
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.navigation"
@@ -32,15 +34,15 @@
           </ul>
         </div>
         
-        <div class="inline-block text-gray-400">
-          <ul class="list-none flex justify-center md:justify-end">
-            <li class="mr-0 sm:mr-6">
+        <div class="text-gray-400">
+          <ul class="list-none m-0 flex justify-center md:justify-end">
+            <li class="mr-3">
               <theme-switcher v-on="$listeners" :theme="theme"/>
             </li>
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.social"
-              class="hover:text-white hidden sm:block"
+              class="hover:text-white"
               v-bind:class="{'mr-6' : index != Object.keys($static.metadata.social).length - 1}"
             >
               <span class="text-sm">
@@ -53,6 +55,7 @@
         </div>
 
       </div>
+
     </nav>
   </div>
 </template>
@@ -112,6 +115,7 @@ export default {
 query {
   metadata {
     siteName
+    siteAuthor
     navigation : headerNavigation {
       name
       link
