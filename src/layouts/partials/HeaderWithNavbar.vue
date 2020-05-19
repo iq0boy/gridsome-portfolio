@@ -1,9 +1,11 @@
 <template>
   <header class="bg-black relative z-1000 bg-radial-t-gray-to-black" id="header">
-    <nav class="flex items-center justify-between flex-wrap container mx-auto px-4 sm:px-0 py-4">
-      <div class="block flex-grow flex items-center w-auto height-30px">
+
+    <nav class="container h-20 sm:h-16  mx-auto px-4 sm:px-0 py-4">
+      <div class="flex flex-col sm:flex-row flex-grow space-between items-center w-auto height-30px">
+
         <div class="text-sm flex-grow uppercase">
-          <ul class="list-none flex justify-left text-gray-300 uppercase">
+          <ul class="list-none m-0 flex justify-center sm:justify-start text-gray-300 uppercase">
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.navigation"
@@ -22,15 +24,15 @@
           </ul>
         </div>
         
-        <div class="inline-block text-gray-400">
-          <ul class="list-none flex justify-center md:justify-end">
-            <li class="mr-0 sm:mr-6">
+        <div class=" w-full sm:w-auto text-gray-400">
+          <ul class="list-none m-0 flex justify-center md:justify-end">
+            <li class="mr-3 self-start">
               <theme-switcher v-on="$listeners" :theme="theme"/>
             </li>
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.social"
-              class="hover:text-white hidden sm:block"
+              class="hover:text-white"
               v-bind:class="{'mr-6' : index !== Object.keys($static.metadata.social).length - 1}"
             >
               <span class="text-sm">
