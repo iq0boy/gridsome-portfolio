@@ -34,7 +34,7 @@
           </ul>
         </div>
         
-        <div class="text-gray-400 mt-2 sm:mt-0">
+        <div class="text-gray-400">
           <ul class="list-none m-0 flex justify-center md:justify-end">
             <li class="mr-3">
               <theme-switcher v-on="$listeners" :theme="theme"/>

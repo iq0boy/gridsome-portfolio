@@ -12,11 +12,11 @@
 
         <span>Powered by</span>
 
-        <ul class="list-none ml-2 flex">
+        <ul class="list-none ml-1 flex">
           <li
             :key="element.name"
             v-for="(element,index) in $static.metadata.navigation"
-            v-bind:class="{'mr-2' : index != Object.keys($static.metadata.navigation).length - 1}"
+            v-bind:class="{'mr-1' : index != Object.keys($static.metadata.navigation).length - 1}"
           >
             <span class="mr-1" v-if="(0 !== index)">&</span>
             <a class="hover:text-white" :href="element.link" v-if="element.external" target="_blank" rel="noopener noreferrer">{{ element.name }}</a>
