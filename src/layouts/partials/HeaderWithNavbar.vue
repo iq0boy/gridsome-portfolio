@@ -24,7 +24,7 @@
           </ul>
         </div>
         
-        <div class=" w-full sm:w-auto text-gray-400 mt-2 sm:mt-0">
+        <div class=" w-full sm:w-auto text-gray-400">
           <ul class="list-none m-0 flex justify-center md:justify-end">
             <li class="mr-3 self-start">
               <theme-switcher v-on="$listeners" :theme="theme"/>
