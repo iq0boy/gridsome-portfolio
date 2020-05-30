@@ -54,6 +54,12 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`
+      }
     }
   ],
   transformers: {
