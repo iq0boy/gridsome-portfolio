@@ -13,7 +13,7 @@
           <font-awesome :icon="['fas', 'code']" class="ml-3"></font-awesome>
         </div>
 
-        <div class="text-sm w-full sm:w-auto flex-grow uppercase">
+        <div class="text-sm pb-2 sm:py-0 w-full sm:w-auto flex-grow uppercase">
           <ul 
           class="list-none m-0 flex justify-center sm:justify-start text-gray-300 uppercase transition-all transition-500">
             <li
@@ -34,7 +34,7 @@
           </ul>
         </div>
         
-        <div class="text-gray-400">
+        <div class="text-gray-400 mt-2 sm:mt-0">
           <ul class="list-none m-0 flex justify-center md:justify-end">
             <li class="mr-3">
               <theme-switcher v-on="$listeners" :theme="theme"/>

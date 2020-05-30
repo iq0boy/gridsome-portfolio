@@ -4,7 +4,7 @@
     <nav class="container h-20 sm:h-16  mx-auto px-4 sm:px-0 py-4">
       <div class="flex flex-col sm:flex-row flex-grow space-between items-center w-auto height-30px">
 
-        <div class="text-sm flex-grow uppercase">
+        <div class="text-sm flex-grow uppercase pb-2 sm:py-0">
           <ul class="list-none m-0 flex justify-center sm:justify-start text-gray-300 uppercase">
             <li
               :key="element.name"
@@ -24,7 +24,7 @@
           </ul>
         </div>
         
-        <div class=" w-full sm:w-auto text-gray-400">
+        <div class=" w-full sm:w-auto text-gray-400 mt-2 sm:mt-0">
           <ul class="list-none m-0 flex justify-center md:justify-end">
             <li class="mr-3 self-start">
               <theme-switcher v-on="$listeners" :theme="theme"/>
