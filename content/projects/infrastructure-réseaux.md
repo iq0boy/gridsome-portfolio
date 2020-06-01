@@ -1,5 +1,5 @@
 ---
-name: Infrastructure réseaux
+name: Projet Infrastructure réseaux sans nom
 description: "Participation à la conguration et au déploiement de différents
   services réseaux\r avec docker (serveur mail, ftp, web, VOIP, firerewall) pour
   une entreprise vitruelle.\r\n"
