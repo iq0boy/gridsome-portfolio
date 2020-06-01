@@ -19,4 +19,5 @@ tools:
 categories:
   - Projet d'intégration
   - Application web
+  - Electronique
 ---
