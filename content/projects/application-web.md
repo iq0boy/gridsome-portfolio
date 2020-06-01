@@ -1,5 +1,5 @@
 ---
-name: Application web
+name: MySmartPlug
 description: conception et développement d'une prise connectée visant à réduire
   la consommation d'électricité dans les ménages, en partenariat avec le Young
   Entreprise Project (projet lauréat de l'école).
@@ -15,4 +15,8 @@ tools:
   - CSS
   - JavaScript
   - jQuery
+  - MySQL
+categories:
+  - Projet d'intégration
+  - Application web
 ---
