@@ -22,4 +22,7 @@ tools:
   - JavaScript
   - Vuejs
   - MySQL
+categories:
+  - Application web
+  - Travail de fin d'étude
 ---
