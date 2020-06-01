@@ -4,7 +4,7 @@
       :title="'Toggle ' + nextTheme"
       class="toggle-theme"
     >
-    <font-awesome :icon="['fas', 'lightbulb']" class="mr-3" v-if="theme === 'dark'"></font-awesome>
+    <font-awesome :icon="['fas', 'sun']" class="mr-3" v-if="theme === 'dark'"></font-awesome>
     <font-awesome :icon="['fas', 'moon']" class="mr-3" v-if="theme === 'light'"></font-awesome>
   </a>
 </template>
@@ -37,7 +37,7 @@ export default {
   },
   async mounted() {
     // set default
-    this.$emit('setTheme',  'dark')
+    if (typeof window.__theme !== 'undefined') this.$emit('setTheme', window.__theme)
   }
 }
 </script>

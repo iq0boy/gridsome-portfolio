@@ -1,16 +1,12 @@
 {
   "social": [
     {
-      "icon": "facebook",
-      "link": "https://www.facebook.com"
-    },
-    {
-      "icon": "twitter",
-      "link": "https://twitter.com/"
+      "icon": "github",
+      "link": "https://github.com/PireJoseph/"
     },
     {
       "icon": "linkedin",
-      "link": "https://www.linkedin.com"
+      "link": "https://www.linkedin.com/in/joseph-pire/"
     }
   ]
 }
