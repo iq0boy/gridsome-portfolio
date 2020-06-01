@@ -1,3 +1,3 @@
 ---
-name: Application
+name: Application java
 ---
