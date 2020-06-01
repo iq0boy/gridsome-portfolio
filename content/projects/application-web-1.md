@@ -1,5 +1,5 @@
 ---
-name: Application web
+name: EPHEC Sport
 description: "Développement d'une application permettant la gestion et la
   promotion d'activités sportives\r
 
