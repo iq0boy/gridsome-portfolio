@@ -11,4 +11,6 @@ createdAt: 2016-06-12T02:58:00.000Z
 tools:
   - Java
   - MySQL
+categories:
+  - Application bureau
 ---
