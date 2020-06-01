@@ -13,4 +13,5 @@ tools:
   - Apache
 categories:
   - Administration réseau
+  - DevOps
 ---
