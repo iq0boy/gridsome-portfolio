@@ -2,7 +2,6 @@ backend:
   name: github
   repo: PireJoseph/gridsome-portfolio
 
-
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
@@ -19,10 +18,10 @@ collections:
     fields:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Description", name: "description", widget: "markdown"}
-      - {label: "Url", name: "url", widget: "string"}
+      - {label: "Url", name: "url", widget: "string", required: false }
       - {label: "Logo", name: "logo", widget: "image"}
-      - {label: "Banner", name: "banner", widget: "image"}
-      - {label: "Color", name: "color", widget: "string"}
+      - {label: "Banner", name: "banner", widget: "image", required: false}
+      - {label: "Color", name: "color", widget: "string", required: false}
 
   - name: "people"
     label: "People"
@@ -33,13 +32,13 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Github", name: "github", widget: "string"}
-      - {label: "LinkedIn", name: "linkedIn", widget: "string"}
-      - {label: "Twitter", name: "twitter", widget: "string"}
-      - {label: "Facebook", name: "facebook", widget: "string"}
-      - {label: "Website", name: "website", widget: "string"}
+      - {label: "Description", name: "description", widget: "markdown", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Github", name: "github", widget: "string", required: false}
+      - {label: "LinkedIn", name: "linkedIn", widget: "string", required: false}
+      - {label: "Twitter", name: "twitter", widget: "string", required: false}
+      - {label: "Facebook", name: "facebook", widget: "string", required: false}
+      - {label: "Website", name: "website", widget: "string", required: false}
 
   - name: "categories"
     label: "Categories"
@@ -50,9 +49,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Color", name: "color", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Color", name: "color", widget: "string", required: false}
 
   - name: "projects"
     label: "Projects"
@@ -65,26 +63,25 @@ collections:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Description", name: "description", widget: "markdown"}
       - {label: "ShortDescription", name: "shortDescription", widget: "markdown"}
-      - {label: "Banner", name: "banner", widget: "image"}
+      - {label: "Banner", name: "banner", widget: "image",  required: false}
       - {label: "Status", name: "status", widget: "string"}
       - {label: "CreatedAt", name: "createdAt", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "image"}
       - {label: "Tools", name: "tools", widget: "relation", collection: "techs", valueField: "name", searchFields: ["name"], multiple: true}
-      - {label: "Collaborators", name: "collaborators", widget: "relation", collection: "people", valueField: "name", searchFields: ["name"], multiple: true}
-      - {label: "Tags", name: "categories", widget: "relation", collection: "categories", valueField: "name", searchFields: ["name"], multiple: true}
+      - {label: "Collaborators", name: "collaborators", widget: "relation", collection: "people", valueField: "name", searchFields: ["name"], multiple: true, required: false}
+      - {label: "Tags", name: "categories", widget: "relation", collection: "categories", valueField: "name", searchFields: ["name"], multiple: true, required: false}
 
   - name: "skills"
     label: "Skills"
     folder: "content/skills"
     create: true
-    identifier_field: "category_name"
-    valueField: "category_name"
+    identifier_field: "name"
+    valueField: "name"
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Description", name: "description", widget: "markdown"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Color", name: "color", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Color", name: "color", widget: "string", required: false}
 
   - name: "certifications"
     label: "Certifications"
@@ -95,7 +92,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Description", name: "description", widget: "markdown", required: false}
       - {label: "Provider", name: "provider", widget: "string"}
       - {label: "AcquiredAt", name: "acquiredAt", widget: "datetime"}
 
@@ -108,32 +105,34 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Description", name: "description", widget: "markdown", required: false}
       - {label: "Provider", name: "provider", widget: "string"}
+      - {label: "Provider Logo", name: "providerLogo", widget: "image", required: false}
       - {label: "AcquiredAt", name: "acquiredAt", widget: "datetime"}
 
   - name: "languages"
     label: "Languages"
     folder: "content/languages"
     create: true
-    identifier_field: "title"
-    valueField: "title"
+    identifier_field: "name"
+    valueField: "name"
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Iso", name: "iso", widget: "string"}
       - {label: "Flag", name: "flag", widget: "image"}
+      - {label: "Level", name: "level", widget: "string"}
 
   - name: "interests"
     label: "Interests"
     folder: "content/interests"
     create: true
-    identifier_field: "title"
-    valueField: "title"
+    identifier_field: "name"
+    valueField: "name"
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Description", name: "description", widget: "markdown", required: false}
 
   - name: "jobs"
     label: "Jobs"
@@ -143,8 +142,9 @@ collections:
     valueField: "title"
     slug: "{{slug}}"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "markdown", required: false}
       - {label: "Started At", name: "startedAt", widget: "datetime"}
       - {label: "Ended At", name: "endedAt", widget: "datetime"}
       - {label: "Employer", name: "employer", widget: "string"}
+      - {label: "Tools", name: "tools", widget: "relation", collection: "techs", valueField: "name", searchFields: ["name"], multiple: true, required: false}
