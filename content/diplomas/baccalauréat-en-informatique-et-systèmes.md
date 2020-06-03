@@ -1,4 +1,5 @@
 ---
+id: diploma1
 title: Baccalauréat en Informatique et Systèmes
 provider: EPHEC
 providerLogo: /uploads/logo-ephec.png
