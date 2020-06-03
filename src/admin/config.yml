@@ -21,18 +21,6 @@ collections:
       - {label: "Logo", name: "logo", widget: "image"}
       - {label: "Color", name: "color", widget: "string", required: false}
 
-
-  - name: "categories"
-    label: "Categories"
-    folder: "content/categories"
-    create: true
-    identifier_field: "id"
-    fields:
-      - {label: "Id", name: "id", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Color", name: "color", widget: "string", required: false}
-
   - name: "projects"
     label: "Projects"
     folder: "content/projects"
@@ -46,8 +34,8 @@ collections:
       - {label: "Banner", name: "banner", widget: "image",  required: false}
       - {label: "Status", name: "status", widget: "string"}
       - {label: "CreatedAt", name: "createdAt", widget: "datetime"}
-      - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "name", searchFields: ["name"], multiple: true}
-      - {label: "Categories", name: "categories", widget: "relation", collection: "categories", valueField: "name", searchFields: ["name"], multiple: true, required: false}
+      - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "title", searchFields: ["title"], multiple: true}
+      - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "title", searchFields: ["title"], multiple: true, required: false}
 
   - name: "skills"
     label: "Skills"
@@ -60,6 +48,7 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Color", name: "color", widget: "string", required: false}
+
 
   - name: "certifications"
     label: "Certifications"
@@ -120,4 +109,5 @@ collections:
       - {label: "Started At", name: "startedAt", widget: "datetime"}
       - {label: "Ended At", name: "endedAt", widget: "datetime"}
       - {label: "Employer", name: "employer", widget: "string"}
-      - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "name", searchFields: ["name"], multiple: true, required: false}
+      - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "title", searchFields: ["title"], multiple: true}
+      - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "title", searchFields: ["title"], multiple: true, required: false}
