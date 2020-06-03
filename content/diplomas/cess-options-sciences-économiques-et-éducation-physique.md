@@ -1,4 +1,5 @@
 ---
+id: diploma3
 title: CESS options Sciences Économiques et Éducation Physique
 provider: Collège Notre-Dame de Basse-Wavre
 providerLogo: /uploads/logo-basse-wavre.png

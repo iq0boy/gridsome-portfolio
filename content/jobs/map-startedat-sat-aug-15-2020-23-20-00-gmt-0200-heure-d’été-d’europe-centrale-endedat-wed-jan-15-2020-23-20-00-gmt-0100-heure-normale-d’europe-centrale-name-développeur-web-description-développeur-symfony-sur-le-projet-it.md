@@ -1,5 +1,6 @@
 ---
 name: Développeur web
+id: job2
 title: Développeur web
 description: "Développeur Symfony sur le projet iT.SCHOOL, chez Keyros S.A., à
   Louvain-la-Neuve.\r
