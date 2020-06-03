@@ -36,7 +36,21 @@ module.exports = {
         typeName: 'Author',
         path: './content/author/*.md'
       }
-    }, 
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Tech',
+        path: './content/techs/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Project',
+        path: './content/projects/*.md'
+      }
+    },
     {
       use: '@gridsome/source-filesystem',
       options: {
@@ -64,6 +78,9 @@ module.exports = {
   ],
   transformers: {
     remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
       plugins: [
         '@noxify/gridsome-remark-table-align',
         ['@noxify/gridsome-remark-classes', {
@@ -90,5 +107,11 @@ module.exports = {
       path: '/tags/:title',
       component: '~/templates/Tag.vue'
     }],
+    Project: [{
+      path: '/projects/:name',
+    }],
+    Tech: [{
+      path: '/techs/:name'
+    }]
   }
 }
