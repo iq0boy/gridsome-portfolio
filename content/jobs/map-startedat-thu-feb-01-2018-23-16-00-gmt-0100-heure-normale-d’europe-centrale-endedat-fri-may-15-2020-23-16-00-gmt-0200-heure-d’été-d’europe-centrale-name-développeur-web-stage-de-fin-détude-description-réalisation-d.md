@@ -1,5 +1,6 @@
 ---
 name: Développeur web - Stage de fin d'étude
+id: job3
 title: Développeur web - Stage de fin d'étude
 description: "Réalisation d'un nouveau module pour le projet iT.SCHOOL, chez
   Keyros S.A., à Louvain-la-Neuve.\r
