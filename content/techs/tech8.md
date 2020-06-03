@@ -1,0 +1,14 @@
+---
+name: MySQL
+id: tech8
+title: MySQL
+description: MySQL est un système de gestion de bases de données relationnelles
+  (SGBDR). Il est distribué sous une double licence GPL et propriétaire. Il fait
+  partie des logiciels de gestion de base de données les plus utilisés au monde,
+  autant par le grand public (applications web principalement) que par des
+  professionnels, en concurrence avec Oracle, PostgreSQL et Microsoft SQL
+  Server.
+url: https://www.mysql.com/
+logo: /uploads/logo-mysql.png
+color: "#00758f"
+---

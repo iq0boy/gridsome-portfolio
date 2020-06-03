@@ -12,87 +12,53 @@ collections:
     label: "Techs"
     folder: "content/techs"
     create: true
-    identifier_field: "name"
-    valueField: "name"
-    slug: "{{tech_name}}"
+    identifier_field: "id"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Id", name: "id", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
       - {label: "Url", name: "url", widget: "string", required: false }
       - {label: "Logo", name: "logo", widget: "image"}
-      - {label: "Banner", name: "banner", widget: "image", required: false}
-      - {label: "Color", name: "color", widget: "string", required: false}
-
-  - name: "people"
-    label: "People"
-    folder: "content/people"
-    create: true
-    identifier_field: "name"
-    valueField: "name"
-    slug: "{{slug}}"
-    fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown", required: false}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Github", name: "github", widget: "string", required: false}
-      - {label: "LinkedIn", name: "linkedIn", widget: "string", required: false}
-      - {label: "Twitter", name: "twitter", widget: "string", required: false}
-      - {label: "Facebook", name: "facebook", widget: "string", required: false}
-      - {label: "Website", name: "website", widget: "string", required: false}
-
-  - name: "categories"
-    label: "Categories"
-    folder: "content/categories"
-    create: true
-    identifier_field: "name"
-    valueField: "name"
-    slug: "{{slug}}"
-    fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Color", name: "color", widget: "string", required: false}
 
   - name: "projects"
     label: "Projects"
     folder: "content/projects"
     create: true
-    identifier_field: "name"
-    valueField: "name"
-    slug: "{{slug}}"
+    identifier_field: "id"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown"}
-      - {label: "ShortDescription", name: "shortDescription", widget: "markdown"}
+      - {label: "Id", name: "id", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "ShortDescription", name: "shortDescription", widget: "text"}
       - {label: "Banner", name: "banner", widget: "image",  required: false}
       - {label: "Status", name: "status", widget: "string"}
       - {label: "CreatedAt", name: "createdAt", widget: "datetime"}
-      - {label: "Tools", name: "tools", widget: "relation", collection: "techs", valueField: "name", searchFields: ["name"], multiple: true}
-      - {label: "Collaborators", name: "collaborators", widget: "relation", collection: "people", valueField: "name", searchFields: ["name"], multiple: true, required: false}
-      - {label: "Tags", name: "categories", widget: "relation", collection: "categories", valueField: "name", searchFields: ["name"], multiple: true, required: false}
+      - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "title", searchFields: ["title"], multiple: true}
+      - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "title", searchFields: ["title"], multiple: true, required: false}
 
   - name: "skills"
     label: "Skills"
     folder: "content/skills"
     create: true
-    identifier_field: "name"
-    valueField: "name"
-    slug: "{{slug}}"
+    identifier_field: "id"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Id", name: "id", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Color", name: "color", widget: "string", required: false}
+
 
   - name: "certifications"
     label: "Certifications"
     folder: "content/certifications"
     create: true
-    identifier_field: "title"
-    valueField: "title"
-    slug: "{{slug}}"
+    identifier_field: "id"
     fields:
+      - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown", required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Provider", name: "provider", widget: "string"}
       - {label: "AcquiredAt", name: "acquiredAt", widget: "datetime"}
 
@@ -100,12 +66,11 @@ collections:
     label: "Diplomas"
     folder: "content/diplomas"
     create: true
-    identifier_field: "title"
-    valueField: "title"
-    slug: "{{slug}}"
+    identifier_field: "id"
     fields:
+      - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown", required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Provider", name: "provider", widget: "string"}
       - {label: "Provider Logo", name: "providerLogo", widget: "image", required: false}
       - {label: "AcquiredAt", name: "acquiredAt", widget: "datetime"}
@@ -114,11 +79,10 @@ collections:
     label: "Languages"
     folder: "content/languages"
     create: true
-    identifier_field: "name"
-    valueField: "name"
-    slug: "{{slug}}"
+    identifier_field: "id"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Id", name: "id", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Iso", name: "iso", widget: "string"}
       - {label: "Flag", name: "flag", widget: "image"}
       - {label: "Level", name: "level", widget: "string"}
@@ -127,24 +91,23 @@ collections:
     label: "Interests"
     folder: "content/interests"
     create: true
-    identifier_field: "name"
-    valueField: "name"
-    slug: "{{slug}}"
+    identifier_field: "id"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown", required: false}
+      - {label: "Id", name: "id", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
 
   - name: "jobs"
     label: "Jobs"
     folder: "content/jobs"
     create: true
-    identifier_field: "title"
-    valueField: "title"
-    slug: "{{slug}}"
+    identifier_field: "id"
     fields:
+      - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "markdown", required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Started At", name: "startedAt", widget: "datetime"}
       - {label: "Ended At", name: "endedAt", widget: "datetime"}
       - {label: "Employer", name: "employer", widget: "string"}
-      - {label: "Tools", name: "tools", widget: "relation", collection: "techs", valueField: "name", searchFields: ["name"], multiple: true, required: false}
+      - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "title", searchFields: ["title"], multiple: true}
+      - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "title", searchFields: ["title"], multiple: true, required: false}
