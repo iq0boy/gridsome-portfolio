@@ -1,5 +1,4 @@
 ---
-name: Français
 id: language2
 title: Français
 iso: Fr

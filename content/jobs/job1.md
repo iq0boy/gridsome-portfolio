@@ -1,5 +1,4 @@
 ---
-name: Développeur back end
 id: job1
 title: Développeur back end
 description: >

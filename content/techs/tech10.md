@@ -1,5 +1,4 @@
 ---
-name: Docker
 id: tech10
 title: Docker
 description: "Docker est un logiciel libre permettant de lancer des applications

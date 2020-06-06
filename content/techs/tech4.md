@@ -1,5 +1,4 @@
 ---
-name: jQuery
 id: tech4
 title: jQuery
 description: "jQuery est une bibliothèque JavaScript libre et multiplateforme

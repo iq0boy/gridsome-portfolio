@@ -1,5 +1,4 @@
 ---
-name: MySQL
 id: tech8
 title: MySQL
 description: MySQL est un système de gestion de bases de données relationnelles

@@ -1,18 +1,4 @@
 ---
-shortDescription: "Développement d'une application permettant la gestion et la
-  promotion d'activités sportives\r
-
-  pour les étudiants de l'EPHEC; analyse conception et développement d'une API
-  REST et d'une Single page application avec\r Symfony et Vue.JS"
-skills:
-  - Analyse business
-  - API REST
-  - Configuration serveur web
-  - Développement web
-  - Gestion de bases de données
-  - Gestion de projet
-  - Sécurité
-name: EPHEC Sport
 id: project3
 title: EPHEC Sport
 status: done
@@ -22,14 +8,27 @@ description: "Développement d'une application permettant la gestion et la
 
   pour les étudiants de l'EPHEC; analyse conception et développement d'une API
   REST et d'une Single page application avec\r Symfony et Vue.JS"
+shortDescription: "Développement d'une application permettant la gestion et la
+  promotion d'activités sportives\r
+
+  pour les étudiants de l'EPHEC; analyse conception et développement d'une API
+  REST et d'une Single page application avec\r Symfony et Vue.JS"
+skills:
+  - skill1
+  - skill2
+  - skill3
+  - skill5
+  - skill6
+  - skill7
+  - skill10  
 techs:
-  - PHP
-  - API Platform
-  - Apache
-  - Symfony
-  - HTML
-  - CSS
-  - JavaScript
-  - Vuejs
-  - MySQL
+  - tech1
+  - tech2
+  - tech3
+  - tech5
+  - tech6
+  - tech7
+  - tech8
+  - tech12
+  - tech13
 ---

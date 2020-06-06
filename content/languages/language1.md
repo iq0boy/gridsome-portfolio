@@ -1,5 +1,4 @@
 ---
-name: Anglais
 id: language1
 title: Anglais
 iso: En

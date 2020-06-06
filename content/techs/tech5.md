@@ -1,5 +1,4 @@
 ---
-name: CSS
 id: tech5
 title: CSS
 description: "Cascading Style Sheets (CSS) est un langage de feuille de style

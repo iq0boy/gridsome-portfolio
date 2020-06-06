@@ -1,5 +1,4 @@
 ---
-name: JavaScript
 id: tech7
 title: JavaScript
 description: "JavaScript (qui est souvent abrégé en « JS ») est un langage de

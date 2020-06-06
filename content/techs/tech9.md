@@ -1,5 +1,4 @@
 ---
-name: Java
 id: tech9
 title: Java
 description: "Java est un langage de programmation orienté objet présenté

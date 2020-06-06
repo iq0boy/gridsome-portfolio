@@ -1,5 +1,4 @@
 ---
-name: API Platform
 id: tech2
 title: API Platform
 description: "\r

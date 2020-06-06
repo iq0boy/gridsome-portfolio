@@ -1,5 +1,4 @@
 ---
-name: Néerlandais
 id: language3
 title: Néerlandais
 iso: Nl

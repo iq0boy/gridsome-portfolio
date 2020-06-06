@@ -1,7 +1,6 @@
 ---
-name: PHP
 id: tech1
-title: php
+title: PHP
 description: >-
   PHP est un acronyme récursif, qui signifie "PHP: Hypertext Preprocessor" :
   c'est un langage de script HTML, exécuté côté serveur. Sa syntaxe est

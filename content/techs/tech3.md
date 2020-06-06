@@ -1,5 +1,4 @@
 ---
-name: Vuejs
 id: tech3
 title: Vuejs
 description: >-

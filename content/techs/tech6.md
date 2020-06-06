@@ -1,5 +1,4 @@
 ---
-name: HTML
 id: tech6
 title: HTML
 description: Le HyperText Markup Language, généralement abrégé HTML ou dans sa

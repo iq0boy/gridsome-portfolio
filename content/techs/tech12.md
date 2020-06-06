@@ -1,5 +1,4 @@
 ---
-name: Apache
 id: tech12
 title: Apache
 description: Le logiciel libre Apache HTTP Server (Apache) est un serveur HTTP

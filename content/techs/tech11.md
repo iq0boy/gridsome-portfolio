@@ -1,5 +1,4 @@
 ---
-name: Python
 id: tech11
 title: Python
 description: "Python est un langage de programmation interprété, multi-paradigme
@@ -16,6 +15,6 @@ description: "Python est un langage de programmation interprété, multi-paradig
   pour optimiser la productivité des programmeurs en offrant des outils de haut
   niveau et une syntaxe simple à utiliser.\r"
 url: https://www.python.org/
-logo: /uploads/logo-python.jpg
+logo: /uploads/logo-python.png
 color: "#3776ab"
 ---

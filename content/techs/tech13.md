@@ -1,5 +1,4 @@
 ---
-name: Symfony
 id: tech13
 title: Symfony
 description: "Symfony est un ensemble de composants PHP ainsi qu'un framework
