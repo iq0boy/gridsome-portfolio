@@ -1,14 +1,11 @@
 ---
 id: tech7
 title: JavaScript
-description: "JavaScript (qui est souvent abrégé en « JS ») est un langage de
-  script léger, orienté objet, principalement connu comme le langage de script
-  des pages web. Mais il est aussi utilisé dans de nombreux environnements
-  extérieurs aux navigateurs web tels que Node.js, Apache CouchDB voire Adobe
-  Acrobat. Le code JavaScript est interprété ou compilé à la volée (JIT). C'est
-  un langage à objets utilisant le concept de prototype, disposant d'un typage
-  faible et dynamique qui permet de programmer suivant plusieurs paradigmes de
-  programmation : fonctionnelle, impérative et orientée objet."
-logo: /uploads/logo-js.png
+description: "JavaScript (qui est souvent abrégé en « JS » often abbreviated as JS, is high-level, often just-in-time compiled,
+and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles.
+JavaScript engines were originally used only in web browsers, but they are now embedded in some servers, usually via Node.js.
+They are also embedded in a variety of applications created with frameworks such as Electron and Cordova"
+logo: ../../static/uploads/logo-js.png
 color: "#f0d91d"
 ---

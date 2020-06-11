@@ -1,15 +1,12 @@
 ---
 id: tech9
 title: Java
-description: "Java est un langage de programmation orienté objet présenté
-  officiellement en 1995.\r
-
-
-  Une particularité de Java est que les logiciels écrits dans ce langage sont
-  compilés vers une représentation binaire intermédiaire qui peut être exécutée
-  dans une machine virtuelle Java (JVM) en faisant abstraction du système
-  d'exploitation."
+description: "Java is a general-purpose programming language that is class-based, object-oriented,
+and designed to have as few implementation dependencies as possible.
+It is intended to let application developers write once, run anywhere (WORA).
+Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM)
+ regardless of the underlying computer architecture."
 url: https://www.java.com
-logo: /uploads/logo-java.png
+logo: ../../static/uploads/logo-java.png
 color: "#e76f00"
 ---

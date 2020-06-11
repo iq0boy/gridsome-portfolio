@@ -1,6 +1,6 @@
 ---
 id: skill10
-title: Sécurité
+title: Security
 shortName: Security
-description: Protection et analyse de vulnérabilité de systèmes et réseaux.
+description: Vulnerability analysis and protection of systems and networks.
 ---

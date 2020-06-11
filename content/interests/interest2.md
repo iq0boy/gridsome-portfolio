@@ -1,4 +1,4 @@
 ---
 id: interest2
-title: Culture Web
+title: Web Culture
 ---

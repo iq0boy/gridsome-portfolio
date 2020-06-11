@@ -1,6 +1,6 @@
 ---
 id: skill9
-title: Physique appliquée
+title: Applied physics
 shortName: Physics
-description: électronique, traitement de signal (MATLAB).
+description: Electronics, analog and digital signal processing (MATLAB), electricity.
 ---

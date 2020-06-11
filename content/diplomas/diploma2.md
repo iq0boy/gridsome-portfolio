@@ -1,7 +1,7 @@
 ---
 id: diploma2
-title: Baccalauréat en Psychologie et Sciences de l'éducation
+title: Bachelor degree in Psychology and Educational Sciences
 provider: UCLouvain
-providerLogo: /uploads/logo-uclouvain.png
+providerLogo: ../../static/uploads/logo-uclouvain.png
 acquiredAt: 2015-09-01T05:06:19.463Z
 ---

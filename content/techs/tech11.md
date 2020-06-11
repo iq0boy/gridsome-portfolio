@@ -1,20 +1,12 @@
 ---
 id: tech11
 title: Python
-description: "Python est un langage de programmation interprété, multi-paradigme
-  et multiplateformes. Il favorise la programmation impérative structurée,
-  fonctionnelle et orientée objet. Il est doté d'un typage dynamique fort, d'une
-  gestion automatique de la mémoire par ramasse-miettes et d'un système de
-  gestion d'exceptions ; il est ainsi similaire à Perl, Ruby, Scheme, Smalltalk
-  et Tcl.\r
-
-  \r
-
-  Le langage Python est placé sous une licence libre proche de la licence BSD7
-  et fonctionne sur la plupart des plates-formes informatiques. Il est conçu
-  pour optimiser la productivité des programmeurs en offrant des outils de haut
-  niveau et une syntaxe simple à utiliser.\r"
+description: "Python is an interpreted, high-level, general-purpose programming language.
+Python's design philosophy emphasizes code readability with its notable use of significant whitespace.
+Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
+Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly, procedural), object-oriented, and functional programming.
+Python is often described as a 'batteries included' language due to its comprehensive standard library."
 url: https://www.python.org/
-logo: /uploads/logo-python.png
+logo: ../../static/uploads/logo-python.png
 color: "#3776ab"
 ---

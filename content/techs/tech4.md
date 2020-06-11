@@ -1,19 +1,9 @@
 ---
 id: tech4
 title: jQuery
-description: "jQuery est une bibliothèque JavaScript libre et multiplateforme
-  créée pour faciliter l'écriture de scripts côté client dans le code HTML des
-  pages web. La première version est lancée en janvier 2006 par John Resig.\r
-
-  \r
-
-  Le but de la bibliothèque étant le parcours et la modification du DOM (y
-  compris le support des sélecteurs CSS 1 à 3 et un support basique de XPath),
-  elle contient de nombreuses fonctionnalités ; notamment des animations, la
-  manipulation des feuilles de style en cascade (accessibilité des classes et
-  attributs), la gestion des évènements, etc. L'utilisation d'Ajax est facilitée
-  et de nombreux plugins sont présents. "
+description: "Query is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation,
+event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. It is free, open-source software using the permissive MIT License"
 url: https://jquery.com/
-logo: /uploads/logo-jquery.png
+logo: ../../static/uploads/logo-jquery.png
 color: "#0769ad"
 ---

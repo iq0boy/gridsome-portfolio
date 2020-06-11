@@ -1,14 +1,9 @@
 ---
 id: tech3
 title: Vuejs
-description: >-
-  Vue.js (aussi appelé plus simplement Vue), est un framework JavaScript
-  open-source utilisé pour construire des interfaces utilisateur et des
-  applications web monopages. 
-
-
-  Vue présente une architecture progressivement adoptable qui se concentre sur le rendu déclaratif et la composition des composants. Les fonctionnalités avancées requises pour les applications complexes telles que le routage, la gestion d'état et les outils de construction sont offertes par le biais de bibliothèques et de paquets officiellement maintenus
+description: "Vue.js (commonly referred to as Vue; ), is an open-source model–view–view model JavaScript framework for building user interfaces and single-page applications.
+Advanced features required for complex applications such as routing, state management and build tooling are offered via officially maintained supporting libraries and packages, with Nuxt.js as one of the most popular solutions"
 url: https://vuejs.org/
-logo: /uploads/logo-vuejs.png
+logo: ../../static/uploads/logo-vuejs.png
 color: "#41b883"
 ---

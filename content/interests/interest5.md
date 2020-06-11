@@ -1,4 +1,4 @@
 ---
 id: interest5
-title: Philosophie
+title: Philosophy
 ---

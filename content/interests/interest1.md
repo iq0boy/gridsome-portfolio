@@ -1,4 +1,4 @@
 ---
 id: interest1
-title: Cuisine
+title: Cooking
 ---

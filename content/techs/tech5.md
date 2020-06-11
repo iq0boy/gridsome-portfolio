@@ -1,16 +1,10 @@
 ---
 id: tech5
 title: CSS
-description: "Cascading Style Sheets (CSS) est un langage de feuille de style
-  utilisé pour décrire la présentation d'un document écrit en HTML ou en XML (on
-  inclut ici les langages basés sur XML comme SVG ou XHTML). CSS décrit la façon
-  dont les éléments doivent être affichés à l'écran, sur du papier, en
-  vocalisation, ou sur d'autres supports.\r
-
-  \r
-
-  CSS est l'un des langages principaux du Web ouvert et a été standardisé par
-  le W3C."
-logo: /uploads/logo-css.png
+description: "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
+CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
+This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics,
+enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content."
+logo: ../../static/uploads/logo-css.png
 color: "#016db4"
 ---

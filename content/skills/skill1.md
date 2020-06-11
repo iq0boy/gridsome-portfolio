@@ -1,6 +1,6 @@
 ---
 id: skill1
-title: Analyse business
+title: Business analysis
 shortName: B.A.
-description: Analyse, modélisation et traduction UML (schéma entité association, relationnel, diagramme d'activité, diagramme de classe...)
+description: Analyse, modeling and translation of a business needs with the UML toolbox (entity relationship diagram, activity diagram, class diagram...)
 ---

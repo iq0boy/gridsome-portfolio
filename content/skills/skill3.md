@@ -1,6 +1,6 @@
 ---
 id: skill3
-title: Configuration serveur web
+title: Web server configuration
 shortName: Server 
 description: Apache, Nginx
 ---

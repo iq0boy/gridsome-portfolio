@@ -1,14 +1,14 @@
 ---
 id: project1
-title: Application Java
+title: Java MVC application
 status: done
 createdAt: 2016-06-12T02:58:00.000Z
-description: développement d'une application MVC JAVA/MYSQL avec interface
-  graphique etconsole, dédiée à l'apprentissage de vocabulaire d'une langue
-  étrangère.
-shortDescription: développement d'une application MVC JAVA/MYSQL avec interface
-  graphique etconsole, dédiée à l'apprentissage de vocabulaire d'une langue
-  étrangère.
+description: "From an idea of building a tool to help to learn vocabulary of a new language, i have developed an MVC application from scratch.
+The Purpose of this project was to apply what i learned from my java lecture.
+My technical challenge was to build a small MVC project with a graphical and a console GUI, connected to a Mysql database with JDBC.
+I started by designing the model and the visual of the different interfaces. Then i have implemented the model and the console view, driven by a dedicated controller.
+I finished by implementing the graphical view with the old swing library."
+shortDescription: "Conception, design, and development of a JAVA application."
 skills:
   - skill4
   - skill6

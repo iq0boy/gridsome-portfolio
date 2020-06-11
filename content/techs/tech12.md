@@ -1,11 +1,11 @@
 ---
 id: tech12
 title: Apache
-description: Le logiciel libre Apache HTTP Server (Apache) est un serveur HTTP
-  créé et maintenu au sein de la fondation Apache. Jusqu'en avril 2019, ce fut
-  le serveur HTTP le plus populaire du World Wide Web. Il est distribué selon
-  les termes de la licence Apache.
+description: "The Apache HTTP Server, colloquially called Apache,
+is a free and open-source cross-platform web server software
+Apache supports a variety of features, many implemented as compiled modules which extend the core functionality.
+These can range from authentication schemes to supporting server-side programming languages such as PHP."
 url: https://httpd.apache.org/
-logo: /uploads/logo-apache.png
+logo: ../../static/uploads/logo-apache.png
 color: "#ac0000"
 ---

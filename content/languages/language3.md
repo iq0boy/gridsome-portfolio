@@ -1,7 +1,7 @@
 ---
 id: language3
-title: Néerlandais
+title: Dutch
 iso: Nl
 flag: /uploads/flag-nl.png
-level: Notions élémentaires
+level: Elementary notions
 ---

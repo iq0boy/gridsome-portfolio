@@ -1,7 +1,7 @@
 ---
 id: language2
-title: Français
+title: French
 iso: Fr
 flag: /uploads/flag-fr.png
-level: Langue maternelle
+level: Mother tongue
 ---

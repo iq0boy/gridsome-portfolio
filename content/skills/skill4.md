@@ -1,6 +1,6 @@
 ---
 id: skill4
-title: Développement applicatif
+title: software development
 shortName: App
-description: Java, C#, Orienté objet, MVC.
+description: Java, C#, JS, PHP, functional and object oriented programming, MVC.
 ---

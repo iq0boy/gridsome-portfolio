@@ -1,6 +1,6 @@
 ---
 id: skill7
-title: Gestion de projet
+title: Project management
 shortName: Project
-description: Principes agiles, méthodologie SCRUM, intégration continue, git (GitHub et GitLab)
+description: Agile principles, SCRUM methodology Scrum, continuous integration, git (GitHub et GitLab)
 ---

@@ -1,13 +1,9 @@
 ---
 id: tech1
 title: PHP
-description: >-
-  PHP est un acronyme récursif, qui signifie "PHP: Hypertext Preprocessor" :
-  c'est un langage de script HTML, exécuté côté serveur. Sa syntaxe est
-  empruntée aux langages C, Java et Perl, et est facile à apprendre.
-
-  Le but de ce langage est de permettre aux développeurs web d'écrire des pages dynamiques rapidement, mais vous pouvez faire beaucoup plus avec PHP.
+description: "PHP is a popular general-purpose scripting language that is especially suited to web development.
+Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world."
 url: https://www.php.net/
-logo: /uploads/logo-php.png
+logo: ../../static/uploads/logo-php.png
 color: "#858fb8"
 ---
