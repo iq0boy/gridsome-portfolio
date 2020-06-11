@@ -22,15 +22,24 @@ query($page:Int) {
     edges {
       node {
        id
-        name
+        title
         description
         shortDescription
         status
         createdAt
         monthYear: createdAt(format:"MMM YYYY")
-        tools
         path
-        categories
+        techs {
+          title
+          path
+          color
+          logo (width: 50, height: 50, quality: 90)
+        }
+        skills {
+          title
+          shortName
+          path
+        }
       }
     }
   }
