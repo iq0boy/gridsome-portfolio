@@ -32,8 +32,7 @@
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.social"
-              class="hover:text-white"
-              v-bind:class="{'mr-6' : index !== Object.keys($static.metadata.social).length - 1}"
+              class="hover:text-white mr-6"
             >
               <span class="text-sm">
                 <a :href="element.link" target="_blank" rel="noopener noreferrer">
@@ -41,44 +40,39 @@
                 </a>
               </span>
             </li>
+            <li class="hover:text-white">
+              <g-link to="/contact">
+                <font-awesome :icon="['fas', 'envelope']" />
+              </g-link>
+            </li>
           </ul>
         </div>
 
       </div>
     </nav>
 
-    <div class="logo pt-0 pb-16 md:pb-32 md:pt-16 container mx-auto text-center text-white">
+    <div class="logo pt-0 pb-8 sm:pb-16 md:pb-32 md:pt-16 container mx-auto text-center text-white">
       <h2 class="m-0">
 
         <span class="text-5xl text-white">
-          <span>👋</span>
-          <span> am {{ $static.metadata.siteAuthor }}</span>
+          <span>Hi i am {{ $static.metadata.siteAuthor }}</span>
         </span>
-<!--        <span class="text-4xl">
-          <font-awesome :icon="['fas', 'code']" class="mb-1 ml-3"></font-awesome>
-        </span>-->
+
       </h2>
-      <div class="text-gray-400 font-thin text-xl">{{ $static.metadata.siteDescription }}</div>
+      <div class="text-gray-400 font-thin text-xl">{{ $static.metadata.siteDescription }} in<!-- who does--></div>
+      <div>
+        <VueSlickCarousel v-bind="skillCarouselSettings">
+          <div v-for="(skill, index) in $static.allSkill.edges" :key="skill.node.id" :index="index" >
+            <div class="flex justify-center align">
+              {{skill.node.title}}
+            </div>
+          </div>
+        </VueSlickCarousel>
+      </div>
     </div>
     
   </header>
 </template>
-
-<script>
-
-import ThemeSwitcher from '~/components/ThemeSwitcher'
-
-export default {
-  props: {
-    theme: {
-      type: String,
-    },
-  },
-  components : {
-    ThemeSwitcher
-  }
-};
-</script>
 
 <static-query>
 query {
@@ -96,5 +90,52 @@ query {
       link
     }
   }
+  allSkill {
+    totalCount
+    edges {
+      node {
+        id
+        title
+        description
+        shortName
+      }
+    }
+  }
 }
 </static-query>
+
+<script>
+
+import ThemeSwitcher from '~/components/ThemeSwitcher'
+import VueSlickCarousel from 'vue-slick-carousel'
+// import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
+export default {
+  props: {
+    theme: {
+      type: String,
+    },
+  },
+  data() {
+    return {
+      skillCarouselSettings: {
+        "arrows": false,
+        "dots": false,
+        "autoplay": true,
+        "autoplaySpeed": 2000,
+        "fade": true,
+        "infinite": true,
+        "speed": 1000,
+        "slidesToShow": 1,
+        "slidesToScroll": 1,
+      }
+
+    }
+  },
+  components : {
+    ThemeSwitcher,
+    VueSlickCarousel
+  }
+};
+</script>

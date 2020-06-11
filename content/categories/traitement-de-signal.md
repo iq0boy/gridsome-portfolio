@@ -1,3 +1,0 @@
----
-name: Traitement de signal
----
