@@ -12,15 +12,15 @@
                     <!--              class="hover:underline"-->
                     <!--            >{{ $page.blog.category.title }}</g-link>-->
                     <!--          </span>-->
-                    <h1 class="text-5xl font-medium leading-none mt-0">{{ $page.project.title}}</h1>
+                    <h1 class="text-5xl font-medium leading-none mt-0">{{ $page.job.title}}</h1>
                     <ul class="flex flex-wrap mb-5">
-                        <li  class=" uppercase font-medium text-xs text-blue-700 mt-3" v-for="(skill, index) in $page.project.skills">
+                        <li  class=" uppercase font-medium text-xs text-blue-700 mt-3" v-for="(skill, index) in $page.job.skills">
                             <g-link :to="skill.path">
-                                <span class="">{{ skill.title }}</span><span class="ml-2 mr-2" v-if="index+1 < $page.project.skills.length">-</span>
+                                <span class="">{{ skill.title }}</span><span class="ml-2 mr-2" v-if="index+1 < $page.job.skills.length">-</span>
                             </g-link>
                         </li>
                     </ul>
-                    <div class="text-2xl pt-4 pb-10 text-gray-700 font-serif" v-html="$page.project.shortDescription"></div>
+                    <div class="text-2xl pt-4 pb-10 text-gray-700 font-serif" v-html="$page.job.shortDescription"></div>
                 </section>
 
                 <!--        <section class="post-author-list mb-10 mx-0">-->
@@ -65,21 +65,22 @@
 
             <div class="lg:mx-32 md:mx-16 px-4 sm:px-0">
                 <section class="post-content container mx-auto relative font-serif text-gray-700">
-                    <div class="post-content-text text-xl" v-html="$page.project.description"></div>
+                    <div class="post-content-text text-xl" v-html="$page.job.description"></div>
                 </section>
             </div>
 
             <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-10">
                 <blockquote>
-                    <p class="font-bold">Status : {{$page.project.status.charAt(0).toUpperCase() + $page.project.status.slice(1)}}</p>
-                    <p>Started : {{ $page.project.monthYear}}</p>
+<!--                    <p class="font-bold">Status : {{$page.project.status.charAt(0).toUpperCase() + $page.project.status.slice(1)}}</p>-->
+                    <p>Started : {{ $page.job.startedAt}}</p>
+                    <p>Ended : {{ $page.job.endedAt}}</p>
                 </blockquote>
             </div>
 
             <div class="lg:mx-32 md:mx-16 px-4 sm:px-0">
                 <section class="flex flex-wrap container mx-auto relative py-10">
                     <g-link
-                            v-for="tech in $page.project.techs"
+                            v-for="tech in $page.job.techs"
                             :key="tech.id"
                             :to="tech.path"
                             class="flex items-center py-4 px-4 mr-2 mt-2 border hover:border-blue-500 border-gray-600 rounded-full hover:bg-black bg-white"
@@ -94,28 +95,28 @@
 
         </div>
 
-<!--        <section class="post-related bg-black text-gray-200 pt-10 border-b border-b-gray-900">-->
-<!--            <div class="container mx-auto">-->
-<!--                <div class="flex flex-wrap pt-8 pb-8 mx-4 sm:-mx-4">-->
-<!--                    <ProjectListItem v-if="$page.previous" :record="$page.previous" :border=false></ProjectListItem>-->
-<!--                    <ProjectListItem v-if="$page.next" :record="$page.next" :border=false></ProjectListItem>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
+       <!-- <section class="post-related bg-black text-gray-200 pt-10 border-b border-b-gray-900">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap pt-8 pb-8 mx-4 sm:-mx-4">
+                    <ProjectListItem v-if="$page.previous" :record="$page.previous" :border=false></ProjectListItem>
+                    <ProjectListItem v-if="$page.next" :record="$page.next" :border=false></ProjectListItem>
+                </div>
+            </div>
+        </section>-->
 
     </Layout>
 </template>
 
 <page-query>
  query($id: ID!, $previousElement: ID!, $nextElement: ID!) {
-    project(id: $id) {
+    job(id: $id) {
       title
-      path
       description
       shortDescription
-      status
-      createdAt
-      monthYear: createdAt(format:"MMM YYYY")
+      startedAt(format:"MMM YYYY")
+      endedAt(format:"MMM YYYY")
+      employer
+      path
       techs {
         title
         path
@@ -129,14 +130,13 @@
       }
     }
 
-    previous: project(id: $previousElement) {
+    previous: job(id: $previousElement) {
       title
-      path
       description
-      shortDescription
-      status
-      createdAt
-      monthYear: createdAt(format:"MMM YYYY")
+      startedAt(format:"MMM YYYY")
+      endedAt(format:"MMM YYYY")
+      employer
+      path
       techs {
         title
         path
@@ -149,14 +149,13 @@
       }
     }
 
-    next: project(id: $nextElement) {
+    next: job(id: $nextElement) {
       title
-      path
       description
-      shortDescription
-      status
-      createdAt
-      monthYear: createdAt(format:"MMM YYYY")
+      startedAt(format:"MMM YYYY")
+      endedAt(format:"MMM YYYY")
+      employer
+      path
       techs {
         title
         path
