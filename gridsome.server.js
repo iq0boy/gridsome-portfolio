@@ -6,77 +6,6 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
-  api.loadSource((actions) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  });
-
-
-
-  api.createPages(({
-    createPage
-  }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  });
-
-  api.onCreateNode(options => {
-    if (options.internal.typeName === 'Blog') {
-
-      options.tags = (typeof options.tags === 'string') ? options.tags.split(',').map(string => string.trim()) : options.tags;
-      options.author = (typeof options.author === 'string') ? options.author.split(',').map(string => string.trim()) : options.author;
-      return {
-        ...options
-      };
-    }
-
-    if  ( (options.internal.typeName === 'Project') || (options.internal.typeName === 'Tech') ) {
-      options.name = (typeof options.name === 'string') ? options.name.split(',').map(string => string.trim()) : options.name;
-      return {
-        ...options
-      };
-    }
-
-  });
-
-    api.createPages(async ({
-      graphql,
-      createPage
-    }) => {
-      // Use the Pages API here: https://gridsome.org/docs/pages-api
-      const {
-        data
-      } = await graphql(`
-      {
-      allBlog {
-        edges {
-          previous {
-            id
-          }
-          next {
-            id
-          }
-          node {
-            id
-            path
-          }
-        }
-      }
-    }
-    `);
-
-      data.allBlog.edges.forEach(function (element) {
-        createPage({
-          path: element.node.path,
-          component: './src/templates/BlogPost.vue',
-          context: {
-            previousElement: (element.previous) ? element.previous.id : '##empty##',
-            nextElement: (element.next) ? element.next.id : '##empty##',
-            id: element.node.id
-          }
-        });
-      });
-
-    });
-
 
   api.createPages(async ({ graphql, createPage }) => {
     const { data } = await graphql(`{
@@ -89,6 +18,7 @@ module.exports = function (api) {
             id
           }
           node {
+            title
             id
             path
           }
@@ -104,11 +34,48 @@ module.exports = function (api) {
         context: {
           previousElement: (element.previous) ? element.previous.id : '##empty##',
           nextElement: (element.next) ? element.next.id : '##empty##',
-          id: element.node.id
+          id: element.node.id,
+          title: element.node.title
         }
       })
     })
   });
+
+
+
+  api.createPages(async ({ graphql, createPage }) => {
+    const { data } = await graphql(`{
+      allJob(sortBy:"endedAt", order: DESC) {
+        edges {
+          previous {
+            id
+          }
+          next {
+            id
+          }
+          node {
+            title
+            id
+            path
+          }
+        }
+      }
+    }`);
+
+    data.allJob.edges.forEach(function (element) {
+      createPage({
+        path: element.node.path,
+        component: './src/templates/JobDetail.vue',
+        context: {
+          previousElement: (element.previous) ? element.previous.id : '##empty##',
+          nextElement: (element.next) ? element.next.id : '##empty##',
+          id: element.node.id,
+          title: element.node.title
+        }
+      })
+    })
+  });
+
 
 
   api.createPages(async ({ graphql, createPage }) => {
@@ -117,8 +84,8 @@ module.exports = function (api) {
         edges {
           node {
             id
+            title
             path
-            name
             description
             logo
             url
@@ -129,7 +96,6 @@ module.exports = function (api) {
     }`);
 
     data.allTech.edges.forEach(function (element) {
-      console.log(element.node.path);
       createPage({
         path: element.node.path,
         component: './src/templates/TechDetail.vue',
@@ -137,13 +103,41 @@ module.exports = function (api) {
           previousElement: (element.previous) ? element.previous.id : '##empty##',
           nextElement: (element.next) ? element.next.id : '##empty##',
           id: element.node.id,
-          techName: element.node.name[0]
+          title: element.node.title
         }
       })
     });
   });
 
 
+
+  api.createPages(async ({ graphql, createPage }) => {
+    const { data } = await graphql(`{
+       allSkill{
+        edges {
+          node {
+            id
+            title
+            path
+            description
+          }
+        }
+      }
+    }`);
+
+    data.allSkill.edges.forEach(function (element) {
+      createPage({
+        path: element.node.path,
+        component: './src/templates/SkillDetail.vue',
+        context: {
+          previousElement: (element.previous) ? element.previous.id : '##empty##',
+          nextElement: (element.next) ? element.next.id : '##empty##',
+          id: element.node.id,
+          title: element.node.title
+        }
+      })
+    });
+  });
 
 
 }

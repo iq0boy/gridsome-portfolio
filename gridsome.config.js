@@ -8,6 +8,7 @@ module.exports = {
   siteName: 'Joseph Pire',
   siteDescription: 'An enthusiast junior dev',
   siteUrl: 'http://localhost:8080',
+  pathPrefix: '/dist',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
@@ -29,13 +30,6 @@ module.exports = {
       options: {
         path: './content/site/*.json'
       }
-    }, 
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'Author',
-        path: './content/author/*.md'
-      }
     },
     {
       use: '@gridsome/source-filesystem',
@@ -47,24 +41,64 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'Project',
-        path: './content/projects/*.md'
+        typeName: 'Skill',
+        path: './content/skills/*.md'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'Blog',
-        path: './content/blog/**/*.md',
+        typeName: 'Diploma',
+        path: './content/diplomas/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Certification',
+        path: './content/certifications/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Interest',
+        path: './content/interests/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Language',
+        path: './content/languages/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Project',
+        path: './content/projects/*.md',
         refs: {
-          author: 'Author',
-          tags: {
-            typeName: 'Tag',
-            create: true
+          skills: {
+            typeName: 'Skill',
           },
-          category: {
-            typeName: 'Category',
-            create: true
+          techs: {
+            typeName: 'Tech'
+          }
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Job',
+        path: './content/jobs/*.md',
+        refs: {
+          skills: {
+            typeName: 'Skill',
+          },
+          techs: {
+            typeName: 'Tech'
           }
         }
       }
@@ -92,26 +126,20 @@ module.exports = {
     }
   },
   templates: {
-    Blog: [{
-      path: '/blog/:title'
-    }],
-    Category: [{
-      path: '/category/:title',
-      component: '~/templates/Category.vue'
-    }],
-    Author: [{
-      path: '/author/:name',
-      component: '~/templates/Author.vue'
-    }],
-    Tag: [{
-      path: '/tags/:title',
-      component: '~/templates/Tag.vue'
-    }],
     Project: [{
-      path: '/projects/:name',
+      path: (node) => '/projects/' + node.title.toLowerCase().split(' ').join('-'),
+      component: '~/templates/ProjectDetail.vue'
+    }],
+    Job: [{
+      path: (node) => '/jobs/' + node.title.toLowerCase().split(' ').join('-'),
+      component: '~/templates/JobDetail.vue'
     }],
     Tech: [{
-      path: '/techs/:name'
+      path: (node) => '/techs/' + node.title.toLowerCase().split(' ').join('-'),
+      component: '~/templates/TechDetail.vue'
+    }],
+    Skill: [{
+      path: '/skills/:title'
     }]
   }
 }
