@@ -5,9 +5,11 @@
                 lien
             </g-link>-->
 
-        <ul class="flex mb-3">
-            <li  class="uppercase font-medium text-xs text-blue-700 mt-3" v-for="(category, index) in record.categories">
-                <span>{{ category }}</span><span class="ml-2 mr-2" v-if="index+1 < record.categories.length">-</span>
+        <ul class="flex flex-wrap mb-5">
+            <li  class=" uppercase font-medium text-xs text-blue-700 mt-3" v-for="(skill, index) in record.skills">
+                <g-link :to="skill.path">
+                    <span >{{ skill.shortName }}</span><span class="ml-2 mr-2" v-if="index+1 < record.skills.length">-</span>
+                </g-link>
             </li>
         </ul>
 
@@ -16,10 +18,22 @@
             <g-link :to="record.path">
 
                 <h2 class="post-card-title mt-0">
-                    {{ record.name[0] }}
+                    {{ record.title }}
                 </h2>
                 <p class="post-card-excerpt">{{ record.shortDescription }}</p>
-                <p class="pt-4">{{ record.monthYear }}</p>
+
+       <!--         <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-10">
+                    <div class="border-l-4 p-4">
+                        <p class="font-bold">Status : {{record.status.charAt(0).toUpperCase() + record.status.slice(1)}}</p>
+                        <p>Started : {{ record.monthYear}}</p>
+                    </div>
+                </div>-->
+
+                <blockquote>
+                    <p class="font-bold">Status : {{record.status.charAt(0).toUpperCase() + record.status.slice(1)}}</p>
+                    <p>Started : {{ record.monthYear}}</p>
+                </blockquote>
+
             </g-link>
 
 <!--
@@ -59,9 +73,9 @@
 
         </div>
 
-        <ul class="flex mt-3">
-            <li  class="uppercase font-medium text-xs text-blue-700 mt-3" v-for="(tool, index) in record.tools">
-                <span><g-link :to="{ path: (generateTechPath(tool)) }">{{ tool }}</g-link></span><span class="ml-2 mr-2" v-if="index+1 < record.tools.length">-</span>
+        <ul class="hidden sm:flex flex-wrap items-center">
+            <li class="mt-5" v-for="(tech, index) in record.techs">
+                <g-link :to="{ path: tech.path }"><span class="tech-title text-xs bg-transparent hover:text-blue-700 py-2 px-4 mr-2 border hover:border-blue-500 border-gray-600 text-gray-700 rounded-full">{{ tech.title }}</span></g-link>
             </li>
         </ul>
 
@@ -69,46 +83,15 @@
     </div>
 </template>
 
-<static-query>
-query {
-  allTech{
-    edges {
-      node {
-        id
-        path
-        name
-        description
-        logo
-        url
-        color
-      }
-    }
-  }
-}
-</static-query>
-
 <script>
     export default {
         props: {
             record: {},
-            techs: [],
             border: {
                 type: Boolean,
                 default: true
             }
         },
-        methods: {
-            // generateTechPath(tool) {
-            //     return '/techs/' + tool
-            // },
-            generateTechPath(tool) {
-                const correspondingTech =  this.$static.allTech.edges.filter( tech => tech.node.name[0] === tool );
-                if (correspondingTech.length === 0) return  '/techs/' + tool; // javascript markdown is dead :c
-                return this.$static.allTech.edges.filter( tech => tech.node.name[0] === tool )[0].node.path;
-            }
-        },
-        computed: {
-        }
     };
 </script>
 
