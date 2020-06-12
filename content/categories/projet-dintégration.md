@@ -1,3 +1,0 @@
----
-name: Projet d'intégration
----

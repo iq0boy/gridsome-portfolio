@@ -7,8 +7,8 @@
       "external": false
     },
     {
-      "name": "About",
-      "link": "/about",
+      "name": "Cursus",
+      "link": "/cursus",
       "external": false
     },
     {
@@ -17,8 +17,8 @@
       "external": false
     },
     {
-      "name": "Contact",
-      "link": "/contact",
+      "name": "Services",
+      "link": "/services",
       "external": false
     }
   ],
