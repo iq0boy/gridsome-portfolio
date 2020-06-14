@@ -35,8 +35,8 @@ collections:
       - {label: "Status", name: "status", widget: "string"}
       - {label: "CreatedAt", name: "createdAt", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "id", searchFields: ["title"], multiple: true, required: false}
-      - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "id", searchFields: ["title"], multiple: true, required: false}
+      - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "id", displayFields: "title", searchFields: ["title"], multiple: true, required: false}
+      - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "id", displayFields: "title", searchFields: ["title"], multiple: true, required: false}
 
   - name: "skills"
     label: "Skills"
@@ -110,5 +110,5 @@ collections:
       - {label: "Ended At", name: "endedAt", widget: "datetime"}
       - {label: "Employer", name: "employer", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "id", searchFields: ["title"], multiple: true, required: false}
-      - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "id", searchFields: ["title"], multiple: true, required: false}
+      - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "id", displayFields: "title", searchFields: ["title"], multiple: true, required: false}
+      - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "id", displayFields: "title", searchFields: ["title"], multiple: true, required: false}
