@@ -27,7 +27,8 @@ collections:
     label: "Projects"
     folder: "content/projects"
     create: true
-    identifier_field: "id"
+    identifier_field: id
+    slug: id.md
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
@@ -43,21 +44,21 @@ collections:
     label: "Skills"
     folder: "content/skills"
     create: true
-    identifier_field: "id"
+    identifier_field: id
+    slug: id.md
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Short Name", name: "shortName", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Color", name: "color", widget: "string", required: false}
 
 
   - name: "certifications"
     label: "Certifications"
     folder: "content/certifications"
     create: true
-    identifier_field: "id"
+    identifier_field: id
+    slug: id.md
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
@@ -69,7 +70,8 @@ collections:
     label: "Diplomas"
     folder: "content/diplomas"
     create: true
-    identifier_field: "id"
+    identifier_field: id
+    slug: id.md
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
@@ -82,7 +84,8 @@ collections:
     label: "Languages"
     folder: "content/languages"
     create: true
-    identifier_field: "id"
+    identifier_field: id
+    slug: id.md
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
@@ -94,7 +97,8 @@ collections:
     label: "Interests"
     folder: "content/interests"
     create: true
-    identifier_field: "id"
+    identifier_field: id
+    slug: id.md
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
@@ -104,7 +108,8 @@ collections:
     label: "Jobs"
     folder: "content/jobs"
     create: true
-    identifier_field: "id"
+    identifier_field: id
+    slug: id.md
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
