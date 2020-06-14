@@ -32,11 +32,11 @@ collections:
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
       - {label: "ShortDescription", name: "shortDescription", widget: "text"}
       - {label: "Banner", name: "banner", widget: "image",  required: false}
       - {label: "Status", name: "status", widget: "string"}
       - {label: "CreatedAt", name: "createdAt", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "id", searchFields: ["title"], multiple: true, required: false}
       - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "id", searchFields: ["title"], multiple: true, required: false}
 
@@ -114,9 +114,9 @@ collections:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "ShortDescription", name: "shortDescription", widget: "text"}
-      - {label: "Description", name: "description", widget: "text"}
       - {label: "Started At", name: "startedAt", widget: "datetime"}
       - {label: "Ended At", name: "endedAt", widget: "datetime"}
       - {label: "Employer", name: "employer", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "id", searchFields: ["title"], multiple: true, required: false}
       - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "id", searchFields: ["title"], multiple: true, required: false}

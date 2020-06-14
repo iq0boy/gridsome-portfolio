@@ -65,7 +65,7 @@
 
             <div class="lg:mx-32 md:mx-16 px-4 sm:px-0">
                 <section class="post-content container mx-auto relative font-serif text-gray-700">
-                    <div class="post-content-text text-xl" v-html="$page.project.description"></div>
+                    <div class="post-content-text text-xl" v-html="$page.project.content"></div>
                 </section>
             </div>
 
@@ -111,7 +111,7 @@
     project(id: $id) {
       title
       path
-      description
+      content
       shortDescription
       status
       createdAt
@@ -132,7 +132,7 @@
     previous: project(id: $previousElement) {
       title
       path
-      description
+      content
       shortDescription
       status
       createdAt
@@ -152,7 +152,7 @@
     next: project(id: $nextElement) {
       title
       path
-      description
+      content
       shortDescription
       status
       createdAt

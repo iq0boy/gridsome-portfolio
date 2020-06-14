@@ -86,7 +86,7 @@ module.exports = function (api) {
             id
             title
             path
-            description
+            content
             logo
             url
             color

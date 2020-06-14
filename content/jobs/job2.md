@@ -1,15 +1,7 @@
 ---
 id: job2
 title: Web developer
-shortDescription: >
-    Developer on the iT.SCHOOL project
-                 
-description: >
-    Symfony developer on the iT.SCHOOL project
-    
-    Development, testing, deployment, monitoring, maintenance and debugging.
-    Focus on functionnal testing and refactoring of the existing codebase
-    
+shortDescription: Developer on the iT.SCHOOL project     
 startedAt: 2018-08-15T21:20:00.000Z
 endedAt: 2019-01-15T22:20:00.000Z
 employer: Keyros S.A.
@@ -31,3 +23,7 @@ techs:
   - tech12
   - tech13
 ---
+Symfony developer on the iT.SCHOOL project
+
+Development, testing, deployment, monitoring, maintenance and debugging.
+Focus on functionnal testing and refactoring of the existing codebase

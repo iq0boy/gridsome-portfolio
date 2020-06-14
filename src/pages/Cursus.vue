@@ -87,7 +87,7 @@ query {
       node {
         id
         title
-        description
+        content
         startedAt(format:"MMM YYYY")
         endedAt(format:"MMM YYYY")
         employer

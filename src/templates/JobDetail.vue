@@ -65,7 +65,7 @@
 
             <div class="lg:mx-32 md:mx-16 px-4 sm:px-0">
                 <section class="post-content container mx-auto relative font-serif text-gray-700">
-                    <div class="post-content-text text-xl" v-html="$page.job.description"></div>
+                    <div class="post-content-text text-xl" v-html="$page.job.content"></div>
                 </section>
             </div>
 
@@ -111,7 +111,7 @@
  query($id: ID!, $previousElement: ID!, $nextElement: ID!) {
     job(id: $id) {
       title
-      description
+      content
       shortDescription
       startedAt(format:"MMM YYYY")
       endedAt(format:"MMM YYYY")
@@ -132,7 +132,7 @@
 
     previous: job(id: $previousElement) {
       title
-      description
+      content
       startedAt(format:"MMM YYYY")
       endedAt(format:"MMM YYYY")
       employer
@@ -151,7 +151,7 @@
 
     next: job(id: $nextElement) {
       title
-      description
+      content
       startedAt(format:"MMM YYYY")
       endedAt(format:"MMM YYYY")
       employer
