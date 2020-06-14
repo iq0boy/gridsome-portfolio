@@ -12,7 +12,6 @@ collections:
     label: "Techs"
     folder: "content/techs"
     create: true
-    identifier_field: id
     slug: id.md
     extension: 'md'
     fields:
