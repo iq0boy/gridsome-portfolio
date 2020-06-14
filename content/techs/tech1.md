@@ -1,9 +1,10 @@
 ---
 id: tech1
 title: PHP
-description: "PHP is a popular general-purpose scripting language that is especially suited to web development.
-Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world."
 url: https://www.php.net/
 logo: ../../static/uploads/logo-php.png
 color: "#858fb8"
 ---
+PHP is a popular general-purpose scripting language that is especially suited to web development.
+
+Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.

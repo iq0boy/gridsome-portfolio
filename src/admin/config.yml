@@ -12,14 +12,16 @@ collections:
     label: "Techs"
     folder: "content/techs"
     create: true
-    identifier_field: "id"
+    identifier_field: id
+    slug: id.md
+    extension: 'md'
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
       - {label: "Url", name: "url", widget: "string", required: false }
       - {label: "Logo", name: "logo", widget: "image"}
       - {label: "Color", name: "color", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "projects"
     label: "Projects"
