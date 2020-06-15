@@ -8,7 +8,7 @@ module.exports = {
   siteName: 'Joseph Pire',
   siteDescription: 'An enthusiast junior dev',
   siteUrl: 'http://localhost:8080',
-  pathPrefix: '/dist',
+  // pathPrefix: '/dist',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
