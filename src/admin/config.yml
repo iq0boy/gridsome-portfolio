@@ -1,6 +1,12 @@
 backend:
   name: github
   repo: PireJoseph/gridsome-portfolio
+#  branch: dev
+  auth_endpoint: auth
+  base_url: https://api.netlify.com
+  api_root: https://api.github.com
+  site_domain: location.hostname
+#  comment the previous line when on localhost
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
