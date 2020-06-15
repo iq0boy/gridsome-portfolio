@@ -23,7 +23,7 @@ query($page:Int) {
       node {
        id
         title
-        description
+        content
         shortDescription
         status
         createdAt
