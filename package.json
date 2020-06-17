@@ -25,13 +25,13 @@
     "tailwindcss": "^1.2.0",
     "tailwindcss-gradients": "^3.0.0",
     "tailwindcss-tables": "^0.4.0",
-    "v-tooltip": "^2.0.3",
-    "vue-slick-carousel": "^1.0.5"
+    "v-tooltip": "^2.0.3"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/vue-fontawesome": "^0.1.9"
+    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "gridsome-plugin-svg": "^0.0.13"
   }
 }
