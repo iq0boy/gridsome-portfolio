@@ -1,16 +1,18 @@
 <template>
-  <div class="fixed inset-0 h-20 sm:h-16 bg-black">
-    <nav 
-    class="container mx-auto px-4 sm:px-0 py-4 transition-all transition-500"
+  <div class="fixed inset-0 h-20 sm:h-16 bg-black"
     v-bind:class="{
-      'opacity-100': !disableScroll && scrollPosition > headerHeight, 
-      'opacity-0': !disableScroll && scrollPosition < headerHeight
-    }">
+    'first-plan opacity-100' : navBarShow,
+    'opacity-0' : !navBarShow
+  }"
+  >
+    <nav 
+    class="container mx-auto px-4 sm:px-0 py-4 transition-all transition-500">
       <div class="flex flex-col sm:flex-row flex-grow items-center w-auto">
 
         <div class="hidden md:flex items-center flex-shrink-0 text-white mr-6">
-          <span class="font-semibold text-xl tracking-tight">{{ $static.metadata.siteAuthor }}</span>
-          <font-awesome :icon="['fas', 'code']" class="ml-3"></font-awesome>
+<!--          <span class="font-semibold text-xl tracking-tight">{{ $static.metadata.siteAuthor }}</span>-->
+          <g-image src="~/favicon.png" width="25" height="25" fit="contain"></g-image>
+<!--          <font-awesome :icon="['fas', 'code']" class="ml-3"></font-awesome>-->
         </div>
 
         <div class="text-sm pb-2 sm:py-0 w-full sm:w-auto flex-grow uppercase">
@@ -95,10 +97,18 @@ export default {
       headerHeight: 0
     };
   },
+  computed: {
+    navBarShow: function () {
+      return this.headerHeight===0 || (!this.disableScroll  && this.scrollPosition > this.headerHeight)
+    }
+  },
 
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY;
+    },
+    updateHeaderSize() {
+      this.headerHeight = document.getElementById("header").clientHeight;
     },
     setHeaderHeight(height) {
       this.headerHeight = height;
@@ -107,9 +117,12 @@ export default {
 
   mounted() {
     if( !this.disableScroll ) {
-      var height = document.getElementById("header").clientHeight;
-      this.setHeaderHeight(height);
-      window.addEventListener("scroll", this.updateScroll);
+      if(null !== document.getElementById("header")) {
+        let height = document.getElementById("header").clientHeight;
+        this.setHeaderHeight(height);
+        window.addEventListener("scroll", this.updateScroll);
+        window.addEventListener("resize", this.updateHeaderSize);
+      }
     }
   }
 };
@@ -132,3 +145,9 @@ query {
   }
 }
 </static-query>
+
+<style scoped>
+  .first-plan {
+    z-index: 2000;
+  }
+</style>
