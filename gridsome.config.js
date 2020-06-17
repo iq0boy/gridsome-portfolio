@@ -11,6 +11,9 @@ module.exports = {
   // pathPrefix: '/dist',
   plugins: [
     {
+      use: 'gridsome-plugin-svg',
+    },
+    {
       use: 'gridsome-plugin-tailwindcss',
       options: {
         tailwindConfig: './tailwind.config.js',
@@ -19,7 +22,7 @@ module.exports = {
           whitelistPatterns: [/fa-$/, /blockquote$/, /code$/, /pre$/, /table$/, /table-$/]
         },
         presetEnvConfig: {},
-        shouldPurge: false,
+        shouldPurge: true,
         shouldImport: true,
         shouldTimeTravel: true,
         shouldPurgeUnusedKeyframes: true,
