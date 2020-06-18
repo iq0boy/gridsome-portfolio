@@ -49,6 +49,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Short Name", name: "shortName", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "id", displayFields: ["title"], searchFields: ["title"], multiple: true, required: false}
 
 
   - name: "certifications"
