@@ -3,35 +3,44 @@
 
     <div class="container sm:pxi-0 mx-auto overflow-x-hidden pt-24 pb-24">
 
-      <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 pt-8 flex justify-between items-center">
-        <h1 class="pb-0 my-0 text-5xl font-medium">{{ $page.skill.title }}</h1>
+      <!-- Header -->
+      <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 pt-8 px-0 mb-4 border-b pb-10">
+
+        <div >
+          <h1 class="pb-0 my-0 text-5xl font-medium">{{ $page.skill.title }}</h1>
+        </div>
+
+        <div class="text-2xl pt-4 text-gray-700 font-serif" v-html="$page.skill.shortDescription"></div>
+
       </div>
 
+      <!-- Content -->
       <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-6">
         <section class="post-content container mx-auto relative font-serif text-gray-700">
-          <div class="post-content-text text-xl" v-html="$page.skill.description"></div>
+          <div class="post-content-text text-xl" v-html="$page.skill.content"></div>
         </section>
       </div>
 
-      <div class="flex-col lg:mx-32 md:mx-16 px-4 sm:px-0 mt-6">
+      <!-- Footer -->
+      <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-10">
 
-        <div  v-if="$page.skill.relatedJobs.edges.length">
+        <blockquote  v-if="$page.skill.relatedJobs.edges.length">
           <h6>Related jobs</h6>
           <ul>
             <li v-for="job in $page.skill.relatedJobs.edges" :key="job.node.id">
               <g-link :to="job.node.path">{{ job.node.title}}</g-link>
             </li>
           </ul>
-        </div>
+        </blockquote>
 
-        <div v-if="$page.skill.relatedProjects.edges.length">
+        <blockquote v-if="$page.skill.relatedProjects.edges.length">
           <h6>Related projects</h6>
           <ul>
             <li v-for="project in $page.skill.relatedProjects.edges" :key="project.node.id">
               <g-link :to="project.node.path">{{ project.node.title}}</g-link>
             </li>
           </ul>
-        </div>
+        </blockquote>
       </div>
 
     </div>
@@ -44,7 +53,8 @@ query ($id: ID!) {
   skill (id: $id){
     id
     title
-    description
+    shortDescription
+    content
     path
     relatedJobs: belongsTo(filter:{ typeName: {eq: Job}}){
       totalCount
