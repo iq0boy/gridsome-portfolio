@@ -2,6 +2,7 @@
 id: skill9
 title: Applied physics
 shortName: Physics
-description: Electronics, analog and digital signal processing (MATLAB), electricity.
+shortDescription: Electronics, analog and digital signal processing 
 techs:
 ---
+Electronics, analog and digital signal processing (MATLAB), electricity.

@@ -2,7 +2,8 @@
 id: skill3
 title: Web server configuration
 shortName: Server 
-description: Apache, Nginx
+shortDescription: Web server configuration
 techs:
   - tech12
 ---
+Web server configuration

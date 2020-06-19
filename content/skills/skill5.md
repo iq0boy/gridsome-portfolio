@@ -2,7 +2,7 @@
 id: skill5
 title: Web development
 shortName: Web
-description: HTML5, CSS3 (Tailwind, Bootstrap, W3.CSS), JavaScript (Vue.js,gridsome, React, Gatsby, nodeJs, jQuery), PHP (Symfony)
+shortDescription: HTML5, CSS3 (Tailwind, Bootstrap, W3.CSS), JavaScript
 techs:
   - tech1
   - tech2
@@ -16,3 +16,4 @@ techs:
   - tech13
   - tech14
 ---
+HTML5, CSS3 (Tailwind, Bootstrap, W3.CSS), JavaScript
