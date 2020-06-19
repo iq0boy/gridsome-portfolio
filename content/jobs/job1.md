@@ -9,8 +9,8 @@ skills:
   - skill1
   - skill2
   - skill3
-  - skill5
   - skill6
+  - skill13
 techs:
   - tech1
   - tech2
