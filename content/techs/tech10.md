@@ -1,6 +1,7 @@
 ---
 id: tech10
 title: Docker
+shortDescription: Virtualization on manageable containers
 url: https://www.docker.com/
 logo: ../../static/uploads/docker-logo.png
 color: "#039bc6"

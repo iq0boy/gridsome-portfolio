@@ -1,6 +1,7 @@
 ---
 id: tech5
 title: CSS
+shortDescription: Style sheet language used for describing the presentation of a document.
 logo: ../../static/uploads/logo-css.png
 color: "#016db4"
 ---

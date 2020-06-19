@@ -1,6 +1,7 @@
 ---
 id: tech14
 title: tailwindcss
+shortDescription: Highly customizable, low-level CSS framework
 url: https://tailwindcss.com/
 logo: ../../static/uploads/logo-tailwindcss.png
 banner: ""

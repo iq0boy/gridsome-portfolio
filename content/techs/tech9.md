@@ -1,6 +1,7 @@
 ---
 id: tech9
 title: Java
+shortDescription: General-purpose programming language 
 url: https://www.java.com
 logo: ../../static/uploads/logo-java.png
 color: "#e76f00"

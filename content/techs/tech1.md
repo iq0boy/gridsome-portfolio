@@ -1,6 +1,7 @@
 ---
 id: tech1
 title: PHP
+shortDescription: Popular general-purpose scripting language that is especially suited to web development.
 url: https://www.php.net/
 logo: ../../static/uploads/logo-php.png
 color: "#858fb8"

@@ -1,6 +1,7 @@
 ---
 id: tech12
 title: Apache
+shortDescription: Free and open-source cross-platform HTTP Server
 url: https://httpd.apache.org/
 logo: ../../static/uploads/logo-apache.png
 color: "#ac0000"

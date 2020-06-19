@@ -1,6 +1,7 @@
 ---
 id: tech8
 title: MySQL
+shortDescription: Relational database management system
 url: https://www.mysql.com/
 logo: ../../static/uploads/logo-mysql.png
 color: "#00758f"
