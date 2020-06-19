@@ -86,10 +86,6 @@ module.exports = function (api) {
             id
             title
             path
-            content
-            logo
-            url
-            color
           }
         }
       }
@@ -119,7 +115,6 @@ module.exports = function (api) {
             id
             title
             path
-            description
           }
         }
       }
