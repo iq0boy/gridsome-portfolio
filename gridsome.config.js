@@ -45,7 +45,12 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Skill',
-        path: './content/skills/*.md'
+        path: './content/skills/*.md',
+        refs: {
+          techs: {
+            typeName: 'Tech'
+          }
+        }
       }
     },
     {
