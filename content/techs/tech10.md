@@ -5,6 +5,7 @@ shortDescription: Virtualization on manageable containers
 url: https://www.docker.com/
 logo: ../../static/uploads/docker-logo.png
 color: "#039bc6"
+featured: false
 ---
 Docker is a set of platform as a service (PaaS) products that uses OS-level virtualization to deliver software in packages called containers.
 

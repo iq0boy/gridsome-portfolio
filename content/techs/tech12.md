@@ -5,6 +5,7 @@ shortDescription: Free and open-source cross-platform HTTP Server
 url: https://httpd.apache.org/
 logo: ../../static/uploads/logo-apache.png
 color: "#ac0000"
+featured: false
 ---
 The Apache HTTP Server, colloquially called Apache, is a free and open-source cross-platform web server software
 Apache supports a variety of features, many implemented as compiled modules which extend the core functionality.

@@ -4,6 +4,7 @@ title: OCR with Python
 status: done
 createdAt: 2017-06-12T03:01:00.000Z
 shortDescription: "Optical character recognition software built in python"
+featured: false
 skills:
   - skill4  
   - skill9

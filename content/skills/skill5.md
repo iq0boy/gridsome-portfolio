@@ -3,6 +3,7 @@ id: skill5
 title: Web development
 shortName: Web
 shortDescription: HTML5, CSS3 (Tailwind, Bootstrap, W3.CSS), JavaScript
+featured: false
 techs:
   - tech1
   - tech2

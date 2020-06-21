@@ -4,6 +4,7 @@ title: Java MVC application
 status: done
 createdAt: 2016-06-12T02:58:00.000Z
 shortDescription: "Conception, design, and development of a JAVA application."
+featured: false
 skills:
   - skill4
   - skill6

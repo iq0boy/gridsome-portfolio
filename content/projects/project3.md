@@ -4,6 +4,7 @@ title: EPHEC Sport
 status: done
 createdAt: 2019-06-06T03:04:00.000Z
 shortDescription: "A full stack web application made to manage and promote EPHEC Sport"
+featured: true
 skills:
   - skill1
   - skill2

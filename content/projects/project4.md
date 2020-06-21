@@ -4,6 +4,7 @@ title: MySmartPlug
 status: done
 createdAt: 2018-06-01T03:03:00.000Z
 shortDescription: A multidisciplinary integration project
+featured: true
 skills:
   - skill1
   - skill2

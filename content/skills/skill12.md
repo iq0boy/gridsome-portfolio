@@ -3,6 +3,7 @@ id: skill12
 title: Front end development
 shortName: Front end
 shortDescription: Development of web user interfaces based on framework with javascript, css, markdown and more
+featured: true
 techs:
   - tech3
   - tech4

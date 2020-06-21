@@ -5,6 +5,7 @@ shortDescription: Popular general-purpose scripting language that is especially 
 url: https://www.php.net/
 logo: ../../static/uploads/logo-php.png
 color: "#858fb8"
+featured: false
 ---
 PHP is a popular general-purpose scripting language that is especially suited to web development.
 

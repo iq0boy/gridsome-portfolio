@@ -4,6 +4,7 @@ title: Network Infrastructure
 status: done
 createdAt: 2016-06-12T02:59:00.000Z
 shortDescription: "A cluster of services on top of docker"
+featured: false
 skills:
   - skill10
   - skill11

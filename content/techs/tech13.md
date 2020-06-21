@@ -6,6 +6,7 @@ url: https://symfony.com/
 logo: ../../static/uploads/logo-symfony.png
 banner: ""
 color: "#000000" 
+featured: true
 ---
 Symfony is a PHP web application framework and a set of reusable PHP components/libraries.
 
