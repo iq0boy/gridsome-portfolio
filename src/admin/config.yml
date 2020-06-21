@@ -22,6 +22,7 @@ collections:
       - {label: "Url", name: "url", widget: "string", required: false }
       - {label: "Logo", name: "logo", widget: "image"}
       - {label: "Color", name: "color", widget: "string", required: false}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "projects"
@@ -36,6 +37,7 @@ collections:
       - {label: "Banner", name: "banner", widget: "image",  required: false}
       - {label: "Status", name: "status", widget: "string"}
       - {label: "CreatedAt", name: "createdAt", widget: "datetime"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "id", displayFields: ["title"], searchFields: ["title"], multiple: true, required: false}
       - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "id", displayFields: ["title"], searchFields: ["title"], multiple: true, required: false}
@@ -50,7 +52,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Short Name", name: "shortName", widget: "string"}
       - {label: "ShortDescription", name: "shortDescription", widget: "text"}
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "id", displayFields: ["title"], searchFields: ["title"], multiple: true, required: false}
 
@@ -62,12 +64,13 @@ collections:
     slug: id.md
     fields:
       - {label: "Id", name: "id", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "ShortDescription", name: "shortDescription", widget: "text"}
-      - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Provider", name: "provider", widget: "string"}
       - {label: "Provider Logo", name: "providerLogo", widget: "image", required: false}
       - {label: "AcquiredAt", name: "acquiredAt", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
 
   - name: "diplomas"
     label: "Diplomas"
@@ -78,10 +81,10 @@ collections:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "ShortDescription", name: "shortDescription", widget: "text"}
-      - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Provider", name: "provider", widget: "string"}
       - {label: "Provider Logo", name: "providerLogo", widget: "image", required: false}
       - {label: "AcquiredAt", name: "acquiredAt", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "languages"
     label: "Languages"
@@ -103,7 +106,8 @@ collections:
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "ShortDescription", name: "shortDescription", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "jobs"
     label: "Jobs"
