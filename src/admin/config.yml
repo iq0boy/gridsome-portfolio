@@ -62,9 +62,11 @@ collections:
     slug: id.md
     fields:
       - {label: "Id", name: "id", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"
+      - {label: "ShortDescription", name: "shortDescription", widget: "text"}
       - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Provider", name: "provider", widget: "string"}
+      - {label: "Provider Logo", name: "providerLogo", widget: "image", required: false}
       - {label: "AcquiredAt", name: "acquiredAt", widget: "datetime"}
 
   - name: "diplomas"
@@ -75,6 +77,7 @@ collections:
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "ShortDescription", name: "shortDescription", widget: "text"}
       - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Provider", name: "provider", widget: "string"}
       - {label: "Provider Logo", name: "providerLogo", widget: "image", required: false}
@@ -114,6 +117,8 @@ collections:
       - {label: "Started At", name: "startedAt", widget: "datetime"}
       - {label: "Ended At", name: "endedAt", widget: "datetime"}
       - {label: "Employer", name: "employer", widget: "string"}
+      - {label: "Employer Logo", name: "employerLogo", widget: "image", required: true}
+      - {label: "Location", name: "location", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "id", displayFields: ["title"], searchFields: ["title"], multiple: true, required: false}
       - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "id", displayFields: ["title"], searchFields: ["title"], multiple: true, required: false}
