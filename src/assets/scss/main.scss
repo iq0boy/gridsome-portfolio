@@ -9,6 +9,10 @@ html, body, #app {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 blockquote {
   @apply border-l;
   @apply border-l-4;
@@ -148,6 +152,10 @@ ul {
 
 }
 
+.gradient {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
 body[data-theme="dark"] {
   
     //background-color: #191b1f;
@@ -196,5 +204,10 @@ body[data-theme="dark"] {
         }
       }
     }
+
+    .gradient {
+      background: linear-gradient(90deg,black -14%, #742a2a 250%)
+    }
+
   
 }
