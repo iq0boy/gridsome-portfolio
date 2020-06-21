@@ -4,7 +4,9 @@ title: Web Developer - internship
 shortDescription: Development of a new module for the iT.SCHOOL project
 startedAt: 2018-02-01T22:16:00.000Z
 endedAt: 2018-05-15T21:16:00.000Z
-employer: "Keyros S.A."
+employer: Keyros S.A.
+employerLogo: ../../static/uploads/logo-it-school.png
+location: Louvain-la-Neuve
 skills:
   - skill2
   - skill3
@@ -16,7 +18,6 @@ skills:
   - skill13
 techs:
   - tech1
-  - tech2
   - tech4
   - tech5
   - tech6

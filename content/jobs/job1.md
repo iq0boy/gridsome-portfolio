@@ -5,6 +5,8 @@ shortDescription: Supervision, development, monitoring, testing and debugging of
 startedAt: 2019-11-25T22:21:00.000Z
 endedAt: 2020-04-15T21:21:00.000Z
 employer: Utopix Pictures
+employerLogo: ../../static/uploads/logo-utopix.png
+location: La Hulpe
 skills:
   - skill1
   - skill2
@@ -16,6 +18,7 @@ techs:
   - tech2
   - tech8
   - tech10
+  - tech12
   - tech13
 ---
 Supervision, development, monitoring, testing and debugging of an API built with Symfony and API Platform. 

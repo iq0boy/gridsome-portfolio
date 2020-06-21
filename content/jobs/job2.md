@@ -5,6 +5,8 @@ shortDescription: Developer on the iT.SCHOOL project
 startedAt: 2018-08-15T21:20:00.000Z
 endedAt: 2019-01-15T22:20:00.000Z
 employer: Keyros S.A.
+employerLogo: ../../static/uploads/logo-it-school.png
+location: Louvain-la-Neuve
 skills:
   - skill2
   - skill3
@@ -16,7 +18,6 @@ skills:
   - skill13
 techs:
   - tech1
-  - tech2
   - tech4
   - tech5
   - tech6
