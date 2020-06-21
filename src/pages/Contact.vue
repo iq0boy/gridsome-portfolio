@@ -8,8 +8,11 @@
                 <form
                         action="https://formspree.io/mlepbawr"
                         method="POST"
-                        class="w-full"
+                        class="w-full relative"
                 >
+                    <figure id="contact-logo" class="absolute">
+                        <ContactLogo></ContactLogo>
+                    </figure>
 
                     <fieldset class="mt-2">
                         <label for="_replyto">Your email :</label>
@@ -44,9 +47,14 @@
 </template>
 
 <script>
+    import ContactLogo from '~/assets/svg/undraw_connection_b38q.svg?inline'
+
     export default {
         metaInfo: {
             title: "Contact"
+        },
+        components: {
+            ContactLogo
         }
     };
 </script>
@@ -72,5 +80,14 @@
         background-color: lightgrey;
         border-color: black;
         color: #191b1f;
+    }
+    #contact-logo {
+        z-index: -1;
+        top: -15rem;
+        right: -18rem;
+        width: 80%;
+    }
+    svg {
+        width: 100%;
     }
 </style>
