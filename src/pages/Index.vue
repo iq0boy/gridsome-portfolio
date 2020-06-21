@@ -192,7 +192,7 @@
 
 <page-query>
 query {
-    allTech(filter: {title: {in: ["API Platform","Vuejs","tailwindcss"]}}) {
+    allTech(filter: {featured: {eq: true}}) {
       edges {
         node {
           id
@@ -204,7 +204,7 @@ query {
       }
     },
       allSkill(
-      filter: {id: {in: ["skill7","skill12", "skill13"]}},
+      filter: {featured: {eq: true}},
       sortBy: "id"
     )
     {
@@ -255,50 +255,54 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
     ul {
         list-style: none;
         margin: 0;
     }
 
-    #waves-container {
-        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-    }
-    body[data-theme="dark"] #last-wave-light, body[data-theme="light"] #last-wave-dark  {
-        display: none;
-    }
-
-    body[data-theme="light"] #last-wave-light, body[data-theme="dark"] #last-wave-dark {
-        display: block;
-    }
-
-    body[data-theme="dark"] #waves-transition {
-        background-color: #191b1f;
-    }
-
-    body[data-theme="light"] #waves-transition {
-        background-color: white;
-    }
-
-    body[data-theme="dark"] #call-to-action-container, body[data-theme="dark"] #waves-container  {
-        background: linear-gradient(90deg,black 60%, #742a2a 250%);
-    }
-
-    body[data-theme="light"] #call-to-action-container, body[data-theme="light"] #waves-container  {
-        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-    }
-
-
-    body[data-theme="dark"] #about-me {
-        background-color: beige;
-    }
-    body[data-theme="dark"] #about-me h1, body[data-theme="dark"] #about-me h3 {
-        color: black;
+    body[data-theme="dark"] {
+        #last-wave-dark {
+            display: block;
+        }
+        #last-wave-light {
+            display: none;
+        }
+        #waves-transition {
+            background-color: white;
+        }
+        #call-to-action-container,  #waves-container  {
+            background: linear-gradient(90deg,black 60%, #742a2a 250%);
+        }
+        #about-me {
+            background-color: beige;
+            h1, h3 {
+                color: black;
+            }
+        }
+        #main-stack .stack-card {
+            background-color: beige;
+        }
+        .gradient {
+            background: linear-gradient(90deg,black -14%, #742a2a 250%)
+        }
     }
 
-    body[data-theme="dark"] #main-stack .stack-card {
-        background-color: beige;
+    body[data-theme="light"] {
+        #last-wave-dark {
+            display: none;
+        }
+        #last-wave-light {
+            display: block;
+        }
+        #waves-transition {
+            background-color: #191b1f;
+        }
+        #call-to-action-container, #waves-container, .gradient, #waves-container {
+            background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+        }
+
     }
 
     .about-logo {

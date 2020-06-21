@@ -152,10 +152,6 @@ ul {
 
 }
 
-.gradient {
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-}
-
 body[data-theme="dark"] {
   
     //background-color: #191b1f;
@@ -203,10 +199,6 @@ body[data-theme="dark"] {
           @apply text-white;
         }
       }
-    }
-
-    .gradient {
-      background: linear-gradient(90deg,black -14%, #742a2a 250%)
     }
 
   
