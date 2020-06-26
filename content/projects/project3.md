@@ -12,7 +12,6 @@ skills:
   - skill5
   - skill6
   - skill7
-  - skill10  
   - skill12
   - skill13
 techs:
