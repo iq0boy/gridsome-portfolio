@@ -17,21 +17,13 @@
     "gridsome-plugin-netlify-cms-paths": "^0.3.1",
     "gridsome-plugin-tailwindcss": "^2.2.41",
     "gridsome-source-static-meta": "github:noxify/gridsome-source-static-meta#master",
-    "lodash": "^4.17.15",
     "netlify-cms": "^2.10.50",
     "node-sass": "^4.13.1",
     "pluralize": "^8.0.0",
     "sass-loader": "^8.0.2",
-    "tailwindcss": "^1.2.0",
-    "tailwindcss-gradients": "^3.0.0",
-    "tailwindcss-tables": "^0.4.0",
-    "v-tooltip": "^2.0.3"
+    "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-brands-svg-icons": "^5.12.1",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/vue-fontawesome": "^0.1.9",
     "gridsome-plugin-svg": "^0.0.13"
   }
 }
