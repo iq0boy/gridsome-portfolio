@@ -1,11 +1,11 @@
 {
   "social": [
     {
-      "icon": "github",
+      "title": "github",
       "link": "https://github.com/PireJoseph/"
     },
     {
-      "icon": "linkedin",
+      "title": "linkedin",
       "link": "https://www.linkedin.com/in/joseph-pire/"
     }
   ]
