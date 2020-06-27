@@ -85,7 +85,6 @@ import githubLogo from '~/assets/icons/github.svg?inline'
 import linkedInLogo from '~/assets/icons/linkedin.svg?inline'
 import mailLogo from '~/assets/icons/mail.svg?inline'
 
-
 export default {
   components : {
     ThemeSwitcher,
@@ -109,10 +108,10 @@ export default {
       return this.headerHeight===0 || (this.scrollPosition > this.headerHeight)
     },
     githubLink: function () {
-      return this.$static.metadata.social.filter((e)=>e.title="github").pop().link
+      return this.$static.metadata.social.filter((e) => e.title ==="github").pop().link
     },
     linkedInLink: function () {
-      return this.$static.metadata.social.filter((e)=>e.title="linkedin").pop().link
+      return this.$static.metadata.social.filter((e) => e.title ==="linkedin").pop().link
     }
   },
 
@@ -154,7 +153,7 @@ query {
       external
     }
     social {
-      icon
+      title
       link
     }
   }

@@ -6,9 +6,7 @@
       <div class="flex flex-col sm:flex-row flex-grow space-between items-center w-auto height-30px">
 
         <div class="hidden md:flex items-center flex-shrink-0 text-white mr-6">
-          <!--          <span class="font-semibold text-xl tracking-tight">{{ $static.metadata.siteAuthor }}</span>-->
           <g-image class="logo" src="~/favicon.png" width="25" height="25" fit="contain"></g-image>
-          <!--          <font-awesome :icon="['fas', 'code']" class="ml-3"></font-awesome>-->
         </div>
 
         <div class="text-sm flex-grow uppercase pb-2 sm:py-0">
@@ -31,29 +29,6 @@
           </ul>
         </div>
 
-<!--        <div class="w-full sm:w-auto text-gray-400">
-          <ul class="list-none m-0 flex justify-center md:justify-end">
-            <li class="mr-3 self-start">
-              <theme-switcher v-on="$listeners" :theme="theme"/>
-            </li>
-            <li
-              :key="element.name"
-              v-for="(element,index) in $static.metadata.social"
-              class="hover:text-white mr-6"
-            >
-              <span class="text-sm">
-                <a :href="element.link" target="_blank" rel="noopener noreferrer">
-                  <font-awesome :icon="['fab', element.icon]" />
-                </a>
-              </span>
-            </li>
-            <li class="hover:text-white">
-              <g-link to="/contact">
-                <font-awesome :icon="['fas', 'envelope']" />
-              </g-link>
-            </li>
-          </ul>
-        </div>-->
         <!--icons navigations-->
         <div>
           <ul class="list-none m-0 flex justify-center md:justify-end">
@@ -131,7 +106,6 @@ query {
       external
     }
     social {
-      icon
       link
       title
     }
@@ -155,10 +129,10 @@ export default {
   },
   computed: {
     githubLink: function () {
-      return this.$static.metadata.social.filter((e)=>e.title="github").pop().link
+      return this.$static.metadata.social.filter((e) => e.title ==="github").pop().link
     },
     linkedInLink: function () {
-      return this.$static.metadata.social.filter((e)=>e.title="linkedin").pop().link
+      return this.$static.metadata.social.filter((e) => e.title ==="linkedin").pop().link
     }
   },
   components : {
