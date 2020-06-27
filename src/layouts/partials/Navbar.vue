@@ -1,27 +1,26 @@
 <template>
-  <div class="fixed inset-0 h-20 sm:h-16 bg-black"
+  <div id="nav-container" class="fixed inset-0 h-20 sm:h-16 shadow-md"
     v-bind:class="{
     'first-plan opacity-100' : navBarShow,
     'opacity-0' : !navBarShow
   }"
   >
     <nav 
-    class="container mx-auto px-4 sm:px-0 py-4 transition-all transition-500">
+    class="mx-4 sm:px-0 py-4 transition-all transition-500">
       <div class="flex flex-col sm:flex-row flex-grow items-center w-auto">
 
-        <div class="hidden md:flex items-center flex-shrink-0 text-white mr-6">
-<!--          <span class="font-semibold text-xl tracking-tight">{{ $static.metadata.siteAuthor }}</span>-->
+        <!--logo-->
+        <div class="logo hidden md:flex items-center flex-shrink-0  mr-6">
           <g-image src="~/favicon.png" width="25" height="25" fit="contain"></g-image>
-<!--          <font-awesome :icon="['fas', 'code']" class="ml-3"></font-awesome>-->
         </div>
 
+        <!--links navigation-->
         <div class="text-sm pb-2 sm:py-0 w-full sm:w-auto flex-grow uppercase">
           <ul 
-          class="list-none m-0 flex justify-center sm:justify-start text-gray-300 uppercase transition-all transition-500">
+          class="list-none m-0 flex justify-center sm:justify-start uppercase transition-all transition-500">
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.navigation"
-              class="hover:text-white"
               v-bind:class="{'mr-4' : index != Object.keys($static.metadata.navigation).length - 1}"
             >
               <a
@@ -35,28 +34,41 @@
             </li>
           </ul>
         </div>
-        
-        <div class="text-gray-400">
+
+        <!--icons navigations-->
+        <div>
           <ul class="list-none m-0 flex justify-center md:justify-end">
+
+            <!--theme switcher-->
             <li class="mr-3">
               <theme-switcher v-on="$listeners" :theme="theme"/>
             </li>
-            <li
-              :key="element.name"
-              v-for="(element,index) in $static.metadata.social"
-              class="hover:text-white mr-6"
-            >
+
+            <!--github-->
+            <li class="mr-6">
               <span class="text-sm">
-                <a :href="element.link" target="_blank" rel="noopener noreferrer">
-                  <font-awesome :icon="['fab', element.icon]" />
+                <a :href="githubLink" target="_blank" rel="noopener noreferrer">
+                  <githubLogo></githubLogo>
                 </a>
               </span>
             </li>
-            <li class="hover:text-white">
+
+            <!--linkedin-->
+            <li class="mr-6">
+              <span class="text-sm">
+                <a :href="linkedInLink" target="_blank" rel="noopener noreferrer">
+                  <linked-in-logo></linked-in-logo>
+                </a>
+              </span>
+            </li>
+
+            <!--contact-->
+            <li>
               <g-link to="/contact">
-                <font-awesome :icon="['fas', 'envelope']" />
+                <mailLogo></mailLogo>
               </g-link>
             </li>
+
           </ul>
         </div>
 
@@ -67,26 +79,21 @@
 </template>
 
 <script>
-/*
- * I'm a lazy guy, so i used this script
- * https://codepen.io/ninaregli/pen/OjeMLP
- * to calculate the current scroll position
- *
- * Will be used to add/remove the additional
- * css classes to show the sticky navbar
- */
 
 import ThemeSwitcher from '~/components/ThemeSwitcher'
+import githubLogo from '~/assets/icons/github.svg?inline'
+import linkedInLogo from '~/assets/icons/linkedin.svg?inline'
+import mailLogo from '~/assets/icons/mail.svg?inline'
+
 
 export default {
   components : {
-    ThemeSwitcher
+    ThemeSwitcher,
+    githubLogo,
+    linkedInLogo,
+    mailLogo
   },
   props: {
-    disableScroll: {
-      type: Boolean,
-      default: false
-    },
     theme: {
       type: String
     }
@@ -99,7 +106,13 @@ export default {
   },
   computed: {
     navBarShow: function () {
-      return this.headerHeight===0 || (!this.disableScroll  && this.scrollPosition > this.headerHeight)
+      return this.headerHeight===0 || (this.scrollPosition > this.headerHeight)
+    },
+    githubLink: function () {
+      return this.$static.metadata.social.filter((e)=>e.title="github").pop().link
+    },
+    linkedInLink: function () {
+      return this.$static.metadata.social.filter((e)=>e.title="linkedin").pop().link
     }
   },
 
@@ -108,21 +121,23 @@ export default {
       this.scrollPosition = window.scrollY;
     },
     updateHeaderSize() {
-      this.headerHeight = document.getElementById("header").clientHeight;
+      let computedHeight = 0;
+      if (null !== document.getElementById("header")) {
+        computedHeight = document.getElementById("header").clientHeight;
+      }
+      this.headerHeight = computedHeight;
     },
     setHeaderHeight(height) {
       this.headerHeight = height;
-    }
+    },
   },
 
   mounted() {
-    if( !this.disableScroll ) {
-      if(null !== document.getElementById("header")) {
-        let height = document.getElementById("header").clientHeight;
-        this.setHeaderHeight(height);
-        window.addEventListener("scroll", this.updateScroll);
-        window.addEventListener("resize", this.updateHeaderSize);
-      }
+    if(null !== document.getElementById("header")) {
+      let height = document.getElementById("header").clientHeight;
+      this.setHeaderHeight(height);
+      window.addEventListener("scroll", this.updateScroll);
+      window.addEventListener("resize", this.updateHeaderSize);
     }
   }
 };
@@ -146,8 +161,50 @@ query {
 }
 </static-query>
 
-<style scoped>
+<style lang="scss" scoped>
   .first-plan {
     z-index: 2000;
   }
+
+  body[data-theme="light"] {
+    #nav-container{
+      background-color: #fefefefe;
+      color: #555555;
+      .logo {
+        filter: invert(100%);
+      }
+      a:hover {
+        color: black;
+        svg {
+          fill: black;
+        }
+      }
+      a svg {
+        fill: #555555;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+  }
+
+  body[data-theme="dark"] {
+    #nav-container{
+      background-color: black;
+      color: white;
+      a:hover {
+        color: #555555;
+        svg {
+          fill: #555555;
+        }
+      }
+      a svg {
+        fill: white;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+
 </style>

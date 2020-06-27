@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="flex flex-col min-h-screen">
-    <HeaderPartial v-if="hideHeader!=true" @setTheme="setTheme" :theme="this.theme" ></HeaderPartial>
+  <div id="app" class="flex flex-col h-full">
+    <HeaderPartial v-if="hideHeader!==true" @setTheme="setTheme" :theme="this.theme" ></HeaderPartial>
     <main class="flex-grow">
       <slot />
     </main>

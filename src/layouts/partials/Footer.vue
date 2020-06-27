@@ -1,6 +1,6 @@
 <template>
 
-  <nav class="relative bg-black pt-4 pb-8 text-sm text-gray-500">
+  <nav class="relative pt-4 pb-8 text-sm">
 
     <div class="container mx-auto flex justify-between h-12 items-center">
 
@@ -12,14 +12,14 @@
 
         <span>Powered by</span>
 
-        <ul class="list-none ml-1 flex">
+        <ul class="list-none ml-1 flex external-link">
           <li
             :key="element.name"
             v-for="(element,index) in $static.metadata.navigation"
             v-bind:class="{'mr-1' : index != Object.keys($static.metadata.navigation).length - 1}"
           >
             <span class="mr-1" v-if="(0 !== index)">&</span>
-            <a class="hover:text-white" :href="element.link" v-if="element.external" target="_blank" rel="noopener noreferrer">{{ element.name }}</a>
+            <a :href="element.link" v-if="element.external" target="_blank" rel="noopener noreferrer">{{ element.name }}</a>
             <g-link v-else :to="element.link" >{{element.name}}</g-link>
           </li>
         </ul>
@@ -54,3 +54,30 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+  body[data-theme="light"] {
+    nav {
+      background-color: #fefefefe;
+      color: #555555;
+      .logo {
+        filter: invert(100%);
+      }
+      .external-link a:hover {
+        color: black;
+      }
+    }
+
+  }
+  body[data-theme="dark"] {
+    nav {
+      background-color: black;
+      color: white;
+      .external-link a:hover {
+        color: #555555;
+      }
+    }
+
+  }
+
+</style>

@@ -1,12 +1,13 @@
 <template>
-  <header class="bg-black relative z-1000 bg-radial-t-gray-to-black" id="header">
+  <header class="bg-black relative z-1000" id="header">
 
-    <nav class="container h-20 sm:h-16  mx-auto px-4 sm:px-0 py-4">
+    <!-- NavBar -->
+    <nav class="px-12 h-20 sm:h-16 mx-auto py-4">
       <div class="flex flex-col sm:flex-row flex-grow space-between items-center w-auto height-30px">
 
         <div class="hidden md:flex items-center flex-shrink-0 text-white mr-6">
           <!--          <span class="font-semibold text-xl tracking-tight">{{ $static.metadata.siteAuthor }}</span>-->
-          <g-image src="~/favicon.png" width="25" height="25" fit="contain"></g-image>
+          <g-image class="logo" src="~/favicon.png" width="25" height="25" fit="contain"></g-image>
           <!--          <font-awesome :icon="['fas', 'code']" class="ml-3"></font-awesome>-->
         </div>
 
@@ -29,8 +30,8 @@
             </li>
           </ul>
         </div>
-        
-        <div class="w-full sm:w-auto text-gray-400">
+
+<!--        <div class="w-full sm:w-auto text-gray-400">
           <ul class="list-none m-0 flex justify-center md:justify-end">
             <li class="mr-3 self-start">
               <theme-switcher v-on="$listeners" :theme="theme"/>
@@ -52,12 +53,48 @@
               </g-link>
             </li>
           </ul>
+        </div>-->
+        <!--icons navigations-->
+        <div>
+          <ul class="list-none m-0 flex justify-center md:justify-end">
+
+            <!--theme switcher-->
+            <li class="mr-3">
+              <theme-switcher v-on="$listeners" :theme="theme"/>
+            </li>
+
+            <!--github-->
+            <li class="mr-6">
+              <span class="text-sm">
+                <a :href="githubLink" target="_blank" rel="noopener noreferrer">
+                  <githubLogo></githubLogo>
+                </a>
+              </span>
+            </li>
+
+            <!--linkedin-->
+            <li class="mr-6">
+              <span class="text-sm">
+                <a :href="linkedInLink" target="_blank" rel="noopener noreferrer">
+                  <linked-in-logo></linked-in-logo>
+                </a>
+              </span>
+            </li>
+
+            <!--contact-->
+            <li>
+              <g-link to="/contact">
+                <mailLogo></mailLogo>
+              </g-link>
+            </li>
+
+          </ul>
         </div>
 
       </div>
     </nav>
 
-    <div class="pt-2 md:pt-16  text-center">
+    <div class="pt-8  md:pt-16 lg:pt-32 lg:pb-56 text-center">
 
       <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center text-white">
         <!--Left Col-->
@@ -70,7 +107,7 @@
         </div>
         <!--Right Col-->
         <div class="w-full md:w-3/5 md:py-6 text-center">
-          <figure class="w-full md:w-4/5 z-50" >
+          <figure class="w-full" >
             <HeroLogo id="hero-svg" />
           </figure>
         </div>
@@ -96,6 +133,7 @@ query {
     social {
       icon
       link
+      title
     }
   }
 }
@@ -104,6 +142,9 @@ query {
 <script>
 
 import ThemeSwitcher from '~/components/ThemeSwitcher'
+import githubLogo from '~/assets/icons/github.svg?inline'
+import linkedInLogo from '~/assets/icons/linkedin.svg?inline'
+import mailLogo from '~/assets/icons/mail.svg?inline'
 import HeroLogo from '~/assets/svg/undraw_source_code_xx2e.svg?inline'
 
 export default {
@@ -112,17 +153,29 @@ export default {
       type: String,
     }
   },
+  computed: {
+    githubLink: function () {
+      return this.$static.metadata.social.filter((e)=>e.title="github").pop().link
+    },
+    linkedInLink: function () {
+      return this.$static.metadata.social.filter((e)=>e.title="linkedin").pop().link
+    }
+  },
   components : {
     ThemeSwitcher,
+    githubLogo,
+    linkedInLogo,
+    mailLogo,
     HeroLogo
   }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
   #hero-svg {
     width: 100%;
+    height: auto;
   }
 
   body[data-theme="dark"] #header {
@@ -133,6 +186,43 @@ export default {
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
   }
 
+  body[data-theme="light"] {
+    header{
+      color: white;
+      .logo {
+        filter: invert(100%);
+      }
+      a:hover {
+        color: black;
+        svg {
+          fill: black;
+        }
+      }
+      a svg {
+        fill: white;
+        width: 16px;
+        height: 16px;
+      }
+    }
 
+  }
+
+  body[data-theme="dark"] {
+    header{
+      background-color: black;
+      color: white;
+      a:hover {
+        color: #555555;
+        svg {
+          fill: #555555;
+        }
+      }
+      a svg {
+        fill: white;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
 
 </style>
