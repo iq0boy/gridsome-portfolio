@@ -4,7 +4,7 @@ title: Gridsome
 shortDescription: Gridsome is a Vue.js powered Jamstack framework for building
   static generated websites & apps that are fast by default 🚀.
 url: https://gridsome.org/
-logo: /uploads/logo-gridsome.svg
+logo: /uploads/docker-logo.png
 color: "#00835C"
 featured: true
 ---
