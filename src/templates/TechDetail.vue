@@ -19,8 +19,8 @@
 
       <!-- Content -->
       <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-6">
-        <section class="post-content container mx-auto relative font-serif text-gray-700">
-          <div class="post-content-text text-xl" v-html="$page.tech.content"></div>
+        <section class="container mx-auto relative font-serif text-gray-700">
+          <div class="content-detail text-xl" v-html="$page.tech.content"></div>
         </section>
       </div>
 
@@ -92,12 +92,8 @@ query ($id: ID!) {
 </page-query>
 
 <script>
-import ProjectListItem from "~/components/ProjectListItem.vue";
 
 export default {
-  components: {
-    ProjectListItem
-  },
   computed: {
     projectLabel: function() {
       const pluralize = require("pluralize");
