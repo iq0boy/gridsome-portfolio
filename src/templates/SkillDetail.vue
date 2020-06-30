@@ -21,6 +21,23 @@
         </section>
       </div>
 
+      <!-- Techs -->
+      <div v-if="$page.skill.techs.length" class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-4">
+        <section class="flex flex-wrap container mx-auto relative py-10">
+          <g-link
+                  v-for="tech in $page.skill.techs"
+                  :key="tech.id"
+                  :to="tech.path"
+                  class="flex items-center py-4 px-4 mr-2 mt-2 border hover:border-red-400 border-gray-600 rounded-full hover:bg-black bg-white"
+          >
+            <div >
+              <g-image class="tech-tile" :src="tech.logo" :alt="tech.title" :title="tech.title"/>
+            </div>
+
+          </g-link>
+        </section>
+      </div>
+
       <!-- Footer -->
       <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-10">
 
@@ -56,6 +73,11 @@ query ($id: ID!) {
     shortDescription
     content
     path
+    techs {
+      title
+      path
+      logo(width:64, height:64, fit:contain, background:"rgba(0,0,0,0)", quality:10)
+    }
     relatedJobs: belongsTo(filter:{ typeName: {eq: Job}}){
       totalCount
       edges {
@@ -68,7 +90,7 @@ query ($id: ID!) {
         }
       }
     },
-     relatedProjects: belongsTo(filter:{ typeName: {eq: Project}}){
+    relatedProjects: belongsTo(filter:{ typeName: {eq: Project}}){
       totalCount
       edges {
         node {
