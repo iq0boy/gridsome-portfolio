@@ -65,3 +65,12 @@ body[data-theme="dark"] {
       color: white;
     }
 }
+
+@media print {
+  #cv-container {
+    padding: 0;
+  }
+  #nav-container, nav{
+    display: none;
+  }
+}
