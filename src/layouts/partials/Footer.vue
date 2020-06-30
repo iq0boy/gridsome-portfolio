@@ -1,6 +1,6 @@
 <template>
 
-  <nav class="relative pt-4 pb-8 text-sm">
+  <nav class="relative pt-4 pb-8 text-sm px-4">
 
     <div class="container mx-auto flex justify-between h-12 items-center">
 
