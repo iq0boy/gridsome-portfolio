@@ -81,9 +81,9 @@
     }
 
     next: job(id: $nextElement) {
-    title
-    employer
-    path
+        title
+        employer
+        path
     }
 
   }
