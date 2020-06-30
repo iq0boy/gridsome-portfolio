@@ -94,9 +94,9 @@ query {
 
 <script>
 
-import PageTitle from "../components/PageTitle";
+import PageTitle from "~/layouts/partials/PageTitle";
 import ServiceLogo from '~/assets/svg/undraw_heavy_box_agqi.svg?inline'
-import ServiceSection from "../components/ServiceSection";
+import ServiceSection from "~/components/ServiceSection";
 
 
 export default {

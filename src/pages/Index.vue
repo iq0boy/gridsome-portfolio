@@ -99,49 +99,20 @@
                  <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
              </div>
 
-             <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-
-                 <div v-for="(skill, index) in $page.allSkill.edges" :key="skill.node.id"
-                      v-bind:class="{
-                  'lg:w-1/4 rounded-none lg:rounded-l-lg' : index !== 1,
-                  'lg:w-1/3  sm:-mt-6 rounded-lg sm:-mt-6 shadow-lg z-10' : index === 1
-              }" class="flex flex-col w-5/6 mx-auto lg:mx-0 bg-white mt-4 b-white rounded">
-
-                     <div v-bind:class="{'text-gray-600' : index !== 1}" class="flex-1  overflow-hidden shadow">
-                         <g-link :to="skill.node.path">
-                             <div v-bind:class="{
-                          'border-b-4' : index !== 1,
-                          'w-full' :  index === 1,
-                      }" class="p-8 text-3xl font-bold text-center">{{skill.node.shortName}}</div>
-                         </g-link>
-                         <div v-if="index === 1" class="h-1 w-full gradient my-0 py-0 "></div>
-                         <ul  v-bind:class="{
-                          'text-sm' : index !== 1,
-                          'text-base font-bold' : index === 1
-                      }" class="w-full text-center">
-                             <g-link v-for="(tech, index) in skill.node.techs" :key="tech.id" :to="tech.path">
-                                 <li v-bind:class="{'border-b': index !== skill.node.techs.length-1 }" class="py-4">{{tech.title}}</li>
-                             </g-link>
-                         </ul>
-                     </div>
-                     <div class="flex-none mt-auto shadow p-6">
-                         <div v-bind:class="{
-                          'text-3xl text-gray-600 ' : index !== 1,
-                          'text-4xl' : index === 1
-                      }" class="w-full pt-6 font-bold text-center">{{skill.node.relatedProjects.totalCount}} <span class="text-base">{{getPluralizedLabel('project', skill.node.relatedProjects.totalCount)}} related</span></div>
-                         <div v-bind:class="{
-                          'text-3xl text-gray-600 ' : index !== 1,
-                          'text-4xl' : index === 1
-                      }" class="w-full pt-6 font-bold text-center">{{skill.node.relatedJobs.totalCount}} <span class="text-base">{{getPluralizedLabel('job', skill.node.relatedJobs.totalCount)}} related</span></div>
-                         <g-link :to="skill.node.path">
-                             <div class="flex items-center justify-center">
-                                 <div class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg">More info</div>
-                             </div>
-                         </g-link>
-                     </div>
-                 </div>
-
-             </div>
+             <ul class="list-none m-0 p-0 mt-10 grid gap-4 grid-cols-6 mx-auto">
+                 <li class="mb-4 p-2 cursor-pointer inline-flex flex-row justify-center " v-for="tech in $page.allTech.edges" :key="tech.node.id">
+                     <g-link
+                             :to="tech.node.path"
+                     >
+                         <div class="badge flex items-center justify-center mr-2 mt-2 border hover:border-red-400 border-gray-600 rounded-full hover:bg-black bg-white shadow-lg">
+                             <g-image :src="tech.node.logo" :alt="tech.node.title" :title="tech.node.title"/>
+                         </div>
+                         <p class="text-center ">
+                             {{tech.node.title}}
+                         </p>
+                     </g-link>
+                 </li>
+             </ul>
 
          </div>
 
@@ -169,12 +140,12 @@
 
          <section class="container mx-auto text-center pt-6 pb-24">
 
-             <h1 class="w-full my-2 text-5xl text-white font-bold leading-tight text-center">Lets get in touch</h1>
+             <h1 class="w-full my-2 text-5xl text-white font-bold leading-tight text-center px-4">Lets get in touch</h1>
              <div class="w-full mb-4">
                  <div class="h-1 mx-auto bg-gray-300 w-1/6 my-0 py-0 rounded-t"></div>
              </div>
 
-             <h4 class="my-4 text-3xl text-white leading-tight">I might be able to help you</h4>
+             <h4 class="my-4 text-3xl text-white leading-tight px-4">I might be able to help you</h4>
 
              <g-link to="/contact">
                  <div class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg inline-block">Send a message!</div>
@@ -194,7 +165,6 @@ query {
         node {
           id
           title
-          shortDescription
           logo(width:64, height:64, fit:contain, background:"rgba(0,0,0,0)", quality:10)
           path
         }
@@ -210,18 +180,7 @@ query {
           id
           title
           path
-          shortName
           shortDescription
-          relatedProjects: belongsTo(filter:{ typeName: {eq: Project}}){
-            totalCount
-      	  },
-          relatedJobs: belongsTo(filter:{ typeName: {eq: Job}}){
-            totalCount
-          },
-          techs {
-            title
-            path
-          }
       	}
       }
     }
@@ -264,7 +223,7 @@ export default {
             fill: beige;
         }
         #call-to-action-container,  #waves-container  {
-            background: linear-gradient(90deg,black 60%, #742a2a 250%);
+            background: linear-gradient(90deg,#1a202c 60%, #c53030 250%);
         }
         #about-me {
             background-color: beige;
@@ -276,7 +235,7 @@ export default {
             background-color: beige;
         }
         .gradient {
-            background: linear-gradient(90deg,black -14%, #742a2a 250%)
+            background: linear-gradient(90deg,#1a202c 60%, #c53030 250%);
         }
     }
 

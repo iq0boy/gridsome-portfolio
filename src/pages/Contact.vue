@@ -11,10 +11,7 @@
                         method="POST"
                         class="w-full"
                 >
-              <!--      <figure id="contact-logo" class="absolute">
-                        <ContactLogo></ContactLogo>
-                    </figure>
--->
+
                     <fieldset class="mt-2">
                         <label for="_replyto">Your email :</label>
                         <input class="w-full mt-2 rounded border-gray-600" id="_replyto" type="email" name="_replyto">
@@ -47,7 +44,7 @@
 </template>
 
 <script>
-    import PageTitle from "../components/PageTitle";
+    import PageTitle from "~/layouts/partials/PageTitle";
     import ContactLogo from '~/assets/svg/undraw_connection_b38q.svg?inline'
 
     export default {
