@@ -4,6 +4,7 @@ title: Applied physics
 shortName: Physics
 shortDescription: Electronics, analog and digital signal processing
 featured: false
+onResume: true
 techs:
 ---
 Electronics, analog and digital signal processing (MATLAB), electricity.

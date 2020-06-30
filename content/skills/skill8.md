@@ -4,6 +4,7 @@ title: Network
 shortName: Network
 shortDescription: Cisco Routing and Switching configuration
 featured: false
+onResume: true
 techs:
 ---
 Cisco Routing and Switching (configuration, debugging, address, routing, VLAN, security...).

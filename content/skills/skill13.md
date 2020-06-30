@@ -4,6 +4,7 @@ title: Back end development
 shortName: Back end
 shortDescription: Development of server side application
 featured: true
+onResume: true
 techs:
   - tech1
   - tech2

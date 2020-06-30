@@ -10,7 +10,6 @@ location: Louvain-la-Neuve
 skills:
   - skill2
   - skill3
-  - skill5
   - skill6
   - skill7
   - skill11

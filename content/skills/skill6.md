@@ -4,6 +4,7 @@ title: Database management
 shortName: Database
 shortDescription: MariaDB, MySQL, PostgreSQL, SAP SQL Anywhere.
 featured: false
+onResume: true
 techs:
   - tech8
 ---

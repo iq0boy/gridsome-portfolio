@@ -2,8 +2,9 @@
 id: skill12
 title: Front end development
 shortName: Front end
-shortDescription: Development of web user interfaces based on framework with javascript, css, markdown and more
+shortDescription: Development of web user interfaces based on modern framework
 featured: true
+onResume: true
 techs:
   - tech3
   - tech4

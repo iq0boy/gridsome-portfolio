@@ -9,7 +9,6 @@ skills:
   - skill1
   - skill2
   - skill3
-  - skill5
   - skill6  
   - skill7
   - skill8

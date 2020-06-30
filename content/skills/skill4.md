@@ -1,9 +1,10 @@
 ---
 id: skill4
-title: software development
+title: Software development
 shortName: App
 shortDescription: Development and testing of software.
 featured: false
+onResume: true
 techs:
   - tech9
   - tech11
