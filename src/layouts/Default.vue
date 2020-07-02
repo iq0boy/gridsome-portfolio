@@ -4,7 +4,7 @@
     <main class="flex-grow">
       <slot />
     </main>
-    <NavbarPartial :disableScroll="disableScroll" @setTheme="setTheme" :theme="this.theme" class="flex-1"></NavbarPartial>
+    <NavbarPartial :alwaysShown="hideHeader" @setTheme="setTheme" :theme="this.theme" class="flex-1"></NavbarPartial>
     <FooterPartial class="flex-initial"></FooterPartial>
   </div>
 </template>
@@ -25,10 +25,6 @@ import FooterPartial from '~/layouts/partials/Footer.vue'
 export default {
   props: {
     hideHeader: {
-      type: Boolean,
-      default: false
-    },
-    disableScroll: {
       type: Boolean,
       default: false
     }
