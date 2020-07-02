@@ -24,6 +24,7 @@ techs:
   - tech8
   - tech12
   - tech13
+  - tech17
 ---
 Symfony developer on the iT.SCHOOL project
 

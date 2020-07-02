@@ -12,6 +12,7 @@ techs:
   - tech6
   - tech7
   - tech14
+  - tech17
 ---
  Development of web user interfaces based on framework with javascript, css, markdown and more
  

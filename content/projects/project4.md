@@ -23,6 +23,7 @@ techs:
   - tech7
   - tech8
   - tech12
+  - tech17
 ---
 Design, conception, development and realization of a connected power strip aimed at reducing electricity consumption in households.
 

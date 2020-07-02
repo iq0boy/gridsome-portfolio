@@ -24,6 +24,7 @@ techs:
   - tech8
   - tech12
   - tech13
+  - tech17
 ---
 Starting from raw specification, I have made an analysis of the requirements, in order to conceptualize a model
 which I translated to UML use case diagram.
