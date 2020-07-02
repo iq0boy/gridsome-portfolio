@@ -1,6 +1,6 @@
 ---
 id: job2
-title: Web developer
+title: Web Developer
 shortDescription: Developer on the iT.SCHOOL project     
 startedAt: 2018-08-15T21:20:00.000Z
 endedAt: 2019-01-15T22:20:00.000Z
