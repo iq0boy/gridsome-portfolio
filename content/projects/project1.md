@@ -2,7 +2,7 @@
 id: project1
 title: Java MVC application
 status: done
-createdAt: 2016-06-12T02:58:00.000Z
+createdAt: 2016-01-12T02:58:00.000Z
 shortDescription: "Conception, design, and development of a JAVA application."
 featured: false
 skills:
