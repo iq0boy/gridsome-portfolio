@@ -277,7 +277,7 @@ query {
     }
 
     #cv {
-        font-size: 0.70rem;
+        font-size: 0.65rem;
         width: 210mm;
         height: 297mm;
         @media print {
