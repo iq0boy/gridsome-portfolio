@@ -1,5 +1,5 @@
 <template>
-    <Layout :hideHeader="true" :disableScroll="true">
+    <Layout :hideHeader="true">
         <div id="cv-container" class="pt-24 pb-16 container mx-auto">
 
             <div id="cv-actions" class="mx-auto mb-8 flex justify-center">
@@ -13,7 +13,7 @@
 
             <div id="cv" class="mx-auto border p-4 flex flex-col shadow-2xl">
 
-                <header class="">
+                <header>
                     <div class="flex justify-between bg-gray-700 text-white p-2">
                         <div>
                             <h1 class="m-0 text-2xl text-red-400">Joseph <span class="uppercase">Pire</span></h1>
@@ -117,7 +117,15 @@
                             </h2>
                             <ul>
                                 <li v-for="skill in $page.allSkill.edges" :key="skill.node.id" class="mb-2 leading-tight">
-                                    <p><span class="font-bold">{{ skill.node.title}}</span> - {{ skill.node.shortDescription}}</p>
+                                    <p>
+                                        <span class="font-bold">
+                                        {{ skill.node.title}}</span> - {{ skill.node.shortDescription}}
+                                    </p>
+                                    <p class="text-red-400">
+                                        <span v-for="(tech, index) in skill.node.techs" :key="tech.id">
+                                            <span v-if="index !==0"> - </span>{{tech.title}}
+                                        </span>
+                                    </p>
                                 </li>
                             </ul>
                         </section>
@@ -204,7 +212,9 @@ query {
         title
         shortDescription
         techs {
+          id
           title
+          logo(width:24, height:24, fit:contain, background:"rgba(0,0,0,0)", quality:10)
         }
       }
     }
@@ -267,7 +277,7 @@ query {
     }
 
     #cv {
-        font-size: 0.65rem;
+        font-size: 0.70rem;
         width: 210mm;
         height: 297mm;
         @media print {
@@ -296,22 +306,20 @@ query {
         width: 1rem;
         height: 1rem;
     }
-
-    .row-1 {
-        height: 25%;
-    }
-    .row-2 {
-        height: 40%;
-    }
-    .row-3 {
-        height: 30%;
-    }
     .interest-tag {
         font-size: 0.6rem;
         padding: 0.2rem 0.5rem;
         margin: 0.2em;
     }
-/*    div section, aside section {
+
+    .row-1 {
+        height: 25%;
+    }
+    .row-2 {
         height: 32%;
-    }*/
+    }
+    .row-3 {
+        height: 35%;
+    }
+
 </style>
