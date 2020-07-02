@@ -1,12 +1,12 @@
 <template>
-    <Layout :hideHeader="true" :disableScroll="true">
+    <Layout :hideHeader="true" >
         <div class="pt-24 pb-16 relative container mx-auto overflow-x-hidden relative">
 
             <PageTitle :title="'Projects'">
                 <ProjectsLogo></ProjectsLogo>
             </PageTitle>
 
-            <div id="projects-container" class="pt-32 sm:px-0 flex flex-col">
+            <div id="projects-container" class="pt-24 sm:pt-32 md:pt-40 lg:pt-32 sm:px-0 flex flex-col">
                 <ProjectCard v-for="project in $page.allProject.edges" :key="project.node.id" :project="project.node" />
             </div>
 
