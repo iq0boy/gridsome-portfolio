@@ -9,16 +9,16 @@
                     <ul class="flex flex-wrap mb-5">
                         <li  class=" uppercase font-medium text-xs text-red-400 mt-3" v-for="(skill, index) in $page.project.skills">
                             <g-link :to="skill.path">
-                                <span class="">{{ skill.title }}</span><span class="ml-2 mr-2" v-if="index+1 < $page.project.skills.length">-</span>
+                                <span class="skill-label">{{ skill.title }}</span><span class="ml-2 mr-2" v-if="index+1 < $page.project.skills.length">-</span>
                             </g-link>
                         </li>
                     </ul>
-                    <div class="text-2xl pt-4 pb-10 text-gray-700 font-serif" v-html="$page.project.shortDescription"></div>
+                    <div class="text-2xl pt-4 pb-10 text-gray-700" v-html="$page.project.shortDescription"></div>
                 </section>
             </div>
 
             <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4">
-                <section class="container mx-auto font-serif text-gray-700">
+                <section class="container mx-auto text-gray-700">
                     <div class="content-detail text-xl" v-html="$page.project.content"></div>
                 </section>
             </div>
@@ -31,7 +31,7 @@
             </div>
 
             <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4">
-                <section class="flex flex-wrap container mx-auto relative py-10">
+                <section class="flex flex-wrap container mx-auto relative">
                     <g-link
                             v-for="tech in $page.project.techs"
                             :key="tech.id"
@@ -44,6 +44,19 @@
 
                     </g-link>
                 </section>
+            </div>
+
+            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4 mt-8 mb-24 relative text-xl">
+                <div  v-if="$page.next" class="absolute left-0 ml-2">
+                    <g-link :to="$page.next.path" class="flex justify-between items-center cursor-pointer nav-arrow">
+                        <chevron-left-icon /> Before
+                    </g-link>
+                </div>
+                <div v-if="$page.previous"  class="absolute right-0 mr-2">
+                    <g-link :to="$page.previous.path" class="flex justify-between items-center cursor-pointer nav-arrow">
+                        After <chevron-right-icon/>
+                    </g-link>
+                </div>
             </div>
 
         </div>
@@ -88,20 +101,31 @@
 </page-query>
 
 <script>
+import ChevronLeftIcon from '~/assets/icons/chevron-left.svg?inline'
+import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
 
 export default {
-  metaInfo() {
-    return {
-      title: this.$context.title
-    };
-  }
+    components: {
+        ChevronLeftIcon,
+        ChevronRightIcon
+    },
+    metaInfo() {
+        return {
+            title: this.$context.title
+        };
+    }
 
 };
 </script>
 
-<style>
+<style scoped>
     .tech-tile {
         width: 64px!important;
         height: 64px!important;
+    }
+    svg{
+        width: 2em;
+        height: 2em;
+        color: #f56565;
     }
 </style>

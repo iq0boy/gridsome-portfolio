@@ -10,13 +10,13 @@
           <h1 class="pb-0 my-0 text-5xl font-medium">{{ $page.skill.title }}</h1>
         </div>
 
-        <div class="text-2xl pt-4 text-gray-700 font-serif" v-html="$page.skill.shortDescription"></div>
+        <div class="text-2xl pt-4 text-gray-700" v-html="$page.skill.shortDescription"></div>
 
       </div>
 
       <!-- Content -->
       <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-6">
-        <section class="container mx-auto relative font-serif text-gray-700">
+        <section class="container mx-auto relative text-gray-700">
           <div class="content-detail text-xl" v-html="$page.skill.content"></div>
         </section>
       </div>
@@ -45,7 +45,7 @@
           <h6>Related jobs</h6>
           <ul>
             <li v-for="job in $page.skill.relatedJobs.edges" :key="job.node.id">
-              <g-link :to="job.node.path">{{ job.node.title}}</g-link>
+              <g-link :to="job.node.path" class="hover:text-red-400">{{ job.node.title}}</g-link>
             </li>
           </ul>
         </blockquote>
@@ -54,7 +54,7 @@
           <h6>Related projects</h6>
           <ul>
             <li v-for="project in $page.skill.relatedProjects.edges" :key="project.node.id">
-              <g-link :to="project.node.path">{{ project.node.title}}</g-link>
+              <g-link :to="project.node.path" class="hover:text-red-400">{{ project.node.title}}</g-link>
             </li>
           </ul>
         </blockquote>

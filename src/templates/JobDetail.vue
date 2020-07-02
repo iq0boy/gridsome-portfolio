@@ -7,18 +7,18 @@
                 <section class="post-header container mx-auto px-0 mb-4 border-b">
                     <h1 class="text-5xl font-medium leading-none mt-0">{{ $page.job.title}}</h1>
                     <ul class="flex flex-wrap mb-5">
-                        <li  class=" uppercase font-medium text-xs text-red-500 mt-3" v-for="(skill, index) in $page.job.skills">
+                        <li class=" uppercase font-medium text-xs text-red-500 mt-3" v-for="(skill, index) in $page.job.skills">
                             <g-link :to="skill.path">
-                                <span class="">{{ skill.title }}</span><span class="ml-2 mr-2" v-if="index+1 < $page.job.skills.length">-</span>
+                                <span class="skill-label">{{ skill.title }}</span><span class="ml-2 mr-2" v-if="index+1 < $page.job.skills.length">-</span>
                             </g-link>
                         </li>
                     </ul>
-                    <div class="text-2xl pt-4 pb-10 text-gray-700 font-serif" v-html="$page.job.shortDescription"></div>
+                    <div class="text-2xl pt-4 pb-10 text-gray-700" v-html="$page.job.shortDescription"></div>
                 </section>
             </div>
 
             <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4">
-                <section class="container mx-auto relative font-serif text-gray-700">
+                <section class="container mx-auto relative text-gray-700">
                     <div class="content-detail text-xl" v-html="$page.job.content"></div>
                 </section>
             </div>
@@ -31,7 +31,7 @@
             </div>
 
             <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4">
-                <section class="flex flex-wrap container mx-auto relative py-10">
+                <section class="flex flex-wrap container mx-auto relative">
                     <g-link
                             v-for="tech in $page.job.techs"
                             :key="tech.id"
@@ -44,6 +44,19 @@
 
                     </g-link>
                 </section>
+            </div>
+
+            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4 mt-8 mb-24 relative text-xl">
+                <div  v-if="$page.next" class="absolute left-0 ml-2">
+                    <g-link :to="$page.next.path" class="flex justify-between items-center cursor-pointer nav-arrow">
+                        <chevron-left-icon  /><span>Before</span>
+                    </g-link>
+                </div>
+                <div v-if="$page.previous"  class="absolute right-0 mr-2">
+                    <g-link :to="$page.previous.path" class="flex justify-between items-center cursor-pointer nav-arrow">
+                        <span>After</span><chevron-right-icon/>
+                    </g-link>
+                </div>
             </div>
 
         </div>
@@ -75,15 +88,17 @@
     }
 
     previous: job(id: $previousElement) {
-      title
-      employer
-      path
+       id
+       title
+       employer
+       path
     }
 
     next: job(id: $nextElement) {
-        title
-        employer
-        path
+      id
+      title
+      employer
+      path
     }
 
   }
@@ -91,19 +106,31 @@
 
 <script>
 
+import ChevronLeftIcon from '~/assets/icons/chevron-left.svg?inline'
+import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
+
 export default {
-  metaInfo() {
-    return {
-      title: this.$context.title
-    };
-  }
+    components: {
+        ChevronLeftIcon,
+        ChevronRightIcon
+    },
+    metaInfo() {
+        return {
+            title: this.$context.title
+        };
+    }
 
 };
 </script>
 
-<style>
+<style scoped>
     .tech-tile {
         width: 64px!important;
         height: 64px!important;
+    }
+    svg{
+        width: 2em;
+        height: 2em;
+        color: #f56565;
     }
 </style>
