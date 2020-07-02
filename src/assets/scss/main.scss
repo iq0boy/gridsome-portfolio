@@ -41,6 +41,13 @@ blockquote {
 
 .content-detail {
   @apply text-black;
+  p {
+    @apply my-4;
+  }
+}
+
+.skill-label:hover, .nav-arrow:hover {
+  filter: brightness(20%);
 }
 
 .badge {
