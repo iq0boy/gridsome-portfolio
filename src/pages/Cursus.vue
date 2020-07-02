@@ -1,5 +1,5 @@
 <template>
-    <Layout :hideHeader="true" :disableScroll="true">
+    <Layout :hideHeader="true">
         <div id="cursus-content" class="pt-24 pb-16 container mx-auto relative overflow-x-hidden">
 
             <PageTitle :title="'Cursus'">

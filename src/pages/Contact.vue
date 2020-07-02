@@ -1,5 +1,5 @@
 <template>
-    <Layout :hideHeader="true" :disableScroll="true">
+    <Layout :hideHeader="true">
         <div class="container mx-auto pt-24 pb-16 relative overflow-x-hidden">
 
                 <PageTitle :title="'Contact'">
