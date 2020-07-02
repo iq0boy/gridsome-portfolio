@@ -1,5 +1,5 @@
 <template>
-    <Layout :hideHeader="true" :disableScroll="true">
+    <Layout :hideHeader="true">
         <div class="pt-24 pb-16 relative container mx-auto overflow-x-hidden relative">
 
             <PageTitle :title="'Services'">
@@ -52,7 +52,6 @@
                             <div class="badge flex items-center  justify-center border hover:border-red-300 border-gray-400 rounded-full hover:text-white hover:bg-black bg-white shadow-lg font-bold">
                                 {{ skill.node.shortName}}
                             </div>
-
                         </g-link>
                     </li>
                 </template>
