@@ -9,7 +9,7 @@ module.exports = function (api) {
 
   api.createPages(async ({ graphql, createPage }) => {
     const { data } = await graphql(`{
-      allProject {
+      allProject(sortBy:"createdAt", order: DESC) {
         edges {
           previous {
             id
