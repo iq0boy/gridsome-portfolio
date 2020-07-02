@@ -2,7 +2,7 @@
     <div v-bind:class="{
         'self-end flex-row-reverse' : ltr,
         'self-start' : !ltr
-    }" class="max-w-4xl flex flex-row items-center w-full my-16">
+    }" class="max-w-4xl flex flex-row items-center w-full my-16 lg:my-8">
 
         <!--  Side Image -->
         <div class="hidden lg:block lg:w-2/5">
@@ -48,7 +48,7 @@
             <div v-bind:class="{
                 'lg:left-0 lg:ml-4': ltr,
                 'lg:right-0 lg:mr-4': !ltr
-            }" class="flex justify-center lg:absolute lg:bottom-0 lg:mb-4">
+            }" class="flex justify-center lg:absolute lg:bottom-0 lg:mb-4 mt-4 lg:mt-0 font-bold card-date">
                 <span>{{from}}</span><span class="ml-1" v-if="!!to">- {{to}}</span>
             </div>
 
@@ -77,7 +77,7 @@
 <style lang="scss" scoped>
 
     .card-date {
-        left: 25%;
+        color: #3f3d56;
     }
 
     .card-content {
@@ -99,6 +99,9 @@
             p {
                 color: #7e7d99;
             }
+        }
+        .card-date {
+            color: #d0cde1;
         }
     }
 

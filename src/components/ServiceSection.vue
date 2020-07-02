@@ -20,7 +20,7 @@
                     'ml-4': ltr
                 }">
                     <a :href="previousSectionId">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                        <chevronUpIcon />
                     </a>
                 </span>
                 <span v-if="nextSectionId" :class="{
@@ -28,7 +28,7 @@
                     'ml-4': ltr
                 }">
                     <a :href="nextSectionId">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <chevronDownIcon />
                     </a>
                 </span>
             </h2>
@@ -44,8 +44,15 @@
 </template>
 
 <script>
+    import ChevronUpIcon from '~/assets/icons/chevron-up.svg?inline'
+    import ChevronDownIcon from '~/assets/icons/chevron-down.svg?inline'
+
     export default {
         name: "ServiceSection",
+        components: {
+            ChevronUpIcon,
+            ChevronDownIcon
+        },
         props: {
             title: String, // the title of the section
             sectionId: String, // the id utilised fot the anchor
@@ -57,6 +64,14 @@
 </script>
 
 <style lang="scss" scoped>
+    a > svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #f56565;
+    }
+    a:hover > svg {
+        opacity: 0.3;
+    }
 
     /* Anchors */
     #techs, #skills {
