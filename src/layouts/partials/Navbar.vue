@@ -95,17 +95,22 @@ export default {
   props: {
     theme: {
       type: String
+    },
+    alwaysShown: {
+      type: Boolean,
+      default: true
     }
   },
   data: function() {
     return {
       scrollPosition: null,
-      headerHeight: 0
+      headerHeight: 0,
+      navBarInitiated: false, // to avoid display navBar on load ^u^
     };
   },
   computed: {
     navBarShow: function () {
-      return this.headerHeight===0 || (this.scrollPosition > this.headerHeight)
+      return this.alwaysShown || (this.navBarInitiated && this.headerHeight===0 || (this.scrollPosition > this.headerHeight))
     },
     githubLink: function () {
       return this.$static.metadata.social.filter((e) => e.title ==="github").pop().link
@@ -117,6 +122,7 @@ export default {
 
   methods: {
     updateScroll() {
+      this.navBarInitiated = true;
       this.scrollPosition = window.scrollY;
     },
     updateHeaderSize() {
