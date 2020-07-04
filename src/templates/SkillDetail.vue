@@ -22,24 +22,23 @@
       </div>
 
       <!-- Techs -->
-      <div v-if="$page.skill.techs.length" class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-4">
-        <section class="flex flex-wrap container mx-auto relative py-10">
-          <g-link
-                  v-for="tech in $page.skill.techs"
-                  :key="tech.id"
-                  :to="tech.path"
-                  class="flex items-center py-4 px-4 mr-2 mt-2 border hover:border-red-400 border-gray-600 rounded-full hover:bg-black bg-white"
-          >
-            <div >
-              <g-image class="tech-tile" :src="tech.logo" :alt="tech.title" :title="tech.title"/>
-            </div>
-
-          </g-link>
+      <div v-if="$page.skill.techs.length" class="lg:mx-32 md:mx-16 px-4 sm:px-0 my-8 lg:my-10">
+        <section class="flex flex-wrap container mx-auto relative">
+          <ul class="list-none m-0 p-0 flex flex-wrap container mx-auto relative">
+            <li v-for="tech in $page.skill.techs" :key="tech.id">
+              <TechBadge
+                  :title="tech.title"
+                  :logo="tech.logo"
+                  :path="tech.path"
+                  :scale=0.6
+              />
+            </li>
+          </ul>
         </section>
       </div>
 
       <!-- Footer -->
-      <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-10">
+      <div class="lg:mx-32 md:mx-16 px-4 sm:px-0">
 
         <blockquote  v-if="$page.skill.relatedJobs.edges.length">
           <h6>Related jobs</h6>
@@ -76,7 +75,7 @@ query ($id: ID!) {
     techs {
       title
       path
-      logo(width:64, height:64, fit:contain, background:"rgba(0,0,0,0)", quality:10)
+      logo(width:42, height:42, fit:contain, background:"rgba(0,0,0,0)")
     }
     relatedJobs: belongsTo(filter:{ typeName: {eq: Job}}){
       totalCount
@@ -108,7 +107,12 @@ query ($id: ID!) {
 
 <script>
 
-export default {
+import TechBadge from "~/components/TechBadge";
+
+  export default {
+    components: {
+      TechBadge
+    },
   computed: {
     projectLabel: function() {
       const pluralize = require("pluralize");

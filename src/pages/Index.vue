@@ -101,13 +101,13 @@
 
                   <div class="flex justify-center">
                       <ul class="list-none m-0 p-0 mt-10 grid gap-4 grid-rows-2 grid-cols-3 sm:grid-cols-6 sm:grid-rows-none mx-auto w-4/5">
-                          <li class="mb-4 p-2 cursor-pointer inline-flex flex-row justify-center " v-for="tech in $page.allTech.edges" :key="tech.node.id">
-                              <g-link :to="tech.node.path">
-                                  <div class="badge flex items-center justify-center mr-2 mt-2 border hover:border-red-400 border-gray-600 rounded-full hover:bg-black bg-white shadow-lg">
-                                      <g-image :src="tech.node.logo" :alt="tech.node.title" :title="tech.node.title"/>
-                                  </div>
-                                  <p class="text-center text-xs sm:text-sm md:text-base">{{tech.node.title}}</p>
-                              </g-link>
+                          <li v-for="tech in $page.allTech.edges" :key="tech.node.id">
+                              <TechBadge
+                                :title="tech.node.title"
+                                :logo="tech.node.logo"
+                                :path="tech.node.path"
+                                :label="tech.node.title"
+                              />
                           </li>
                       </ul>
                   </div>
@@ -187,6 +187,7 @@ query {
 
 <script>
 
+import TechBadge from "~/components/TechBadge";
 import PersonalityLogo from '~/assets/svg/undraw_thought_process_67my.svg?inline'
 import MotivationLogo from '~/assets/svg/undraw_team_spirit_hrr4.svg?inline'
 
@@ -203,6 +204,7 @@ export default {
     },
   },
   components : {
+      TechBadge,
       PersonalityLogo,
       MotivationLogo
   },

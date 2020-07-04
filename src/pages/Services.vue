@@ -17,21 +17,16 @@
                 <template v-slot:logo>
                 </template>
                 <template v-slot:cards>
-                    <li class="mb-4 p-2 cursor-pointer inline-flex flex-row justify-center " v-for="tech in $page.allTech.edges" :key="tech.node.id">
-                        <g-link
-                                :to="tech.node.path"
-                        >
-                            <div class="badge flex items-center justify-center mr-2 mt-2 border hover:border-red-400 border-gray-600 rounded-full hover:bg-black bg-white shadow-lg">
-                                <g-image :src="tech.node.logo" :alt="tech.node.title" :title="tech.node.title"/>
-                            </div>
-                            <p class="text-center ">
-                                {{tech.node.title}}
-                            </p>
-                        </g-link>
+                    <li class="inline-flex justify-center" v-for="tech in $page.allTech.edges" :key="tech.node.id">
+                        <TechBadge
+                            :title="tech.node.title"
+                            :label="tech.node.title"
+                            :logo="tech.node.logo"
+                            :path="tech.node.path"
+                        />
                     </li>
                 </template>
             </ServiceSection>
-
 
 
 
@@ -45,14 +40,11 @@
                 <template v-slot:logo>
                 </template>
                 <template v-slot:cards>
-                    <li class="mb-4 p-2 cursor-pointer inline-flex flex-row justify-center " v-for="skill in $page.allSkill.edges" :key="skill.node.id">
-                        <g-link
-                                :to="skill.node.path"
-                        >
-                            <div class="badge flex items-center  justify-center border hover:border-red-300 border-gray-400 rounded-full hover:text-white hover:bg-black bg-white shadow-lg font-bold">
-                                {{ skill.node.shortName}}
-                            </div>
-                        </g-link>
+                    <li class="inline-flex justify-center" v-for="skill in $page.allSkill.edges" :key="skill.node.id">
+                        <SkillBadge
+                            :path="skill.node.path"
+                            :title="skill.node.shortName"
+                        />
                     </li>
                 </template>
             </ServiceSection>
@@ -94,15 +86,18 @@ query {
 <script>
 
 import PageTitle from "~/layouts/partials/PageTitle";
-import ServiceLogo from '~/assets/svg/undraw_heavy_box_agqi.svg?inline'
-import ServiceSection from "~/components/ServiceSection";
-
+import ServiceLogo from '~/assets/svg/undraw_heavy_box_agqi.svg?inline';
+import ServiceSection from "~/components/Sections/ServiceSection";
+import TechBadge from "~/components/TechBadge";
+import SkillBadge from "~/components/SkillBadge";
 
 export default {
     components: {
         PageTitle,
         ServiceLogo,
-        ServiceSection
+        ServiceSection,
+        TechBadge,
+        SkillBadge
     },
     metaInfo: {
     title: "Services"

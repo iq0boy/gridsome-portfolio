@@ -32,17 +32,16 @@
 
             <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4">
                 <section class="flex flex-wrap container mx-auto relative">
-                    <g-link
-                            v-for="tech in $page.job.techs"
-                            :key="tech.id"
-                            :to="tech.path"
-                            class="flex items-center py-4 px-4 mr-2 mt-2 border hover:border-red-400 border-gray-600 rounded-full hover:bg-black bg-white"
-                    >
-                        <div >
-                            <g-image class="tech-tile" :src="tech.logo" :alt="tech.title" :title="tech.title"/>
-                        </div>
-
-                    </g-link>
+                    <ul class="list-none m-0 p-0 flex flex-wrap container mx-auto relative">
+                        <li v-for="tech in $page.job.techs" :key="tech.id">
+                            <TechBadge
+                                :title="tech.title"
+                                :logo="tech.logo"
+                                :path="tech.path"
+                                :scale=0.6
+                            />
+                        </li>
+                    </ul>
                 </section>
             </div>
 
@@ -77,7 +76,7 @@
       techs {
         title
         path
-        logo(width:64, height:64, fit:contain, background:"rgba(0,0,0,0)", quality:10)
+        logo(width:42, height:42, fit:contain, background:"rgba(0,0,0,0)")
 
     }
       skills {
@@ -108,11 +107,13 @@
 
 import ChevronLeftIcon from '~/assets/icons/chevron-left.svg?inline'
 import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
+import TechBadge from "~/components/TechBadge";
 
 export default {
     components: {
         ChevronLeftIcon,
-        ChevronRightIcon
+        ChevronRightIcon,
+        TechBadge
     },
     metaInfo() {
         return {
@@ -123,11 +124,7 @@ export default {
 };
 </script>
 
-<style scoped>
-    .tech-tile {
-        width: 64px!important;
-        height: 64px!important;
-    }
+<style lang="scss" scoped>
     svg{
         width: 2em;
         height: 2em;
