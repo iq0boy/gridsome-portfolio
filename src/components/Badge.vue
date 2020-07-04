@@ -1,7 +1,7 @@
 <template>
-    <div class="mb-4 p-2 cursor-pointer inline-flex flex-row justify-center" :style="css">
+    <div class="mb-4 p-2 cursor-pointer inline-flex flex-row relative hover:z-10 justify-center transition duration-100 ease-in-out transform hover:-translate-y-1 hover:scale-110" :style="css">
         <g-link :to="path">
-            <div class="badge flex items-center justify-center border hover:border-red-400 border-gray-600 rounded-full hover:bg-black bg-white shadow-lg">
+            <div class="badge flex items-center justify-center border hover:border-red-400 border-gray-600 rounded-full bg-white shadow-lg">
                 <slot></slot>
             </div>
             <p v-if="label" class="text-center text-xs sm:text-sm md:text-base">
@@ -16,8 +16,7 @@
         name: "Badge",
         data: function(){
             return {
-                baseWidth: 100,
-                baseHeight: 100,
+                baseDiameter: 100,
                 lgRatio: 1.5
             }
         },
@@ -36,10 +35,10 @@
         computed: {
             css() {
                 return {
-                    '--width': (this.baseWidth * this.scale) + 'px',
-                    '--height': (this.baseHeight * this.scale) + 'px',
-                    '--lg-width': (this.baseWidth * this.lgRatio * this.scale) + 'px',
-                    '--lg-height': (this.baseHeight * this.lgRatio * this.scale) + 'px'
+                    '--width': (this.baseDiameter * this.scale) + 'px',
+                    '--height': (this.baseDiameter * this.scale) + 'px',
+                    '--lg-width': (this.baseDiameter * this.lgRatio * this.scale) + 'px',
+                    '--lg-height': (this.baseDiameter * this.lgRatio * this.scale) + 'px'
                 }
             }
         }
@@ -54,16 +53,6 @@
         @media (min-width: 640px) {
             width: var(--lg-width);
             height: var(--lg-height);
-        }
-    }
-
-
-    body[data-theme="dark"] {
-        .badge {
-            color: black;
-        }
-        .badge:hover {
-            color: white;
         }
     }
 

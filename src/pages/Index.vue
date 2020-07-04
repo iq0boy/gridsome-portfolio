@@ -29,7 +29,7 @@
                       <div class="w-5/6 sm:w-1/2 p-6">
                           <h3 class="text-3xl font-bold leading-none mb-3 ">Personality</h3>
                           <p class="text-gray-600 mb-8">I am a quite guy, who like to think and learn; curious by nature, I love to understand how thing works in order to acquire new skills and push myself to be better. If i can work by myself, I always like to meet new people and collaborators, or working within a team.<p>
-                          <p class="text-red-500 underline">Improve myself</p>
+                          <p class="text-red-500">Improve myself</p>
 
                       </div>
                       <div class="w-full sm:w-1/2 p-6">
@@ -50,7 +50,7 @@
                           <div class="align-middle">
                               <h3 class="text-3xl font-bold leading-none mb-3 ">Motivations</h3>
                               <p class="text-gray-600 mb-8">Iam looking for new challenges; I really hope i can find a job where i could be useful, applying what i learned to help others, build bridge across peoples, and share with my siblings.<p>
-                              <p class="text-red-500 underline">Live in harmony</p>
+                              <p class="text-red-500">Live in harmony</p>
                           </div>
                       </div>
 
