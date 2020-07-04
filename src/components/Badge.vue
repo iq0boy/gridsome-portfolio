@@ -17,6 +17,7 @@
         data: function(){
             return {
                 baseDiameter: 100,
+                mdRatio: 1.2,
                 lgRatio: 1.5
             }
         },
@@ -37,6 +38,8 @@
                 return {
                     '--width': (this.baseDiameter * this.scale) + 'px',
                     '--height': (this.baseDiameter * this.scale) + 'px',
+                    '--md-width': (this.baseDiameter * this.mdRatio * this.scale) + 'px',
+                    '--md-height': (this.baseDiameter * this.mdRatio * this.scale) + 'px',
                     '--lg-width': (this.baseDiameter * this.lgRatio * this.scale) + 'px',
                     '--lg-height': (this.baseDiameter * this.lgRatio * this.scale) + 'px'
                 }
@@ -51,6 +54,10 @@
         width: var(--width);
         height: var(--height);
         @media (min-width: 640px) {
+            width: var(--md-width);
+            height: var(--md-height);
+        }
+        @media (min-width: 768px) {
             width: var(--lg-width);
             height: var(--lg-height);
         }
