@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Joseph Pire',
-  siteDescription: 'An enthusiast junior dev',
+  siteDescription: 'Joseph Pire\'s developer portfolio',
   siteUrl: 'http://localhost:8080',
   // pathPrefix: '/dist',
   plugins: [
@@ -18,8 +18,8 @@ module.exports = {
       options: {
         tailwindConfig: './tailwind.config.js',
         purgeConfig: {
-          whitelist: ['svg-inline--fa', 'table', 'table-striped', 'table-bordered', 'table-hover', 'table-sm'],
-          whitelistPatterns: [/fa-$/, /blockquote$/, /code$/, /pre$/, /table$/, /table-$/]
+          whitelist: [],
+          whitelistPatterns: [/blockquote$/]
         },
         presetEnvConfig: {},
         shouldPurge: true,
