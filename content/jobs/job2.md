@@ -27,6 +27,12 @@ techs:
   - tech17
 ---
 Symfony developer on the iT.SCHOOL project
+Development, testing, maintenance and debugging.
 
-Development, testing, deployment, monitoring, maintenance and debugging.
-Focus on functionnal testing and refactoring of the existing codebase
+Focus on functional testing of the most critical parts of the codebase.
+
+Debugging and implementation of new features based on the business needs.
+
+Deployment of the new release of the products and update of the underlying software infrastructure on the clients servers.
+
+Analysis and development of solution in order to enhance the RGBD compliance. 

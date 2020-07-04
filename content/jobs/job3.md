@@ -30,9 +30,9 @@ Starting from raw specification, I have made an analysis of the requirements, in
 which I translated to UML use case diagram.
 
 From this use case diagram I have implemented the model in entity classes in the Symfony Framework.
-I implemented the business logic and the business specifications in a dedicated application layer in order to 
-built the API which would be consumed later buy the differents interfaces of the applications.
+I implemented the business logic, and the business specifications in a dedicated application layer in order to 
+build the API which would be consumed later buy the different interfaces of the applications.
 
-I used the tools (metronic bootrap) to built those interfaces to fit with the other modules in a  responsive design. 
+I used the tools (Metronic Bootstrap) to build those interfaces to fit with the other modules in a responsive design. 
 
-Finaly, i have developed the functionnal tests to cover this codebase, before deploying on a virtualized server. 
+Finally, I have developed the functional tests to cover this codebase, before deploying on a virtualized server. 
