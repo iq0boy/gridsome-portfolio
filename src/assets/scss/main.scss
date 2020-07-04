@@ -50,26 +50,13 @@ blockquote {
   filter: brightness(20%);
 }
 
-.badge {
-  width: 100px;
-  height: 100px;
-  @media (min-width: 640px) {
-    width: 150px;
-    height: 150px;
-  }
-}
+
 
 body[data-theme="dark"] {
     background-color: #080607;
     @apply text-gray-300;
     .content-detail {
       @apply text-white;
-    }
-    .badge {
-      color: black;
-    }
-    .badge:hover {
-      color: white;
     }
 }
 
