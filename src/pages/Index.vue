@@ -101,8 +101,8 @@
                   </div>
 
                   <div class="flex justify-center">
-                      <ul class="list-none m-0 p-0 mt-10 grid gap-4 grid-rows-2 grid-cols-3 sm:grid-cols-6 sm:grid-rows-none mx-auto w-4/5">
-                          <li v-for="tech in $page.allTech.edges" :key="tech.node.id">
+                      <ul class="list-none mb-0 mt-10 mx-auto grid grid-rows-2 grid-cols-3 sm:grid-cols-6 sm:grid-rows-none w-4/5">
+                          <li v-for="tech in $page.allTech.edges" :key="tech.node.id" class="flex justify-center items-center">
                               <TechBadge
                                 :title="tech.node.title"
                                 :logo="tech.node.logo"
@@ -218,11 +218,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-    ul {
-        list-style: none;
-        margin: 0;
-    }
 
     body[data-theme="dark"] {
         #header-last-wave {
