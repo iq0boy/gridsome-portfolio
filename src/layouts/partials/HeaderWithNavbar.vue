@@ -71,24 +71,27 @@
 
     <div class="pt-8  md:pt-16 lg:pt-32 lg:pb-56 text-center">
 
-      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center text-white">
-        <!--Left Col-->
-        <div class="flex flex-col w-full md:w-2/5 justify-center items-center md:items-start text-center md:text-left">
-          <p class="tracking-loose w-full">{{ $static.metadata.siteDescription }}</p>
-          <h1 class="my-4 text-5xl font-bold leading-tight">I am {{ $static.metadata.siteAuthor }}</h1>
-          <p class="leading-normal text-2xl mb-8">And this is my portfolio</p>
-          <g-link :to="'/resume'">
-            <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">Get my Resume</button>
-          </g-link>
+    <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center text-white">
+      <!--Left Col-->
+      <div class="flex flex-col w-full md:w-2/5 justify-center items-center md:items-start text-center md:text-left">
+        <p class="tracking-loose w-full">{{ $static.metadata.siteDescription }}</p>
+        <h1 class="my-4 text-5xl font-bold leading-tight">I am {{ $static.metadata.siteAuthor }}</h1>
+        <p class="leading-normal text-2xl mb-8">And this is my portfolio</p>
+        <g-link :to="'/resume'" :title="'take a look at my resume!'">
+          <Button
+            :label="'Get my Resume'"
+            :classes="['bg-white', 'text-gray-800', 'my-6']"
+          />
+        </g-link>
 
-        </div>
-        <!--Right Col-->
-        <div class="w-full md:w-3/5 md:py-6 text-center">
-          <figure class="w-full" >
-            <HeroLogo id="hero-svg" />
-          </figure>
-        </div>
       </div>
+      <!--Right Col-->
+      <div class="w-full md:w-3/5 md:py-6 text-center">
+        <figure class="w-full" >
+          <HeroLogo id="hero-svg" />
+        </figure>
+      </div>
+    </div>
 
     </div>
 
@@ -118,6 +121,7 @@ query {
 <script>
 
 import ThemeSwitcher from '~/components/ThemeSwitcher'
+import Button from '~/components/Button'
 import githubLogo from '~/assets/icons/github.svg?inline'
 import linkedInLogo from '~/assets/icons/linkedin.svg?inline'
 import mailLogo from '~/assets/icons/mail.svg?inline'
@@ -142,7 +146,8 @@ export default {
     githubLogo,
     linkedInLogo,
     mailLogo,
-    HeroLogo
+    HeroLogo,
+    Button
   }
 };
 </script>

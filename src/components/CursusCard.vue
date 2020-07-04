@@ -38,9 +38,10 @@
                 'lg:left-0' : !ltr
             }" class="flex justify-center pt-8 mb-4 lg:mb-0 lg:absolute lg:bottom-0 lg:p-4">
                 <g-link v-if="!!path" :to="path">
-                    <div class="mx-auto lg:mx-0 hover:underline text-white font-bold rounded-full my-0 py-4 px-8 shadow-lg">
-                        More info
-                    </div>
+                    <Button
+                        :label="'More info'"
+                        :classes="['bg-rose']"
+                    />
                 </g-link>
             </div>
 
@@ -59,8 +60,13 @@
 </template>
 
 <script>
+    import Button from "~/components/Button";
+
     export default {
         name: "CursusCard",
+        components: {
+            Button
+        },
         props: [
             'title', // String -  the title of the card
             'content', // String - the content of the card
@@ -84,9 +90,6 @@
         background-color: #e6e6e6;
         h3,p {
             color: #2f2e41;
-        }
-        a div {
-            background-color: #f50057;
         }
     }
 

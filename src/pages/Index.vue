@@ -22,7 +22,7 @@
               <div class="container max-w-5xl mx-auto m-8">
                   <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center">About me</h1>
                   <div class="w-full mb-4">
-                      <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+                      <div class="h-1 mx-auto bg-gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
                   </div>
 
                   <div class="flex flex-wrap">
@@ -65,7 +65,7 @@
 
                   <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center">Main Skills</h1>
                   <div class="w-full mb-4">
-                      <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+                      <div class="h-1 mx-auto bg-gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
                   </div>
 
                   <div  v-for="skill in $page.allSkill.edges" :key="skill.node.id" class=" w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
@@ -78,10 +78,11 @@
                                   </div>
                               </div>
                           </div>
-                          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-                              <div class="flex items-center justify-center">
-                                  <div class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-0 py-4 px-8 shadow-lg">More info</div>
-                              </div>
+                          <div class="flex items-center justify-center bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                              <Button
+                                  :label="'More info'"
+                                  :classes="['bg-gradient']"
+                              />
                           </div>
                       </g-link>
                   </div>
@@ -96,7 +97,7 @@
               <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
                   <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Featured Techs</h1>
                   <div class="w-full mb-4">
-                      <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+                      <div class="h-1 mx-auto bg-gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
                   </div>
 
                   <div class="flex justify-center">
@@ -146,7 +147,10 @@
                   <h4 class="my-4 text-3xl text-white leading-tight px-4">I might be able to help you</h4>
 
                   <g-link to="/contact">
-                      <div class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg inline-block">Send a message!</div>
+                      <Button
+                          :label="'Send a message!'"
+                          :classes="['bg-white', 'text-gray-800', 'my-6']"
+                      />
                   </g-link>
 
               </section>
@@ -188,6 +192,7 @@ query {
 <script>
 
 import TechBadge from "~/components/TechBadge";
+import Button from "~/components/Button";
 import PersonalityLogo from '~/assets/svg/undraw_thought_process_67my.svg?inline'
 import MotivationLogo from '~/assets/svg/undraw_team_spirit_hrr4.svg?inline'
 
@@ -206,7 +211,8 @@ export default {
   components : {
       TechBadge,
       PersonalityLogo,
-      MotivationLogo
+      MotivationLogo,
+      Button
   },
 };
 </script>
@@ -237,9 +243,8 @@ export default {
                 background-color: beige;
             }
         }
-        .gradient {
+        .bg-gradient {
             background: linear-gradient(90deg,#1a202c 60%, #c53030 250%);
-            /*background-color: #f50057;*/
         }
     }
 
@@ -247,7 +252,7 @@ export default {
         #header-last-wave{
             fill: #FFFFFF;
         }
-        #call-to-action-container, #waves-container, .gradient, #waves-container {
+        #call-to-action-container, #waves-container, .bg-gradient, #waves-container {
             background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
         }
 

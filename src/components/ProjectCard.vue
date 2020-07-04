@@ -1,5 +1,5 @@
 <template>
-    <g-link class="project-card mb-16 lg:w-3/5 rounded lg:rounded-full shadow-lg shadow-xl mx-4" :to="project.path">
+    <div class="project-card mb-16 lg:w-3/5 rounded-lg lg:rounded-full shadow-lg shadow-xl mx-6" >
 
         <div class="flex flex-col">
 
@@ -8,17 +8,27 @@
             </h2>
             <p class="card-description text-center px-4">{{ project.shortDescription }}</p>
 
-            <span class="info-button hover:underline text-white font-bold rounded-full my-8 py-4 px-8 shadow-lg text-center self-center">
-                More info
-            </span>
+            <div class="flex justify-center">
+                <g-link :to="project.path">
+                    <Button
+                        :label="'More info'"
+                        :classes="['bg-rose', 'my-8']"
+                    />
+                </g-link>
+            </div>
 
         </div>
-    </g-link>
+    </div>
 
 </template>
 
 <script>
+    import Button from "~/components/Button";
+
     export default {
+        components: {
+            Button
+        },
         props: {
             project: {
                 title: String,
@@ -30,10 +40,6 @@
 </script>
 
 <style lang="scss" scoped>
-    ul {
-        list-style: none;
-        padding: 0;
-    }
 
     body[data-theme="light"] .project-card{
         background-color: #e6e6e6;
@@ -46,10 +52,6 @@
         .card-description{
             color: #7e7d99;
         }
-    }
-
-    .info-button {
-        background-color: #f50057;
     }
 
 
