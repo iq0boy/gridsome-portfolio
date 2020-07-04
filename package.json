@@ -12,7 +12,7 @@
     "@noxify/gridsome-remark-classes": "^1.0.0",
     "@noxify/gridsome-remark-table-align": "^1.0.0",
     "core-js": "^3.6.4",
-    "gridsome": "^0.7.17",
+    "gridsome": "^0.7.18",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-netlify-cms-paths": "^0.3.1",
     "gridsome-plugin-tailwindcss": "^2.2.41",
