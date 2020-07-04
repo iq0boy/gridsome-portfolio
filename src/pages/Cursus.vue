@@ -132,7 +132,7 @@ query {
 
 import PageTitle from "~/layouts/partials/PageTitle";
 import CursusLogo from '~/assets/svg/undraw_certificate_343v.svg?inline'
-import CursusSection from "~/components/CursusSection";
+import CursusSection from "~/components/Sections/CursusSection";
 import CursusCard from "~/components/CursusCard";
 
 
