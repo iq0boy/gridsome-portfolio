@@ -18,7 +18,7 @@ techs:
 ---
 The purpose of this project was to learn the Jamstack and to improve myself in front-end development.
 
-I discovered the Jamstack at my last job for Utopix pictures through GatsbyJS, thanks to Sebastien Crepin.
+I discovered the Jamstack at my last job for Utopix pictures through GatsbyJS.
  
 When I was convicted by the benefits of its approach (high performance, easier scaling, higher security, better developer experience,...)
 I wanted to challenge myself, and go on my own building something with it. As I was looking for a new job, I decided to make my portfolio.
