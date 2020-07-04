@@ -55,10 +55,10 @@ query{
 
     #projects-container {
         @media (min-width: 1024px) {
-            a:nth-child(odd) {
+            .project-card:nth-child(odd) {
                 align-self: flex-start;
             }
-            a:nth-child(even) {
+            .project-card:nth-child(even) {
                 align-self: flex-end;
             }
         }
