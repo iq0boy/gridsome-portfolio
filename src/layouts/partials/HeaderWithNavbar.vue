@@ -74,9 +74,9 @@
     <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center text-white">
       <!--Left Col-->
       <div class="flex flex-col w-full md:w-2/5 justify-center items-center md:items-start text-center md:text-left">
-        <p class="tracking-loose w-full">{{ $static.metadata.siteDescription }}</p>
-        <h1 class="my-4 text-5xl font-bold leading-tight">I am {{ $static.metadata.siteAuthor }}</h1>
-        <p class="leading-normal text-2xl mb-8">And this is my portfolio</p>
+        <p class="tracking-loose w-full">{{ $static.metadata.header.siteAuthorDescription }}</p>
+        <h1 class="my-4 text-5xl font-bold leading-tight">I am {{ $static.metadata.header.siteAuthor }}</h1>
+        <p class="leading-normal text-2xl mb-8">{{$static.metadata.header.siteDescription}}</p>
         <g-link :to="'/resume'" :title="'take a look at my resume!'">
           <Button
             :label="'Get my Resume'"
@@ -102,9 +102,6 @@
 <static-query>
 query {
   metadata {
-    siteName
-    siteAuthor
-    siteDescription
     navigation : headerNavigation {
       name
       link
@@ -113,6 +110,11 @@ query {
     social {
       link
       title
+    }
+    header {
+      siteAuthor
+      siteAuthorDescription
+      siteDescription
     }
   }
 }
