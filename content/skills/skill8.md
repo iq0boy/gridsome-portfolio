@@ -7,4 +7,8 @@ featured: false
 onResume: true
 techs:
 ---
-Cisco Routing and Switching (configuration, debugging, address, routing, VLAN, security...).
+Cisco Certified Network Associate Routing & Switching (CCNA): configuration, maintenance, debugging, address, routing, VLAN, security....
+
+Establish reliable and secure network between computers and devices of all kind.
+
+Work on simulated environment with Cisco Packet Tracer and with real devices. 
