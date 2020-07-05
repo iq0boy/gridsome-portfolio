@@ -8,7 +8,7 @@ module.exports = {
   siteName: 'Joseph Pire',
   siteDescription: 'Joseph Pire\'s developer portfolio',
   //TODO change the siteUrl for sitemap plugin
-  siteUrl: 'https://localhost:8080',
+  siteUrl: 'https://elegant-aryabhata-dad6e8.netlify.app',
   // pathPrefix: '/dist',
   plugins: [
     {
