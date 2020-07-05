@@ -3,7 +3,7 @@ id: tech17
 title: Bootstrap
 shortDescription: Open-source CSS framework directed at responsive, mobile-first front-end web development.
 url: https://www.getbootstrap.com/
-logo: ../../static/uploads/bootstrap-logo.svg
+logo: ../../static/uploads/logo-bootstrap.svg
 color: "#7952b3"
 featured: false
 ---
