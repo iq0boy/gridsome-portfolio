@@ -1,6 +1,6 @@
 <template>
     <Layout :hideHeader="true">
-        <div class="container mx-auto pt-24 pb-16 relative overflow-x-hidden">
+        <div class="container mx-auto px-2 pt-24 pb-16 relative overflow-x-hidden">
 
                 <PageTitle :title="'Contact'">
                     <ContactLogo></ContactLogo>
