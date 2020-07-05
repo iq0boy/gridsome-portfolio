@@ -25,6 +25,7 @@ techs:
   - tech12
   - tech13
   - tech17
+  - tech19
 ---
 Symfony developer on the iT.SCHOOL project
 Development, testing, maintenance and debugging.

@@ -12,6 +12,7 @@ skills:
 techs:
   - tech8
   - tech9
+  - tech18
 ---
 From an idea of building a tool to help to learn vocabulary of a new language, i have developed an MVC application from scratch.
 

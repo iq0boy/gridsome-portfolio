@@ -23,6 +23,7 @@ techs:
   - tech8
   - tech12
   - tech13
+  - tech18
 ---
 The purpose of this end study work was to build a large web application with the latest web technologies in PHP and JavaScript.
 

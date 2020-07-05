@@ -20,6 +20,7 @@ techs:
   - tech10
   - tech12
   - tech13
+  - tech19
 ---
 Analysis of the current system, its structure and implementation in order to improve code quality, reliability, robustness, and performance.
 

@@ -14,6 +14,7 @@ skills:
 techs:
   - tech10
   - tech12
+  - tech18
 ---
 Configuration and deployment of a network infrastructure on top of docker.
 

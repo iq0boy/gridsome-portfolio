@@ -6,6 +6,7 @@ shortDescription: Design, development, and utilisation of API REST
 featured: false
 onResume: true
 techs:
+  - tech2
 ---
 Design, development, resource naming, methods and status HTTP in order to build solid API REST.
 
