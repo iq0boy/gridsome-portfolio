@@ -30,7 +30,7 @@
                             <VCardIcon></VCardIcon><span class="capitalize">Profile</span>
                         </h2>
                         <p class="text-center">
-                            Freshly graduated, autonomous curious and hard worker. Professional experience as full stack developer. If i like to work with a team, i can go well by myself. Always looking for new challenges, I hope i can find a job where i can be useful, applying what i learned to help others, build bridge across peoples, and share with my siblings.
+                            Freshly graduated, autonomous curious and hard worker. Professional experience as full stack developer. If i like to work with a team, i can go well by myself. Always looking for new challenges, I hope i can find a job where i can be useful, building awesome tools; Applying what i learned to help others, build bridge across peoples, and share with my siblings.
                         </p>
                     </div>
 
@@ -116,7 +116,7 @@
                                 <ToolsIcon />Skills
                             </h2>
                             <ul>
-                                <li v-for="skill in $page.allSkill.edges" :key="skill.node.id" class="mb-2 leading-tight">
+                                <li v-for="skill in sortedSkills" :key="skill.node.id" class="mb-2 leading-tight">
                                     <p>
                                         <span class="font-bold">
                                         {{ skill.node.title}}</span> - {{ skill.node.shortDescription}}
@@ -253,6 +253,21 @@ query {
         methods: {
             print: function() {
                 window.print();return false;
+            }
+        },
+        computed: {
+            sortedSkills: function() {
+                return  this.$page.allSkill.edges.sort(function(e1, e2) {
+                    const skillA = e1.node;
+                    const skillB = e2.node;
+                    let decision = 0;
+                    if (skillA.techs.length < skillB.techs.length) {
+                        decision = 1
+                    } else if (skillA.techs.length > skillB.techs.length) {
+                        decision = -1
+                    }
+                    return decision
+                });
             }
         }
     }
