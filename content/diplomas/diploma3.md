@@ -1,6 +1,6 @@
 ---
 id: diploma3
-title: Economics and physical education
+title: Economics and Physical Education
 shortDescription: CESS
 provider: Collège Notre-Dame de Basse-Wavre
 providerLogo: ../../static/uploads/logo-basse-wavre.png
