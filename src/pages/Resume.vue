@@ -152,7 +152,7 @@ query {
       }
     }
   }
-  allCertification {
+  allCertification(sortBy:"acquiredAt", order: DESC) {
     edges {
       node {
         id
