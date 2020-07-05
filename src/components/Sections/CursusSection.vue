@@ -6,7 +6,7 @@
         <div class="relative ml-8 lg:ml-0">
 
             <!--Anchor-->
-            <div :id="sectionId"></div>
+            <div class="anchor" :id="sectionId"></div>
 
             <h2 :class="{
                 'flex-row-reverse mr-8 lg:mr-0' : !ltr
@@ -72,11 +72,10 @@
         opacity: 0.3;
     }
 
-    /* Anchors */
-    #job, #education, #certification {
+   .anchor {
         display: block;
-        position: relative;
-        top: -250px;
+        position: absolute;
+        top: -5em;
         visibility: hidden;
     }
 </style>
