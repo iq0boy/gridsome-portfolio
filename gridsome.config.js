@@ -7,11 +7,24 @@
 module.exports = {
   siteName: 'Joseph Pire',
   siteDescription: 'Joseph Pire\'s developer portfolio',
-  siteUrl: 'http://localhost:8080',
+  //TODO change the siteUrl for sitemap plugin
+  siteUrl: 'https://localhost:8080',
   // pathPrefix: '/dist',
   plugins: [
     {
       use: 'gridsome-plugin-svg',
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        config: {
+          '/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          }
+        }
+      }
     },
     {
       use: 'gridsome-plugin-tailwindcss',
