@@ -5,6 +5,7 @@ html {
 }
 html, body {
   @apply h-full;
+  @apply min-h-full;
 }
 
 blockquote {
