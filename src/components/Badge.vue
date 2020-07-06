@@ -1,10 +1,10 @@
 <template>
-    <div class="mb-4 p-2 cursor-pointer inline-flex flex-row relative hover:z-10 justify-center transition duration-100 ease-in-out transform hover:-translate-y-1 hover:scale-110" :style="css">
+    <div class="badge-container mb-4 p-2 cursor-pointer inline-flex flex-row relative hover:z-10 justify-center transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110" :style="css">
         <g-link :to="path">
-            <div class="badge flex items-center justify-center border hover:border-red-400 border-gray-600 rounded-full bg-white shadow-lg">
+            <div class="badge flex items-center justify-center border border-gray-600 rounded-full shadow-lg transition duration-1000 ease-in-out hover:border-red-400">
                 <slot></slot>
             </div>
-            <p v-if="label" class="text-center text-xs sm:text-sm md:text-base">
+            <p v-if="label" class="text-center text-xs sm:text-sm md:text-base transition duration-1000 ease-in-out">
                 {{ label }}
             </p>
         </g-link>
@@ -51,6 +51,8 @@
 <style lang="scss" scoped>
 
     .badge {
+        background-color: white;
+        @apply text-gray-800;
         width: var(--width);
         height: var(--height);
         @media (min-width: 640px) {
@@ -60,6 +62,31 @@
         @media (min-width: 768px) {
             width: var(--lg-width);
             height: var(--lg-height);
+        }
+    }
+    .badge-container:hover {
+        .badge {
+            @apply text-black;
+            transition: box-shadow 0.5s;
+            @apply shadow-xl;
+        }
+        p {
+            @apply text-red-400;
+        }
+    }
+
+
+
+    body[data-theme="dark"] {
+        .badge {
+            background-color: #4a4866;
+            @apply text-red-300;
+        }
+        .badge-container:hover {
+            .badge {
+                @apply text-white;
+            }
+
         }
     }
 
