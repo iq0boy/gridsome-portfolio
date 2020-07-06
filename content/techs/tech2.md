@@ -3,7 +3,7 @@ id: tech2
 title: API Platform
 shortDescription: Powerful but easy to use full stack framework dedicated to API-driven projects.
 url: https://api-platform.com
-logo: ../../static/uploads/logo-api-platform.png
+logo: ../../static/uploads/logo-api-platform.svg
 color: "#68cdce"
 featured: true
 ---

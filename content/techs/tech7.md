@@ -2,7 +2,7 @@
 id: tech7
 title: JavaScript
 shortDescription: High-level multi-paradigm language.
-logo: ../../static/uploads/logo-js.png
+logo: ../../static/uploads/logo-js.svg
 color: "#f0d91d"
 featured: false
 ---

@@ -3,7 +3,7 @@ id: tech14
 title: Tailwindcss
 shortDescription: Highly customizable, low-level CSS framework
 url: https://tailwindcss.com/
-logo: ../../static/uploads/logo-tailwindcss.png
+logo: ../../static/uploads/logo-tailwind.svg
 color: "#38b2ac"
 banner: ""
 featured: true

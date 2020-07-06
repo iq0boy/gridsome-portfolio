@@ -3,7 +3,7 @@ id: tech4
 title: jQuery
 shortDescription: Fast, small, and feature-rich JavaScript library.
 url: https://jquery.com/
-logo: ../../static/uploads/logo-jquery.png
+logo: ../../static/uploads/logo-jquery.svg
 color: "#0769ad"
 featured: false
 ---

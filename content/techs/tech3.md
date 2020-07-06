@@ -3,7 +3,7 @@ id: tech3
 title: Vuejs
 shortDescription: Open-source JavaScript framework for building user interfaces.
 url: https://vuejs.org/
-logo: ../../static/uploads/logo-vuejs.png
+logo: ../../static/uploads/logo-vuejs.svg
 color: "#41b883"
 featured: true
 ---

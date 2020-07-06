@@ -3,7 +3,7 @@ id: tech13
 title: Symfony
 shortDescription: Framework and set of reusable PHP components/libraries
 url: https://symfony.com/
-logo: ../../static/uploads/logo-symfony.png
+logo: ../../static/uploads/logo-symfony.svg
 color: "#222222"
 banner: ""
 featured: true

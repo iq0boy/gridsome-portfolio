@@ -2,7 +2,7 @@
 id: tech5
 title: CSS
 shortDescription: Style sheet language used for describing the presentation of a document.
-logo: ../../static/uploads/logo-css.png
+logo: ../../static/uploads/logo-css.svg
 color: "#016db4"
 featured: false
 ---

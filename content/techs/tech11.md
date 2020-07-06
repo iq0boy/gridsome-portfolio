@@ -3,7 +3,7 @@ id: tech11
 title: Python
 shortDescription: Interpreted, high-level, general-purpose programming language
 url: https://www.python.org/
-logo: ../../static/uploads/logo-python.png
+logo: ../../static/uploads/logo-python.svg
 color: "#3776ab"
 featured: false
 ---

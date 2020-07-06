@@ -2,7 +2,7 @@
 id: tech6
 title: HTML
 shortDescription: Standard markup language for documents in a web browser.
-logo: ../../static/uploads/logo-html.png
+logo: ../../static/uploads/logo-html.svg
 color: "#e44d26"
 featured: false
 ---
