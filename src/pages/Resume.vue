@@ -163,7 +163,7 @@ query {
     }
     }
   }
-  allLanguage {
+  allLanguage(sortBy: "id", order: ASC) {
     edges {
       node {
         id
