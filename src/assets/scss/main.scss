@@ -11,10 +11,10 @@ html, body {
 blockquote {
   @apply border-l;
   @apply border-l-4;
-  @apply border-l-red-500;
   @apply pl-4;
   @apply italic;
   @apply my-8;
+  border-left-color: #f56565;
 
   p {
     padding: 0 !important;
