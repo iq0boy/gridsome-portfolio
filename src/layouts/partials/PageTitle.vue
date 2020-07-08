@@ -2,7 +2,7 @@
 
     <div id="titleContainer" class="container mx-auto px-4 sm:px-0">
         <div class="mb-4 md:mb-8 lg:mb-16">
-            <h1 class="mx-auto w-32 h-32 text-2xl lg:w-48 lg:h-48 lg:text-4xl lg:mx-0 rounded-full flex justify-center items-center shadow-lg">{{title}}</h1>
+            <h1 class="mx-auto w-32 h-32 text-2xl lg:w-48 lg:h-48 lg:text-4xl lg:mx-0 rounded-full flex justify-center items-center shadow-lg transition duration-300 ease-in-out">{{title}}</h1>
             <figure id="titleLogoContainer" class="w-1/2 h-auto absolute top-8 right-8">
                 <slot />
             </figure>
@@ -52,13 +52,16 @@
         background-color: #fbfbfb;
         color: #2f2e41;
         box-shadow: inset 16px 5px 4px 0 rgba(0, 0, 0, 0.03)
+
     }
     body[data-theme="dark"] {
         h1 {
             background-color: #2f2e41;
             color: rgba(250,250,250, 1);
-            box-shadow: inset 16px 5px 4px 0 rgba(0, 0, 0, 0.06)
-
+            box-shadow: inset -11px -7px 4px 0 rgba(0, 0, 0, 0.1);
+        }
+        #titleContainer svg {
+            opacity: 0.5;
         }
     }
 
