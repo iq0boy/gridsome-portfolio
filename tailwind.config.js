@@ -1,8 +1,3 @@
-//tailwind border color plugin powered by
-//https://github.com/tailwindcss/tailwindcss/pull/560#issuecomment-503222143
-var _ = require('lodash')
-var flattenColorPalette = require('tailwindcss/lib/util/flattenColorPalette').default
-
 
 module.exports = {
   purge: [
@@ -70,32 +65,7 @@ module.exports = {
         }
       })
     },
-    function ({
-      addUtilities,
-      e,
-      theme,
-      variants
-    }) {
-      const colors = flattenColorPalette(theme('borderColor'))
 
-      const utilities = _.flatMap(_.omit(colors, 'default'), (value, modifier) => ({
-
-        [`.${e(`border-t-${modifier}`)}`]: {
-          borderTopColor: `${value}`
-        },
-        [`.${e(`border-r-${modifier}`)}`]: {
-          borderRightColor: `${value}`
-        },
-        [`.${e(`border-b-${modifier}`)}`]: {
-          borderBottomColor: `${value}`
-        },
-        [`.${e(`border-l-${modifier}`)}`]: {
-          borderLeftColor: `${value}`
-        },
-      }))
-
-      addUtilities(utilities, variants('borderColor'))
-    },
     function ({
       addBase,
       config
