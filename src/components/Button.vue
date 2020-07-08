@@ -1,5 +1,5 @@
 <template>
-    <button class="font-bold rounded-full py-4 px-8 shadow-lg hover:underline focus:outline-none" :class="classes">
+    <button class="button font-bold rounded-full py-4 px-8 shadow-xl focus:outline-none transition duration-300 ease-in-out transform hover:underline hover:shadow-lg" :class="classes">
         {{label}}
     </button>
 </template>
@@ -37,6 +37,15 @@
          .bg-gradient {
             background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
         }
+    }
+
+    button {
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+    button:hover{
+        transform: scale(0.95) translateY(0.1em);
+        backdrop-filter: brightness(0.9);
     }
 
 </style>
