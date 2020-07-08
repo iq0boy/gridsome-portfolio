@@ -3,7 +3,7 @@
         <div id="cursus-content" class="pt-24 pb-16 px-2 container mx-auto relative overflow-x-hidden">
 
             <PageTitle :title="'Cursus'">
-                <CursusLogo></CursusLogo>
+                <CursusLogo class="transition duration-1000 ease-in-out"></CursusLogo>
             </PageTitle>
 
             <!--Jobs-->

@@ -3,7 +3,7 @@
         <div class="pt-24 pb-16 px-2 relative container mx-auto overflow-x-hidden relative">
 
             <PageTitle :title="'Projects'">
-                <ProjectsLogo></ProjectsLogo>
+                <ProjectsLogo class="transition duration-1000 ease-in-out"></ProjectsLogo>
             </PageTitle>
 
             <div id="projects-container" class="pt-24 sm:pt-32 md:pt-40 lg:pt-32 sm:px-0 flex flex-col">

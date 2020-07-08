@@ -3,7 +3,7 @@
         <div class="pt-24 pb-16 px-2 relative container mx-auto overflow-x-hidden relative">
 
             <PageTitle :title="'Services'">
-                <ServiceLogo></ServiceLogo>
+                <ServiceLogo class="transition duration-1000 ease-in-out"></ServiceLogo>
             </PageTitle>
 
 

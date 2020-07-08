@@ -3,7 +3,7 @@
         <div class="container mx-auto px-2 pt-24 pb-16 relative overflow-x-hidden">
 
                 <PageTitle :title="'Contact'">
-                    <ContactLogo></ContactLogo>
+                    <ContactLogo class="transition duration-1000 ease-in-out"></ContactLogo>
                 </PageTitle>
 
                 <form
