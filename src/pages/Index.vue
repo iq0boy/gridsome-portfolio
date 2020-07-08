@@ -167,7 +167,7 @@ query {
         node {
           id
           title
-          logo(width:64, height:64, fit:contain, background:"rgba(0,0,0,0)", quality:10)
+          logo(fit:contain, background:"rgba(0,0,0,0)", quality:100)
           path
         }
       }
