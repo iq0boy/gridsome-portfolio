@@ -6,7 +6,7 @@
       <div class="flex flex-col sm:flex-row flex-grow space-between items-center w-auto height-30px">
 
         <div class="hidden md:flex items-center flex-shrink-0 text-white mr-6">
-          <g-image class="logo" src="~/favicon.png" width="25" height="25" fit="contain"></g-image>
+          <faviconLogo  width="25" height="25" />
         </div>
 
         <div class="text-sm flex-grow uppercase pb-2 sm:py-0">
@@ -128,6 +128,8 @@ import githubLogo from '~/assets/icons/github.svg?inline'
 import linkedInLogo from '~/assets/icons/linkedin.svg?inline'
 import mailLogo from '~/assets/icons/mail.svg?inline'
 import HeroLogo from '~/assets/svg/undraw_source_code_xx2e.svg?inline'
+import faviconLogo from '~/faviconBW.svg'
+
 
 export default {
   props: {
@@ -149,6 +151,7 @@ export default {
     linkedInLogo,
     mailLogo,
     HeroLogo,
+    faviconLogo,
     Button
   }
 };

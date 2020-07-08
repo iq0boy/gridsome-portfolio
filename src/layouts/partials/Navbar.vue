@@ -11,7 +11,7 @@
 
         <!--logo-->
         <div class="logo hidden md:flex items-center flex-shrink-0  mr-6">
-          <g-image src="~/favicon.png" width="25" height="25" fit="contain"></g-image>
+          <faviconLogo  width="25" height="25"/>
         </div>
 
         <!--links navigation-->
@@ -84,13 +84,15 @@ import ThemeSwitcher from '~/components/ThemeSwitcher'
 import githubLogo from '~/assets/icons/github.svg?inline'
 import linkedInLogo from '~/assets/icons/linkedin.svg?inline'
 import mailLogo from '~/assets/icons/mail.svg?inline'
+import faviconLogo from '~/faviconBW.svg'
 
 export default {
   components : {
     ThemeSwitcher,
     githubLogo,
     linkedInLogo,
-    mailLogo
+    mailLogo,
+    faviconLogo
   },
   props: {
     theme: {
