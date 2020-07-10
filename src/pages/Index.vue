@@ -18,7 +18,7 @@
           </div>
 
           <!--About me -->
-          <section id="about-me" class="border-b py-8 mx-auto sm:px-0">
+          <section id="about" class="border-b py-8 mx-auto sm:px-0">
               <div class="container max-w-5xl mx-auto m-8">
                   <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center">About me</h1>
                   <div class="w-full mb-4">
@@ -59,7 +59,7 @@
           </section>
 
           <!-- Main Skills -->
-          <section id="main-stack" class="border-b py-8 mx-auto sm:px-0">
+          <section id="skills" class="border-b py-8 mx-auto sm:px-0">
 
               <div class="container mx-auto flex flex-wrap pt-4 pb-12">
 
@@ -92,7 +92,7 @@
           </section>
 
           <!-- Featured techs -->
-          <section class="bg-gray-200 py-8">
+          <section id="techs" class="bg-gray-200 py-8">
 
               <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
                   <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Featured Techs</h1>
@@ -118,7 +118,7 @@
           </section>
 
           <!-- Call to Action -->
-          <div id="call-to-action-container">
+          <div id="action">
               <!-- Change the colour #f8fafc to match the previous section colour -->
               <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -167,7 +167,7 @@ query {
         node {
           id
           title
-          logo(fit:contain, background:"rgba(0,0,0,0)", quality:100)
+          logo(fit:contain, background:"rgba(0,0,0,0)")
           path
         }
       }
@@ -223,16 +223,16 @@ export default {
         #header-last-wave {
             fill: beige;
         }
-        #call-to-action-container,  #waves-container  {
+        #action,  #waves-container  {
             background: linear-gradient(90deg,#1a202c 60%, #c53030 250%);
         }
-        #about-me {
+        #about {
             background-color: beige;
             h1, h3 {
                 color: black;
             }
         }
-        #main-stack {
+        #skills {
             background: linear-gradient(90deg,#1a202c 60%, #c53030 250%);
             .stack-card {
                 background-color: beige;
@@ -247,7 +247,7 @@ export default {
         #header-last-wave{
             fill: #FFFFFF;
         }
-        #call-to-action-container, #waves-container, .bg-gradient, #waves-container {
+        #action, #waves-container, .bg-gradient, #waves-container {
             background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
         }
 
