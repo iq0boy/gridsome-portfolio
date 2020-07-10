@@ -8,7 +8,7 @@
 
         <div class="flex flex-col md:flex-row justify-between items-center">
           <h1 class="pb-0 my-0 text-5xl font-medium" v-bind:style="{ color: $page.tech.color}" >{{ $page.tech.title }}</h1>
-          <g-image class="tech-logo"  :src="$page.tech.logo" :alt="$page.tech.title" :title="$page.tech.title"/>
+          <g-image class="tech-logo"  :src="$page.tech.logo" :alt="$page.tech.title" :title="$page.tech.title" immediate="true"/>
         </div>
 
         <div class="text-2xl pt-4 pb-10 text-gray-700" v-html="$page.tech.shortDescription"></div>

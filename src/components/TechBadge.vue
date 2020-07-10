@@ -5,7 +5,7 @@
         :scale="scale"
     >
         <template>
-            <g-image :src="logo" :alt="title" :title="title"/>
+            <g-image :src="logo" :alt="title" :title="title" immediate="true"/>
         </template>
     </Badge>
 </template>
