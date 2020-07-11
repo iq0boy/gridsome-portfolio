@@ -3,18 +3,18 @@
 
         <div class="container sm:pxi-0 mx-auto overflow-x-hidden pt-24 pb-12">
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4 pt-8">
-                <section class="post-header container mx-auto px-0 mb-4 border-b">
-                    <h1 class="font-medium leading-none mt-0 mb-8 flex flex-col md:flex-row items-baseline">
-                        <span class="text-sm">
-                            <g-link class="nav-link uppercase" :to="'/cursus'">
+            <div class="px-4 pt-8 mb-8">
+                <section class="mb-4 border-b">
+                    <h1 class="font-medium leading-none mt-0 mb-4 md:mb-8 flex flex-col md:flex-row items-baseline">
+                        <span class="text-sm mb-4 md:mb-0">
+                            <g-link class="nav-link uppercase inline-block" :to="'/cursus'">
                                 cursus
                             </g-link>
-                            <ChevronRightIcon class="inline-block" />
-                            <g-link  class="nav-link uppercase" :to="'/cursus#jobs'">
+                            <LevelUpIcon class="inline-block icon-back mx-2"/>
+                            <g-link class="nav-link uppercase inline-block" :to="'/cursus#jobs'">
                                 jobs
                             </g-link>
-                            <ChevronRightIcon class="inline-block" />
+                            <LevelUpIcon class="inline-block icon-back mx-2"/>
                         </span>
                         <span>
                             {{ $page.job.title}}
@@ -31,20 +31,20 @@
                 </section>
             </div>
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4">
+            <div class="lg:mx-16 md:mx-8 sm:mx-4 mx-2 lg:my-16 my-8 px-4">
                 <section class="container mx-auto relative text-gray-700">
                     <div class="content-detail text-xl" v-html="$page.job.content"></div>
                 </section>
             </div>
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4 mt-10">
+            <div class="px-4 mt-10">
                 <blockquote>
                     <p>Started : {{ $page.job.startedAt}}</p>
                     <p>Ended : {{ $page.job.endedAt}}</p>
                 </blockquote>
             </div>
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4">
+            <div class="px-4">
                 <section class="flex flex-wrap container mx-auto relative">
                     <ul class="list-none m-0 p-0 flex flex-wrap container mx-auto relative">
                         <li v-for="tech in $page.job.techs" :key="tech.id">
@@ -59,7 +59,7 @@
                 </section>
             </div>
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4 mt-4 mb-2 relative text-xl h-12">
+            <div class="px-4 mt-4 mb-2 relative text-xl h-12">
                 <div  v-if="$page.next" class="absolute left-0 ml-2">
                     <g-link :to="$page.next.path" class="flex justify-between items-center cursor-pointer nav-arrow">
                         <chevron-left-icon  /> Previous
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 mb-12 relative text-xl h-12">
+            <div class="mb-12 relative text-xl h-12">
                 <div class="absolute left-0 ml-4">
                     <g-link :to="'/cursus#jobs'" class="cursor-pointer nav-link">
                         <LevelUpIcon class="inline-block mr-2 icon-back"/><span>Jobs</span>

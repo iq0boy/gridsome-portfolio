@@ -1,42 +1,40 @@
 <template>
   <Layout :hideHeader="true" :disableScroll="true">
 
-    <div class="container sm:pxi-0 mx-auto overflow-x-hidden pt-24 pb-24">
+    <div class="container sm:pxi-0 mx-auto overflow-x-hidden pt-24 pb-12">
 
       <!-- Header -->
-      <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 pt-8 px-0 mb-4 border-b pb-10">
-
-        <div >
-          <h1 class="pb-0 my-0 text-5xl font-medium">
-            <span class="text-sm">
+      <div class="px-4 pt-8">
+        <section class="border-b">
+          <h1 class="font-medium leading-none mt-0 mb-4 md:mb-8 flex flex-col md:flex-row items-baseline w-full">
+            <span class="text-sm mb-4 md:mb-0">
               <g-link class="nav-link uppercase" :to="'/services'">
                 services
               </g-link>
-              <ChevronRightIcon class="inline-block"/>
+              <LevelUpIcon class="inline-block icon-back mx-2"/>
               <g-link class="nav-link uppercase" :to="'/services#skills'">
                 skills
               </g-link>
-              <ChevronRightIcon class="inline-block"/>
+              <LevelUpIcon class="inline-block icon-back mx-2"/>
             </span>
             <span>
               {{ $page.skill.title}}
             </span>
           </h1>
-        </div>
 
-        <div class="text-2xl pt-4 text-gray-700" v-html="$page.skill.shortDescription"></div>
-
+          <div class="text-2xl pt-4 text-gray-700 mb-10" v-html="$page.skill.shortDescription"></div>
+        </section>
       </div>
 
       <!-- Content -->
-      <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-6">
-        <section class="container mx-auto relative text-gray-700">
+      <div class="lg:mx-16 md:mx-8 sm:mx-4 mx-2 lg:my-16 my-8 px-4">
+        <section class="container mx-auto text-gray-700">
           <div class="content-detail text-xl" v-html="$page.skill.content"></div>
         </section>
       </div>
 
       <!-- Techs -->
-      <div v-if="$page.skill.techs.length" class="lg:mx-32 md:mx-16 px-4 sm:px-0 my-8 lg:my-10">
+      <div v-if="$page.skill.techs.length" class="px-4 sm:px-0 my-8 lg:my-10">
         <section class="flex flex-wrap container mx-auto relative">
           <ul class="list-none m-0 p-0 flex flex-wrap container mx-auto relative">
             <li v-for="tech in $page.skill.techs" :key="tech.id">
@@ -52,7 +50,7 @@
       </div>
 
       <!-- Footer -->
-      <div class="lg:mx-32 md:mx-16 px-4 sm:px-0">
+      <div class="px-4 sm:px-0">
         <blockquote  v-if="$page.skill.relatedJobs.edges.length">
           <h6>Related jobs</h6>
           <ul>
@@ -72,7 +70,7 @@
         </blockquote>
       </div>
 
-      <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 mb-12 relative text-xl h-12">
+      <div class="mb-12 relative text-xl h-12">
         <div class="absolute left-0">
           <g-link :to="'/services#skills'" class="cursor-pointer nav-link">
             <LevelUpIcon class="inline-block mr-2 icon-back"/><span>Skills</span>

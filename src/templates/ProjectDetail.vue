@@ -3,14 +3,14 @@
 
         <div class="container sm:pxi-0 mx-auto overflow-x-hidden pt-24 pb-12">
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4 pt-8">
-                <section class="post-header container mx-auto px-0 mb-4 border-b">
-                    <h1 class="text-5xl font-medium leading-none mt-0">
-                        <span class="text-sm">
-                            <g-link  class="nav-link uppercase" :to="'/projects'">
+            <div class="px-4 pt-8">
+                <section class="mb-4 border-b">
+                    <h1 class="font-medium leading-none mt-0 mb-4 md:mb-8 flex flex-col md:flex-row items-baseline">
+                        <span class="text-sm mb-4 md:mb-0">
+                            <g-link class="nav-link uppercase inline-block" :to="'/projects'">
                                 projects
                             </g-link>
-                            <ChevronRightIcon class="inline-block" />
+                            <LevelUpIcon class="inline-block icon-back mx-2"/>
                         </span>
                         <span>
                             {{ $page.project.title}}
@@ -27,20 +27,20 @@
                 </section>
             </div>
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4">
+            <div class="lg:mx-16 md:mx-8 sm:mx-4 mx-2 lg:my-16 my-8 px-4">
                 <section class="container mx-auto text-gray-700">
                     <div class="content-detail text-xl" v-html="$page.project.content"></div>
                 </section>
             </div>
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4 mt-10">
+            <div class="px-4 mt-10">
                 <blockquote>
                     <p class="font-bold">Status : {{$page.project.status.charAt(0).toUpperCase() + $page.project.status.slice(1)}}</p>
                     <p>Started : {{ $page.project.monthYear}}</p>
                 </blockquote>
             </div>
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4">
+            <div class="px-4">
                 <section class="flex flex-wrap container mx-auto relative">
                     <ul class="list-none m-0 p-0 flex flex-wrap container mx-auto relative">
                         <li v-for="tech in $page.project.techs" :key="tech.id">
@@ -55,7 +55,7 @@
                 </section>
             </div>
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 px-4 mt-4 mb-2 relative text-xl h-12">
+            <div class="px-4 mt-4 mb-2 relative text-xl h-12">
                 <div  v-if="$page.next" class="absolute left-0 ml-2">
                     <g-link :to="$page.next.path" class="flex justify-between items-center cursor-pointer nav-arrow">
                         <chevron-left-icon /> Previous
@@ -68,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 mb-12 relative text-xl h-12">
+            <div class="mb-12 relative text-xl h-12">
                 <div class="absolute left-0 ml-4">
                     <g-link :to="'/projects'" class="cursor-pointer nav-link">
                         <LevelUpIcon class="inline-block mr-2 icon-back"/><span>Projects</span>

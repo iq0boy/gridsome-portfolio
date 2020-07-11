@@ -1,45 +1,46 @@
 <template>
   <Layout :hideHeader="true" :disableScroll="true">
 
-    <div class="container sm:pxi-0 mx-auto overflow-x-hidden pt-24 pb-24">
+    <div class="container sm:pxi-0 mx-auto overflow-x-hidden pt-24 pb-12">
 
       <!-- Header -->
-      <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 pt-8 px-0 mb-4 border-b pb-8">
-
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <h1 class="pb-0 my-0 text-5xl font-medium" >
-            <span class="text-sm">
+      <div class="px-4 pt-8">
+        <section class="border-b">
+          <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
+            <h1 class="font-medium leading-none mt-0 mb-4 md:mb-8 flex flex-col md:flex-row items-baseline w-full">
+            <span class="text-sm mb-4 md:mb-0">
               <g-link class="nav-link uppercase" :to="'/services'">
                 services
               </g-link>
-              <ChevronRightIcon class="inline-block"/>
-              <g-link class="nav-link uppercase" :to="'/services#skills'">
-                skills
+              <LevelUpIcon class="inline-block icon-back mx-2"/>
+              <g-link class="nav-link uppercase" :to="'/services#techs'">
+                techs
               </g-link>
-              <ChevronRightIcon class="inline-block"/>
+              <LevelUpIcon class="inline-block icon-back mx-2"/>
             </span>
-            <span>
+              <span>
               {{ $page.tech.title }}
             </span>
-          </h1>
-          <g-image class="tech-logo"  :src="$page.tech.logo" :alt="$page.tech.title" :title="$page.tech.title" immediate="true"/>
-        </div>
+            </h1>
+            <g-image class="tech-logo "  :src="$page.tech.logo" :alt="$page.tech.title" :title="$page.tech.title" immediate="true"/>
+          </div>
 
-        <div class="text-2xl pt-4 pb-10 text-gray-700" v-html="$page.tech.shortDescription"></div>
+          <div class="text-2xl pt-4 pb-6 text-gray-700" v-html="$page.tech.shortDescription"></div>
 
-        <a v-if="$page.tech.url" :href="$page.tech.url" class="font-bold hover:text-red-400">Visit Official website</a>
+          <a v-if="$page.tech.url" :href="$page.tech.url" class="font-bold hover:text-red-400  inline-block mb-10 ">Visit Official website</a>
 
+        </section>
       </div>
 
       <!-- Content -->
-      <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-6">
-        <section class="container mx-auto relative text-gray-700">
+      <div class="lg:mx-16 md:mx-8 sm:mx-4 mx-2 lg:my-16 my-8 px-4">
+        <section class="container mx-auto text-gray-700">
           <div class="content-detail text-xl" v-html="$page.tech.content"></div>
         </section>
       </div>
 
       <!-- Footer -->
-      <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-10">
+      <div class="px-4 sm:px-0 mt-10">
           <blockquote  v-if="$page.tech.relatedJobs.edges.length">
             <h6>Related jobs</h6>
             <ul>
@@ -59,7 +60,7 @@
           </blockquote>
       </div>
 
-      <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 mb-12 relative text-xl h-12">
+      <div class="mb-12 relative text-xl h-12">
         <div class="absolute left-0">
           <g-link :to="'/services#techs'" class="cursor-pointer nav-link">
             <LevelUpIcon class="inline-block mr-2 icon-back"/><span>Techs</span>
