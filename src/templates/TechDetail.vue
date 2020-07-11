@@ -7,7 +7,7 @@
       <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 pt-8 px-0 mb-4 border-b pb-8">
 
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <h1 class="pb-0 my-0 text-5xl font-medium" v-bind:style="{ color: $page.tech.color}" >
+          <h1 class="pb-0 my-0 text-5xl font-medium" >
             <span class="text-sm">
               <g-link class="nav-link uppercase" :to="'/services'">
                 services
