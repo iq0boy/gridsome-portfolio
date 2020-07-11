@@ -153,15 +153,15 @@ module.exports = {
       component: '~/templates/ProjectDetail.vue'
     }],
     Job: [{
-      path: (node) => '/jobs/' + node.title.toLowerCase().split(' ').join('-'),
+      path: (node) => '/cursus/jobs/' + node.title.toLowerCase().split(' ').join('-'),
       component: '~/templates/JobDetail.vue'
     }],
     Tech: [{
-      path: (node) => '/techs/' + node.title.toLowerCase().split(' ').join('-'),
+      path: (node) => '/services/techs/' + node.title.toLowerCase().split(' ').join('-'),
       component: '~/templates/TechDetail.vue'
     }],
     Skill: [{
-      path: '/skills/:title'
+      path: '/services/skills/:title'
     }]
   }
 }

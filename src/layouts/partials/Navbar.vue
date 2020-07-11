@@ -18,6 +18,9 @@
         <div class="text-sm pb-2 sm:py-0 w-full sm:w-auto flex-grow uppercase">
           <ul 
           class="list-none m-0 flex justify-center sm:justify-start uppercase transition-all transition-500">
+            <li class="mr-4">
+              <g-link :to="'/'" class="animated-link" :active-class="'home-active'">Home</g-link>
+            </li>
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.navigation"

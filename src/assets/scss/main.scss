@@ -35,6 +35,14 @@ blockquote {
   width: 100%;
 }
 
+.animated-link.active, .home-active.active--exact {
+  @apply text-red-400;
+}
+
+.animated-link.active--exact:after {
+  width: 100%;
+}
+
 .content-detail {
   @apply text-black;
   p {

@@ -2,11 +2,6 @@
   "headerNavigation":
   [
     {
-      "name": "Home",
-      "link": "/",
-      "external": false
-    },
-    {
       "name": "Cursus",
       "link": "/cursus",
       "external": false

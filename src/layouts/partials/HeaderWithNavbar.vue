@@ -11,10 +11,12 @@
 
         <div class="text-sm flex-grow uppercase pb-2 sm:py-0">
           <ul class="list-none m-0 flex justify-center sm:justify-start text-gray-300 uppercase">
+            <li class="mr-4">
+              <g-link :to="'/'" class="animated-link" :active-class="'home-active'" >Home</g-link>
+            </li>
             <li
               :key="element.name"
               v-for="(element,index) in $static.metadata.navigation"
-              class="hover:text-white"
               v-bind:class="{'mr-4' : index !== Object.keys($static.metadata.navigation).length - 1}"
             >
               <a
