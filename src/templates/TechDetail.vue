@@ -61,7 +61,7 @@
       </div>
 
       <div class="mb-12 relative text-xl h-12">
-        <div class="absolute left-0">
+        <div class="ml-4 sm:ml-0 absolute left-0">
           <g-link :to="'/services#techs'" class="cursor-pointer nav-link">
             <LevelUpIcon class="inline-block mr-2 icon-back"/><span>Techs</span>
           </g-link>
