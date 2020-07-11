@@ -81,7 +81,6 @@ query ($id: ID!) {
     content
     url
     path
-    color
     logo(width:64, height:64, fit:contain, background:"rgba(0,0,0,0)")
     relatedJobs: belongsTo(filter:{ typeName: {eq: Job}}){
       totalCount
