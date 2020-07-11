@@ -7,7 +7,21 @@
       <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 pt-8 px-0 mb-4 border-b pb-8">
 
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <h1 class="pb-0 my-0 text-5xl font-medium" v-bind:style="{ color: $page.tech.color}" >{{ $page.tech.title }}</h1>
+          <h1 class="pb-0 my-0 text-5xl font-medium" v-bind:style="{ color: $page.tech.color}" >
+            <span class="text-sm">
+              <g-link class="nav-link uppercase" :to="'/services'">
+                services
+              </g-link>
+              <ChevronRightIcon class="inline-block"/>
+              <g-link class="nav-link uppercase" :to="'/services#skills'">
+                skills
+              </g-link>
+              <ChevronRightIcon class="inline-block"/>
+            </span>
+            <span>
+              {{ $page.tech.title }}
+            </span>
+          </h1>
           <g-image class="tech-logo"  :src="$page.tech.logo" :alt="$page.tech.title" :title="$page.tech.title" immediate="true"/>
         </div>
 
@@ -26,7 +40,6 @@
 
       <!-- Footer -->
       <div class="lg:mx-32 md:mx-16 px-4 sm:px-0 mt-10">
-
           <blockquote  v-if="$page.tech.relatedJobs.edges.length">
             <h6>Related jobs</h6>
             <ul>
@@ -44,7 +57,14 @@
               </li>
             </ul>
           </blockquote>
+      </div>
 
+      <div class="lg:mx-32 md:mx-16 sm:mx-8 mx-4 mb-12 relative text-xl h-12">
+        <div class="absolute left-0">
+          <g-link :to="'/services#techs'" class="cursor-pointer nav-link">
+            <LevelUpIcon class="inline-block mr-2 icon-back"/><span>Techs</span>
+          </g-link>
+        </div>
       </div>
 
     </div>
@@ -93,7 +113,14 @@ query ($id: ID!) {
 
 <script>
 
+import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
+import LevelUpIcon from '~/assets/icons/level-up.svg?inline';
+
 export default {
+  components: {
+    ChevronRightIcon,
+    LevelUpIcon,
+  },
   computed: {
     projectLabel: function() {
       const pluralize = require("pluralize");
@@ -113,8 +140,16 @@ export default {
 </script>
 
 <style scoped>
- .tech-logo{
-   width: 75px;
- }
-
+  .tech-logo{
+    width: 75px;
+  }
+  svg{
+    width: 2em;
+    height: 2em;
+    color: #f56565;
+  }
+  svg.icon-back {
+    width: 1.2em;
+    height: 1.2em;
+  }
 </style>
