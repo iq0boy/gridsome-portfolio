@@ -4,7 +4,6 @@ title: NetlifyCMS
 shortDescription: Open source content management for your Git workflow
 url: https://www.netlifycms.org/
 logo: ../../static/uploads/logo-netlify-cms.svg
-color: "#C9FA4B"
 featured: true
 ---
 Static + content management = ♥

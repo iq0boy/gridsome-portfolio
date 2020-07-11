@@ -20,7 +20,6 @@ collections:
       - {label: "ShortDescription", name: "shortDescription", widget: "text"}
       - {label: "Url", name: "url", widget: "string", required: false }
       - {label: "Logo", name: "logo", widget: "image"}
-      - {label: "Color", name: "color", widget: "string", required: false}
       - {label: "Featured", name: "featured", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
 

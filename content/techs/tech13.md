@@ -4,8 +4,6 @@ title: Symfony
 shortDescription: Framework and set of reusable PHP components/libraries
 url: https://symfony.com/
 logo: ../../static/uploads/logo-symfony.svg
-color: "#222222"
-banner: ""
 featured: true
 ---
 Symfony is a PHP web application framework and a set of reusable PHP components/libraries.

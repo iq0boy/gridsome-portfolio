@@ -4,7 +4,6 @@ title: Java
 shortDescription: General-purpose programming language 
 url: https://www.java.com
 logo: ../../static/uploads/logo-java.svg
-color: "#e76f00"
 featured: false
 ---
 Java is a general-purpose programming language that is class-based, object-oriented,

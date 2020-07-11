@@ -4,7 +4,6 @@ title: MySQL
 shortDescription: Relational database management system
 url: https://www.mysql.com/
 logo: ../../static/uploads/logo-mysql.svg
-color: "#00758f"
 featured: false
 ---
 MySQL is a relational database management system (RDBMS).

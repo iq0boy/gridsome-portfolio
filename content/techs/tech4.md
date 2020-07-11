@@ -4,7 +4,6 @@ title: jQuery
 shortDescription: Fast, small, and feature-rich JavaScript library.
 url: https://jquery.com/
 logo: ../../static/uploads/logo-jquery.svg
-color: "#0769ad"
 featured: false
 ---
 jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation,

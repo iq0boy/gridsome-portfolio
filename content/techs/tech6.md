@@ -3,7 +3,6 @@ id: tech6
 title: HTML
 shortDescription: Standard markup language for documents in a web browser.
 logo: ../../static/uploads/logo-html.svg
-color: "#e44d26"
 featured: false
 ---
 Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser.
