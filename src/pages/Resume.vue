@@ -1,17 +1,13 @@
 <template>
     <Layout :hideHeader="true">
-        <div id="cv-container" class="pt-24 pb-16 container mx-auto">
+        <div id="cv-container" class="pt-24 pb-16 mx-auto">
 
-            <div id="cv-actions" class="mx-auto mb-8 flex justify-center">
-                <span class="btn cursor-pointer hover:underline text-white font-bold rounded-full my-0 mx-4 py-4 px-8 shadow-lg flex w-32 justify-center content-center" @click="print">
-                    Print
-                </span>
-                <span class="btn cursor-pointer hover:underline text-white font-bold rounded-full my-0 mx-4 py-4 px-8 shadow-lg flex w-32 justify-center content-center">
-                    Get Pdf
-                </span>
+            <div id="cv-actions" class="w-full mx-auto mb-8 flex justify-center items-center">
+                <div id="print" class="m-4" @click="print"><Button :label="'Print'" :classes="['bg-rose', 'w-full']" /></div>
+                <a id="pdf" class="m-4" :href="'Joseph Pire - CV 2020.pdf'" target="_blank"><Button :label="'Get PDF'" :classes="['bg-rose', 'w-full']" /></a>
             </div>
 
-            <div id="cv" class="mx-auto border p-4 flex flex-col shadow-2xl">
+            <div id="cv" class="mx-auto border p-4 flex flex-col shadow-lg">
 
                 <header>
                     <div class="flex justify-between bg-gray-700 text-white p-2">
@@ -223,6 +219,7 @@ query {
 </page-query>
 
 <script>
+    import Button from "~/components/Button";
     import BoxIcon from '~/assets/icons/box.svg?inline'
     import BriefCaseIcon from '~/assets/icons/briefcase.svg?inline'
     import GlobeIcon from '~/assets/icons/globe.svg?inline'
@@ -238,6 +235,7 @@ query {
     export default {
         name: "Resume",
         components: {
+            Button,
             BoxIcon,
             BriefCaseIcon,
             GlobeIcon,
@@ -248,7 +246,7 @@ query {
             PhoneIcon,
             PriceIcon,
             ToolsIcon,
-            VCardIcon
+            VCardIcon,
         },
         methods: {
             print: function() {
@@ -274,6 +272,10 @@ query {
 </script>
 
 <style lang="scss" scoped>
+    @page {
+        margin: 0;
+    }
+
     #cv-container {
         @media print {
             padding: 0;
@@ -282,6 +284,9 @@ query {
     #cv-actions {
         @media print {
             display: none;
+        }
+        div, a {
+            width: 150px;
         }
     }
 
@@ -335,6 +340,30 @@ query {
     }
     .row-3 {
         height: 35%;
+    }
+
+    @media screen and (max-width: 900px)
+    {
+        #cv-container {
+            @apply flex;
+            @apply flex-row;
+            @apply h-full;
+            @apply justify-center;
+        }
+        #cv {
+            display: none;
+        }
+        #cv-actions {
+            @apply flex-col;
+            div, a {
+                width: 200px;
+            }
+            background-image: url("/undraw_online_cv_qy9w.svg?inline");
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: lighten;
+        }
     }
 
 </style>
