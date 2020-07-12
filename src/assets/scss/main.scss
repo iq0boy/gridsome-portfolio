@@ -21,6 +21,16 @@ blockquote {
   }
 }
 
+.skill-tag {
+  @apply mt-3;
+}
+.skill-label {
+  @apply uppercase;
+  @apply font-medium;
+  @apply text-sm;
+  @apply text-red-600;
+}
+
 // navBar animation
 .animated-link:after {
   content: '';
@@ -62,6 +72,9 @@ body[data-theme="dark"] {
     .content-detail {
       @apply text-white;
     }
+  .skill-label {
+    @apply text-red-400;
+  }
 }
 
 @media print {

@@ -17,9 +17,9 @@
                         </span>
                     </h1>
                     <ul class="flex flex-wrap mb-5">
-                        <li  class=" uppercase font-medium text-xs text-red-400 mt-3" v-for="(skill, index) in $page.project.skills">
+                        <li  class="skill-tag" v-for="(skill, index) in $page.project.skills" :key="index">
                             <g-link :to="skill.path">
-                                <span class="skill-label">{{ skill.title }}</span><span class="ml-2 mr-2" v-if="index+1 < $page.project.skills.length">-</span>
+                                <span class="skill-label">{{ skill.title }}</span><span class="ml-2 mr-2 text-gray-400" v-if="index+1 < $page.project.skills.length">-</span>
                             </g-link>
                         </li>
                     </ul>
