@@ -1,7 +1,7 @@
 <template>
     <div class="badge-container mb-4 p-2 cursor-pointer inline-flex flex-row relative hover:z-10 justify-center transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110" :style="css">
         <g-link :to="path">
-            <div class="badge flex items-center justify-center border border-gray-600 rounded-full shadow-lg transition duration-1000 ease-in-out hover:border-red-400">
+            <div class="badge flex items-center justify-center mx-auto border border-gray-600 rounded-full shadow-lg transition duration-1000 ease-in-out hover:border-red-400">
                 <slot></slot>
             </div>
             <p v-if="label" class="text-center text-xs sm:text-sm md:text-base transition duration-1000 ease-in-out">
