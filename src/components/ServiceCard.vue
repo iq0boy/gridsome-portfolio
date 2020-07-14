@@ -1,37 +1,24 @@
 <template>
     <section :class="{
         'mt-24': previousTitle
-    }" class="flex flex-col shadow-lg service-card py-4 px-4 lg:px-12  rounded-lg lg:rounded-full">
+    }" class="flex flex-col shadow-lg service-card py-4 px-4 lg:px-12  rounded-lg lg:rounded-full relative">
+        <!--Anchor-->
+        <div class="anchor" :id="getIdFromTitle(title)"></div>
 
+        <!--Links-->
+        <span v-if="previousTitle" class="mx-auto">
+           <a :href="'#' + getIdFromTitle(previousTitle)">
+                <chevronUpIcon/>
+           </a>
+        </span>
         <!-- header -->
-        <div class="relative ml-8 lg:ml-0">
-
-            <!--Anchor-->
-            <div class="anchor" :id="getIdFromTitle(title)"></div>
-
+        <div>
             <!--Title and Links -->
             <h2 :class="{
-                'flex-row-reverse mr-8 lg:mr-0' : !ltr,
+                'flex-row-reverse' : !ltr,
                 'lg:pl-32': ltr,
                 'lg:pr-32': !ltr
             }" class="flex items-baseline text-2xl md:text-3xl lg:text-4xl justify-start my-0">
-                <!--Links-->
-                <span v-if="previousTitle" :class="{
-                    'mr-4': ltr,
-                    'ml-4': !ltr
-                }">
-                    <a :href="'#' + getIdFromTitle(previousTitle)">
-                        <chevronUpIcon/>
-                    </a>
-                </span>
-                <span v-if="nextTitle" :class="{
-                    'mr-4': ltr,
-                    'ml-4 ': !ltr
-                }">
-                    <a :href="'#' + getIdFromTitle(nextTitle)">
-                        <chevronDownIcon/>
-                    </a>
-                </span>
                 <!--Title-->
                 <span>{{title}}</span>
             </h2>
@@ -41,7 +28,7 @@
             'flex-row-reverse' : !ltr,
             'lg:pl-16': ltr,
             'lg:pr-16': !ltr
-                 }" class="flex items-baseline justify-center lg:justify-start my-0 card-description">
+                 }" class="flex items-baseline justify-start my-0 card-description">
                 {{shortDescription}}
             </div>
 
@@ -56,11 +43,17 @@
         <div class="flex justify-center pb-2">
             <g-link :to="path" :title="title">
                 <Button
-                    label="More Info"
-                    :classes="['bg-rose']"
+                        label="More Info"
+                        :classes="['bg-rose']"
                 />
             </g-link>
         </div>
+
+        <span v-if="nextTitle" class="mx-auto">
+            <a :href="'#' + getIdFromTitle(nextTitle)">
+                <chevronDownIcon/>
+            </a>
+        </span>
 
     </section>
 </template>
@@ -87,11 +80,11 @@
         },
         methods: {
             camelize(str) { // camel case the string
-                return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
-                    return index === 0 ? word.toLowerCase() : word.toUpperCase();
+                return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word) {
+                    return word.toUpperCase();
                 }).replace(/\s+/g, '');
             },
-            getIdFromTitle(title){
+            getIdFromTitle(title) {
                 return this.camelize(title);
             }
         }
@@ -104,6 +97,7 @@
         height: 1.5rem;
         color: #f56565;
     }
+
     a:hover > svg {
         opacity: 0.3;
     }
@@ -111,19 +105,22 @@
     .anchor {
         display: block;
         position: absolute;
-        top: -5em;
+        top: -7em;
         visibility: hidden;
     }
 
-    body[data-theme="light"] .service-card{
+    body[data-theme="light"] .service-card {
         background-color: #f1f1f1;
-        .card-description{
+
+        .card-description {
             color: #2f2e41;
         }
     }
-    body[data-theme="dark"] .service-card{
+
+    body[data-theme="dark"] .service-card {
         background-color: #1a202c;
-        .card-description{
+
+        .card-description {
             color: #7e7d99;
         }
     }
