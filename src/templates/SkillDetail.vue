@@ -8,12 +8,8 @@
         <section class="border-b">
           <h1 class="font-medium leading-none mt-0 mb-4 md:mb-8 flex flex-col md:flex-row items-baseline w-full">
             <span class="text-sm mb-4 md:mb-0">
-              <g-link class="nav-link uppercase" :to="'/services'">
+              <g-link class="nav-link capitalize" :to="'/services'">
                 services
-              </g-link>
-              <LevelUpIcon class="inline-block icon-back mx-2"/>
-              <g-link class="nav-link uppercase" :to="'/services#skills'">
-                skills
               </g-link>
               <LevelUpIcon class="inline-block icon-back mx-2"/>
             </span>
@@ -72,8 +68,8 @@
 
       <div class="mb-12 relative text-xl h-12">
         <div class="ml-4 sm:ml-0 absolute left-0">
-          <g-link :to="'/services#skills'" class="cursor-pointer nav-link">
-            <LevelUpIcon class="inline-block mr-2 icon-back"/><span>Skills</span>
+          <g-link :to="'/services'" class="cursor-pointer nav-link">
+            <LevelUpIcon class="inline-block mr-2 icon-back"/><span>Services</span>
           </g-link>
         </div>
       </div>

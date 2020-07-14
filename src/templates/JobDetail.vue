@@ -7,11 +7,11 @@
                 <section class="mb-4 border-b">
                     <h1 class="font-medium leading-none mt-0 mb-4 md:mb-8 flex flex-col md:flex-row items-baseline">
                         <span class="text-sm mb-4 md:mb-0">
-                            <g-link class="nav-link uppercase inline-block" :to="'/cursus'">
+                            <g-link class="nav-link capitalize inline-block" :to="'/cursus'">
                                 cursus
                             </g-link>
                             <LevelUpIcon class="inline-block icon-back mx-2"/>
-                            <g-link class="nav-link uppercase inline-block" :to="'/cursus#jobs'">
+                            <g-link class="nav-link capitalize inline-block" :to="'/cursus#jobs'">
                                 jobs
                             </g-link>
                             <LevelUpIcon class="inline-block icon-back mx-2"/>
