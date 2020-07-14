@@ -6,50 +6,25 @@
                 <ServiceLogo class="transition duration-1000 ease-in-out"></ServiceLogo>
             </PageTitle>
 
-
-            <!--Techs-->
-            <ServiceSection
-                    :title="'Techs'"
-                    :section-id="'techs'"
-                    :next-section-id="'#skills'"
-                    :ltr="true"
+            <serviceCard v-for="(skill,index) in sortedSkills" :key="index"
+                :title="skill.node.title"
+                :previousTitle="getPreviousTitle(index)"
+                :nextTitle="getNextTitle(index)"
+                :shortDescription="skill.node.shortDescription"
+                :path="skill.node.path"
+                :ltr="(index%2)===0"
             >
-                <template v-slot:logo>
-                </template>
-                <template v-slot:cards>
-                    <li class="inline-flex justify-center" v-for="tech in $page.allTech.edges" :key="tech.node.id">
+                <slot>
+                    <li  v-for="tech in skill.node.techs" :key="tech.id" >
                         <TechBadge
-                            :title="tech.node.title"
-                            :label="tech.node.title"
-                            :logo="tech.node.logo"
-                            :path="tech.node.path"
+                            :title="tech.title"
+                            :logo="tech.logo"
+                            :path="tech.path"
+                            :scale="0.5"
                         />
                     </li>
-                </template>
-            </ServiceSection>
-
-
-
-            <!--Skills-->
-            <ServiceSection
-                    :title="'Skills'"
-                    :section-id="'skills'"
-                    :previous-section-id="'#techs'"
-                    :ltr="false"
-            >
-                <template v-slot:logo>
-                </template>
-                <template v-slot:cards>
-                    <li class="inline-flex justify-center" v-for="skill in $page.allSkill.edges" :key="skill.node.id">
-                        <SkillBadge
-                            :path="skill.node.path"
-                            :title="skill.node.shortName"
-                        />
-                    </li>
-                </template>
-            </ServiceSection>
-
-
+                </slot>
+            </serviceCard>
 
         </div>
     </Layout>
@@ -69,13 +44,19 @@ query {
     }
   }
   allSkill {
-    totalCount
     edges {
       node {
         id
-        title
         path
         shortName
+        title
+        shortDescription
+        techs {
+          id
+          title
+          path
+          logo(width:24, height:24, fit:contain, background:"rgba(0,0,0,0)", quality:10)
+        }
       }
     }
   }
@@ -87,20 +68,44 @@ query {
 
 import PageTitle from "~/layouts/partials/PageTitle";
 import ServiceLogo from '~/assets/svg/undraw_heavy_box_agqi.svg?inline';
-import ServiceSection from "~/components/Sections/ServiceSection";
+import ServiceCard from "../components/ServiceCard";
 import TechBadge from "~/components/TechBadge";
 import SkillBadge from "~/components/SkillBadge";
 
 export default {
+    metaInfo: {
+        title: "Services",
+    },
     components: {
         PageTitle,
         ServiceLogo,
-        ServiceSection,
         TechBadge,
-        SkillBadge
+        SkillBadge,
+        ServiceCard
     },
-    metaInfo: {
-    title: "Services"
-  }
+    computed: {
+        sortedSkills: function() {
+            return this.$page.allSkill.edges.sort(function(e1, e2) {
+                const skillA = e1.node;
+                const skillB = e2.node;
+                let decision = 0;
+                if (skillA.techs.length < skillB.techs.length) {
+                    decision = 1
+                } else if (skillA.techs.length > skillB.techs.length) {
+                    decision = -1
+                }
+                return decision
+            });
+        }
+    },
+    methods: {
+        getPreviousTitle(index){
+            return this.sortedSkills[index-1]?.node?.title
+        },
+        getNextTitle(index){
+            return this.sortedSkills[index+1]?.node?.title;
+        }
+
+    }
 };
 </script>
