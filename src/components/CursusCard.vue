@@ -67,16 +67,16 @@
         components: {
             Button
         },
-        props: [
-            'title', // String -  the title of the card
-            'content', // String - the content of the card
-            'from', // String - the starting or the only date
-            'to', // String - the end date (not required)
-            'path', // String - the link to access details
-            'bigImgSrc', // String - the src of the big image
-            'smallImgSrc', // String - the src of the small image
-            'ltr' // Boolean - specify if the card is going lef to right or not
-        ]
+        props: {
+            'title': String, //the title of the card,
+            'content': String, //the content of the card
+            'from': String, // the starting or the only date
+            'to': String, // the end date (not required)
+            'path': String, // the link to access details
+            'bigImgSrc': Object, // the src of the big image
+            'smallImgSrc': Object, // the src of the small image
+            'ltr': Boolean // specify if the card is going lef to right or not
+        }
     }
 </script>
 
@@ -106,6 +106,13 @@
         .card-date {
             color: #d0cde1;
         }
+    }
+
+    img {
+        filter: grayscale(0.8) opacity(0.5);
+    }
+    li:hover img {
+        filter: grayscale(0) opacity(1);
     }
 
 </style>
