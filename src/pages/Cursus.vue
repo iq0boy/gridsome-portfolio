@@ -137,18 +137,16 @@ import CursusCard from "~/components/CursusCard";
 
 
 export default {
+    metaInfo: {
+        title: "Cursus"
+    },
     components: {
         CursusCard,
         PageTitle,
         CursusLogo,
         CursusSection
     },
-    metaInfo: {
-    title: "Cursus"
-  }
+
+
 };
 </script>
-
-<style lang="scss" scoped>
-
-</style>
