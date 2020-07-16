@@ -1,10 +1,19 @@
 <template>
   <div id="app" class="flex flex-col h-full">
-    <HeaderPartial v-if="hideHeader!==true" @setTheme="setTheme" :theme="this.theme" ></HeaderPartial>
+    <HeaderPartial
+      v-if="hideHeader !== true"
+      @setTheme="setTheme"
+      :theme="this.theme"
+    ></HeaderPartial>
     <main class="flex-grow">
       <slot />
     </main>
-    <NavbarPartial :alwaysShown="hideHeader" @setTheme="setTheme" :theme="this.theme" class="flex-1"></NavbarPartial>
+    <NavbarPartial
+      :alwaysShown="hideHeader"
+      @setTheme="setTheme"
+      :theme="this.theme"
+      class="flex-1"
+    ></NavbarPartial>
     <FooterPartial class="flex-initial"></FooterPartial>
   </div>
 </template>
@@ -26,29 +35,29 @@ export default {
   props: {
     hideHeader: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
-  data: function() {
+  data: function () {
     return {
-      theme: 'dark'
-    };
+      theme: 'dark',
+    }
   },
   methods: {
     setTheme(mode) {
-        this.theme = mode
-    }
+      this.theme = mode
+    },
   },
   components: {
     HeaderPartial,
     NavbarPartial,
-    FooterPartial
+    FooterPartial,
   },
-  
+
   metaInfo: {
     bodyAttrs: {
-      class: "m-0"
-    }
-  }
+      class: 'm-0',
+    },
+  },
 }
 </script>

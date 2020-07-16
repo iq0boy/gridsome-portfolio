@@ -1,10 +1,5 @@
-
 module.exports = {
-  purge: [
-    './src/**/*.html',
-    './src/**/*.vue',
-    './src/**/*.js',
-  ],
+  purge: ['./src/**/*.html', './src/**/*.vue', './src/**/*.js'],
   theme: {
     borderWidth: {
       default: '1px',
@@ -13,7 +8,7 @@ module.exports = {
       '3': '3px',
       '4': '4px',
       '6': '6px',
-      '8': '8px'
+      '8': '8px',
     },
     flex: {
       '1': '1 1 0%',
@@ -33,10 +28,10 @@ module.exports = {
       '75': 75,
       '100': 100,
       '1000': 1000,
-      'auto': 'auto',
+      auto: 'auto',
     },
     corePlugins: {
-      container: false
+      container: false,
     },
     extend: {},
   },
@@ -44,9 +39,7 @@ module.exports = {
     zIndex: ['responsive', 'hover'],
   },
   plugins: [
-    function ({
-      addComponents
-    }) {
+    function ({ addComponents }) {
       addComponents({
         '.container': {
           maxWidth: '100%',
@@ -62,59 +55,55 @@ module.exports = {
           '@screen xl': {
             maxWidth: '1040px',
           },
-        }
+        },
       })
     },
 
-    function ({
-      addBase,
-      config
-    }) {
-
+    function ({ addBase, config }) {
       addBase({
-        'h1': {
+        h1: {
           fontSize: config('theme.fontSize.5xl'),
           fontWeight: config('theme.fontWeight.bold'),
           fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
-          marginBottom: config('theme.margin.4')
+          marginBottom: config('theme.margin.4'),
         },
-        'h2': {
+        h2: {
           fontSize: config('theme.fontSize.4xl'),
           fontWeight: config('theme.fontWeight.bold'),
           fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
-          marginBottom: config('theme.margin.4')
+          marginBottom: config('theme.margin.4'),
         },
-        'h3': {
+        h3: {
           fontSize: config('theme.fontSize.3xl'),
           fontWeight: config('theme.fontWeight.bold'),
           fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
-          marginBottom: config('theme.margin.4')
+          marginBottom: config('theme.margin.4'),
         },
-        'h4': {
+        h4: {
           fontSize: config('theme.fontSize.2xl'),
           fontWeight: config('theme.fontWeight.bold'),
           fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
-          marginBottom: config('theme.margin.4')
+          marginBottom: config('theme.margin.4'),
         },
-        'h5': {
+        h5: {
           fontSize: config('theme.fontSize.xl'),
           fontWeight: config('theme.fontWeight.bold'),
           fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
-          marginBottom: config('theme.margin.4')
+          marginBottom: config('theme.margin.4'),
         },
-        'h6': {
+        h6: {
           fontSize: config('theme.fontSize.lg'),
           fontWeight: config('theme.fontWeight.bold'),
           fontFamily: config('theme.fontFamily.sans').join(', '),
           marginTop: config('theme.margin.4'),
-          marginBottom: config('theme.margin.4')
+          marginBottom: config('theme.margin.4'),
         },
       })
     },
-  ]
+  ],
 }

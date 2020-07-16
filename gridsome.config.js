@@ -1,4 +1,4 @@
-// This is where project configuration and plugin options are located. 
+// This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
 
 // Changes here require a server restart.
@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Joseph Pire',
-  siteDescription: 'Joseph Pire\'s developer portfolio',
+  siteDescription: "Joseph Pire's developer portfolio",
   icon: './src/faviconBW.svg',
   //TODO change the siteUrl for sitemap plugin
   siteUrl: 'https://elegant-aryabhata-dad6e8.netlify.app',
@@ -22,10 +22,10 @@ module.exports = {
         config: {
           '/*': {
             changefreq: 'weekly',
-            priority: 0.5
-          }
-        }
-      }
+            priority: 0.5,
+          },
+        },
+      },
     },
     {
       use: 'gridsome-plugin-tailwindcss',
@@ -33,27 +33,27 @@ module.exports = {
         tailwindConfig: './tailwind.config.js',
         purgeConfig: {
           whitelist: [],
-          whitelistPatterns: [/blockquote$/]
+          whitelistPatterns: [/blockquote$/],
         },
         presetEnvConfig: {},
         shouldPurge: true,
         shouldImport: true,
         shouldTimeTravel: true,
         shouldPurgeUnusedKeyframes: true,
-      }
-    }, 
+      },
+    },
     {
       use: 'gridsome-source-static-meta',
       options: {
-        path: './content/site/*.json'
-      }
+        path: './content/site/*.json',
+      },
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Tech',
-        path: './content/techs/*.md'
-      }
+        path: './content/techs/*.md',
+      },
     },
     {
       use: '@gridsome/source-filesystem',
@@ -62,38 +62,38 @@ module.exports = {
         path: './content/skills/*.md',
         refs: {
           techs: {
-            typeName: 'Tech'
-          }
-        }
-      }
+            typeName: 'Tech',
+          },
+        },
+      },
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Diploma',
-        path: './content/diplomas/*.md'
-      }
+        path: './content/diplomas/*.md',
+      },
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Certification',
-        path: './content/certifications/*.md'
-      }
+        path: './content/certifications/*.md',
+      },
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Interest',
-        path: './content/interests/*.md'
-      }
+        path: './content/interests/*.md',
+      },
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Language',
-        path: './content/languages/*.md'
-      }
+        path: './content/languages/*.md',
+      },
     },
     {
       use: '@gridsome/source-filesystem',
@@ -105,10 +105,10 @@ module.exports = {
             typeName: 'Skill',
           },
           techs: {
-            typeName: 'Tech'
-          }
-        }
-      }
+            typeName: 'Tech',
+          },
+        },
+      },
     },
     {
       use: '@gridsome/source-filesystem',
@@ -120,17 +120,17 @@ module.exports = {
             typeName: 'Skill',
           },
           techs: {
-            typeName: 'Tech'
-          }
-        }
-      }
+            typeName: 'Tech',
+          },
+        },
+      },
     },
     {
       use: `gridsome-plugin-netlify-cms`,
       options: {
-        publicPath: `/admin`
-      }
-    }
+        publicPath: `/admin`,
+      },
+    },
   ],
   transformers: {
     remark: {
@@ -139,29 +139,43 @@ module.exports = {
       anchorClassName: 'icon icon-link',
       plugins: [
         '@noxify/gridsome-remark-table-align',
-        ['@noxify/gridsome-remark-classes', {
-          'table': 'table table-striped',
-          'tableCell[align=center]': 'text-center',
-          'tableCell[align=right]': 'text-right'
-        }]
-      ]
-    }
+        [
+          '@noxify/gridsome-remark-classes',
+          {
+            table: 'table table-striped',
+            'tableCell[align=center]': 'text-center',
+            'tableCell[align=right]': 'text-right',
+          },
+        ],
+      ],
+    },
   },
   templates: {
-    Project: [{
-      path: (node) => '/projects/' + node.title.toLowerCase().split(' ').join('-'),
-      component: '~/templates/ProjectDetail.vue'
-    }],
-    Job: [{
-      path: (node) => '/cursus/jobs/' + node.title.toLowerCase().split(' ').join('-'),
-      component: '~/templates/JobDetail.vue'
-    }],
-    Tech: [{
-      path: (node) => '/services/techs/' + node.title.toLowerCase().split(' ').join('-'),
-      component: '~/templates/TechDetail.vue'
-    }],
-    Skill: [{
-      path: '/services/skills/:title'
-    }]
-  }
+    Project: [
+      {
+        path: (node) =>
+          '/projects/' + node.title.toLowerCase().split(' ').join('-'),
+        component: '~/templates/ProjectDetail.vue',
+      },
+    ],
+    Job: [
+      {
+        path: (node) =>
+          '/cursus/jobs/' + node.title.toLowerCase().split(' ').join('-'),
+        component: '~/templates/JobDetail.vue',
+      },
+    ],
+    Tech: [
+      {
+        path: (node) =>
+          '/services/techs/' + node.title.toLowerCase().split(' ').join('-'),
+        component: '~/templates/TechDetail.vue',
+      },
+    ],
+    Skill: [
+      {
+        path: '/services/skills/:title',
+      },
+    ],
+  },
 }
