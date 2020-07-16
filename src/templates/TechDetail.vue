@@ -37,6 +37,7 @@
           <a
             v-if="$page.tech.url"
             :href="$page.tech.url"
+            rel="noopener noreferrer"
             class="font-bold hover:text-red-400 inline-block mb-10"
             >Visit Official website</a
           >
