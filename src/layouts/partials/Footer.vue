@@ -2,13 +2,11 @@
   <nav class="relative pt-4 pb-8 text-sm px-4">
     <div class="container mx-auto flex justify-between h-12 items-center">
       <div class="w-full md:w-1/2 text-center md:text-left">
-        Made with 🖤
-        <!-- <font-awesome :icon="['fas', 'heart']" class="mr-1 ml-1"></font-awesome> -->by
-        {{ $static.metadata.siteAuthor }} | {{ currentYear }}
+        Made with 🖤 by {{ $static.metadata.siteAuthor }} | {{ currentYear }}
       </div>
 
       <div class="w-full justify-end text-center hidden md:flex md:text-left">
-        <span>Powered by</span>
+        <span>Built with</span>
 
         <ul class="list-none ml-1 flex external-link">
           <li
@@ -30,6 +28,8 @@
             <g-link v-else :to="element.link">{{ element.name }}</g-link>
           </li>
         </ul>
+        <span class="mx-1">|</span>
+        <a href="/sitemap.xml" target="_blank" title="sitemap">sitemap</a>
       </div>
     </div>
   </nav>
