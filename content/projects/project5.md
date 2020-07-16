@@ -5,6 +5,7 @@ status: done
 createdAt: 2016-03-12T02:59:00.000Z
 shortDescription: "A cluster of services on top of docker"
 featured: false
+onResume: false
 skills:
   - skill10
   - skill11

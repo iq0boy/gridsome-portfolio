@@ -35,6 +35,7 @@ collections:
       - {label: "Status", name: "status", widget: "string"}
       - {label: "CreatedAt", name: "createdAt", widget: "datetime"}
       - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - {label: "On Resume", name: "onResume", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Techs", name: "techs", widget: "relation", collection: "techs", valueField: "id", displayFields: ["title"], searchFields: ["title"], multiple: true, required: false}
       - {label: "Skills", name: "skills", widget: "relation", collection: "skills", valueField: "id", displayFields: ["title"], searchFields: ["title"], multiple: true, required: false}

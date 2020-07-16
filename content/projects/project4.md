@@ -5,6 +5,7 @@ status: done
 createdAt: 2018-04-01T03:03:00.000Z
 shortDescription: A multidisciplinary integration project
 featured: true
+onResume: true
 skills:
   - skill1
   - skill2

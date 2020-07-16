@@ -266,7 +266,7 @@ query {
       }
     }
   }
-  allProject(sortBy: "createdAt", order: DESC) {
+  allProject(filter: {onResume: {eq: true}}, sortBy: "createdAt", order: DESC) {
     edges {
       node {
         id

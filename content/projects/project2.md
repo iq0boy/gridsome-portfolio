@@ -5,6 +5,7 @@ status: done
 createdAt: 2017-02-12T03:01:00.000Z
 shortDescription: "Optical character recognition software built in python"
 featured: false
+onResume: true
 skills:
   - skill4  
   - skill9

@@ -5,6 +5,7 @@ status: done
 createdAt: 2016-01-12T02:58:00.000Z
 shortDescription: "Conception, design, and development of a JAVA application."
 featured: false
+onResume: true
 skills:
   - skill4
   - skill6
