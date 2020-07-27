@@ -10,14 +10,14 @@
               <g-link class="nav-link capitalize inline-block" :to="'/cursus'">
                 cursus
               </g-link>
-              <LevelUpIcon class="inline-block icon-back mx-2" />
+              <MinusIcon class="inline-block icon-back mx-2" />
               <g-link
                 class="nav-link capitalize inline-block"
                 :to="'/cursus#jobs'"
               >
                 jobs
               </g-link>
-              <LevelUpIcon class="inline-block icon-back mx-2" />
+              <MinusIcon class="inline-block icon-back mx-2" />
             </span>
             <span>
               {{ $page.job.title }}
@@ -150,6 +150,7 @@
 import ChevronLeftIcon from '~/assets/icons/chevron-left.svg?inline'
 import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
 import LevelUpIcon from '~/assets/icons/level-up.svg?inline'
+import MinusIcon from '~/assets/icons/minus.svg?inline'
 import TechBadge from '~/components/TechBadge'
 
 export default {
@@ -157,6 +158,7 @@ export default {
     ChevronLeftIcon,
     ChevronRightIcon,
     LevelUpIcon,
+    MinusIcon,
     TechBadge,
   },
   metaInfo() {

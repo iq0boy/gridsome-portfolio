@@ -14,7 +14,7 @@
                 <g-link class="nav-link capitalize" :to="'/services'">
                   services
                 </g-link>
-                <LevelUpIcon class="inline-block icon-back mx-2" />
+                <MinusIcon class="inline-block icon-back mx-2" />
               </span>
               <span>
                 {{ $page.tech.title }}
@@ -132,10 +132,12 @@ query ($id: ID!) {
 
 <script>
 import LevelUpIcon from '~/assets/icons/level-up.svg?inline'
+import MinusIcon from '~/assets/icons/minus.svg?inline'
 
 export default {
   components: {
     LevelUpIcon,
+    MinusIcon,
   },
   computed: {
     projectLabel: function () {
