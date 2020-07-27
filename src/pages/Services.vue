@@ -24,6 +24,7 @@
               :logo="tech.logo"
               :path="tech.path"
               :scale="0.5"
+              :grayScale="true"
             />
           </li>
         </slot>
