@@ -3,7 +3,7 @@
     :class="{
       'mt-24': previousTitle,
     }"
-    class="flex flex-col shadow-lg service-card py-4 px-4 lg:px-12 rounded-lg lg:rounded-full relative"
+    class="flex flex-col shadow-lg service-card py-4 px-4 lg:px-12 rounded-lg lg:rounded-full relative mx-6"
   >
     <!--Anchor-->
     <div class="anchor" :id="getIdFromTitle(title)"></div>
