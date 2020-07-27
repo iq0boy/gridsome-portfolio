@@ -97,7 +97,7 @@ export default {
 }
 
 .card-content {
-  background-color: #e6e6e6;
+  background-color: #f1f1f1;
   h3,
   p {
     color: #2f2e41;
@@ -120,9 +120,9 @@ body[data-theme='dark'] {
 }
 
 img {
-  filter: grayscale(0.8) opacity(0.5);
+  filter: grayscale(0.9) opacity(0.5);
 }
 li:hover img {
-  filter: grayscale(0) opacity(1);
+  filter: grayscale(0.8) opacity(1);
 }
 </style>

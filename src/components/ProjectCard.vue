@@ -38,7 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 body[data-theme='light'] .project-card {
-  background-color: #e6e6e6;
+  background-color: #f1f1f1;
   .card-description {
     color: #2f2e41;
   }
