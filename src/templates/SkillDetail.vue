@@ -144,7 +144,7 @@ export default {
   components: {
     LevelUpIcon,
     TechBadge,
-    MinusIcon
+    MinusIcon,
   },
   computed: {
     projectLabel: function () {

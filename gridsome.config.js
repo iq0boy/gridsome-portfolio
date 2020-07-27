@@ -12,7 +12,7 @@ module.exports = {
   // pathPrefix: '/dist',
   plugins: [
     {
-      use: 'gridsome-plugin-robots'
+      use: 'gridsome-plugin-robots',
     },
     {
       use: 'gridsome-plugin-svg',
