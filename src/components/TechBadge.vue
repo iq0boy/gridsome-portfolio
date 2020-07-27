@@ -1,5 +1,10 @@
 <template>
-  <Badge :path="path" :label="label" :scale="scale">
+  <Badge
+    :path="path"
+    :label="label"
+    :scale="scale"
+    :class="{ grayscale: grayScale }"
+  >
     <template>
       <g-image :src="logo" :alt="title" :title="title" immediate="true" />
     </template>
@@ -29,6 +34,10 @@ export default {
     scale: {
       type: Number,
     },
+    grayScale: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
@@ -40,6 +49,12 @@ body {
 
   [data-theme='dark'] {
   }
+}
+.grayscale {
+  filter: grayscale(1);
+}
+.grayscale:hover {
+  filter: grayscale(0);
 }
 
 img {
