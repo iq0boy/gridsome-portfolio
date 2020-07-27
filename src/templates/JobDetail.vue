@@ -24,7 +24,6 @@
             </span>
           </h1>
           <ul class="flex flex-wrap mb-5">
-            7
             <li
               class="skill-tag"
               v-for="(skill, index) in $page.job.skills"
