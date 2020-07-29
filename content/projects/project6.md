@@ -17,6 +17,7 @@ techs:
   - tech15
   - tech16
   - tech18
+  - tech24
 ---
 The purpose of this project was to learn the Jamstack and to improve myself in front-end development.
 

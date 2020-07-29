@@ -2,9 +2,18 @@
 id: skill1
 title: Business analysis
 shortName: B.A.
-shortDescription: Analyse modelization and translation of business needs in it solution.
+shortDescription: Analysis modelization and translation of business needs
 featured: false
 onResume: true
 techs:
 ---
-Analyse, modeling and translation of a business needs with the UML toolbox (entity relationship diagram, activity diagram, class diagram...)
+Analyse, modeling and translation of a business needs with the UML toolbox (entity relationship diagram, activity diagram, class diagram...).
+
+###### Analysis
+Analysis organisation and business domain and its integration with technologies. 
+
+###### Modelization
+Modelization of those needs in human readable diagram used to communicate with the business team (i.e. Use case diagram, Entity Relationship diagram, Activity diagram).
+
+###### Traduction
+Traduction of those diagrams in machine and tech compliant models and structure (i.e. Class diagram, Sequence diagram).

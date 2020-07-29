@@ -1,6 +1,6 @@
 ---
 id: project7
-title: FootApp
+title: StreetFoot
 status: work in progress
 createdAt: 2020-07-10T00:00:00.000Z
 shortDescription: "A Web application to manage soccer games with friends build with Nuxt and Bulma"
@@ -20,10 +20,12 @@ techs:
   - tech18
   - tech20
   - tech21
+  - tech22
+  - tech24
 ---
 The purpose of this project was to make a small web project to learn Nuxt, its ecosystem, and Bulma with Buefy.
 
-After discovering and enjoying Gridsome, I wanted to dig deeper in the Vue.js ecosystem, and to learn its well-known Nuxt framework.
+After discovering and enjoying Gridsome, I wanted to dig deeper in the Vue.js world, and to learn its well-known Nuxt framework.
 As far as I went, i really enjoyed the journey, and I consider making vue.js my main frontend framework.
 It was the opportunity to discover tools like prettier or eslint, which I wasn't used to go with.
 

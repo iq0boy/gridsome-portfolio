@@ -8,13 +8,12 @@ employer: Keyros S.A.
 employerLogo: ../../static/uploads/logo-it-school.png
 location: Louvain-la-Neuve
 skills:
-  - skill2
   - skill3
   - skill6
   - skill7
-  - skill11
   - skill12
   - skill13
+  - skill14
 techs:
   - tech1
   - tech4

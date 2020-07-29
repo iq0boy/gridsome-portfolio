@@ -7,6 +7,7 @@ shortDescription: "A cluster of services on top of docker"
 featured: false
 onResume: false
 skills:
+  - skill14
   - skill10
   - skill11
   - skill3
