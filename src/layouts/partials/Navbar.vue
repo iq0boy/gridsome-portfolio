@@ -7,7 +7,7 @@
       'opacity-0': !navBarShow,
     }"
   >
-    <nav class="mx-4 sm:px-0 py-4 transition-all transition-500">
+    <nav class="px-4 sm:px-12 py-4 transition-all transition-500">
       <div class="flex flex-col sm:flex-row flex-grow items-center w-auto">
         <!--logo-->
         <div class="logo hidden md:flex items-center flex-shrink-0 mr-6">

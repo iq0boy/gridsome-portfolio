@@ -1,7 +1,7 @@
 <template>
   <header class="bg-black relative z-1000" id="header">
     <!-- NavBar -->
-    <nav class="px-12 h-20 sm:h-16 mx-auto py-4">
+    <nav class="px-4 sm:px-12 h-20 sm:h-16 mx-auto py-4">
       <div
         class="flex flex-col sm:flex-row flex-grow space-between items-center w-auto"
       >
