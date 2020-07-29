@@ -3,10 +3,9 @@
     :path="path"
     :label="label"
     :scale="scale"
-    :class="{ grayscale: grayScale }"
   >
-    <template>
-      <g-image :src="logo" :alt="title" :title="title" immediate="true" />
+    <template >
+      <g-image :src="logo" :alt="title" :title="title" immediate="true" :class="{ grayscale: grayScale }"/>
     </template>
   </Badge>
 </template>
@@ -43,20 +42,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-  [data-theme='light'] {
-  }
-
-  [data-theme='dark'] {
-  }
-}
 .grayscale {
   filter: grayscale(1);
 }
-.grayscale:hover {
-  filter: grayscale(0);
+.badge:hover {
+  .grayscale {
+    filter: grayscale(0);
+  }
 }
-
 img {
   max-width: 50%;
   max-height: 50%;
