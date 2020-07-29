@@ -58,6 +58,9 @@ blockquote {
   p {
     @apply my-4;
   }
+  h6 {
+    @apply text-red-400;
+  }
 }
 
 .skill-label:hover, .nav-arrow:hover, .nav-link:hover {
