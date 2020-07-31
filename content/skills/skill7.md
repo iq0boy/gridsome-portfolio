@@ -5,6 +5,7 @@ shortName: Project
 shortDescription: Management focused on the production aspect of IT project development
 featured: true
 onResume: true
+order: 9
 techs:
 ---
 ###### Planning, execution, monitoring

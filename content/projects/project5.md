@@ -10,7 +10,6 @@ skills:
   - skill14
   - skill10
   - skill11
-  - skill3
   - skill8
   - skill7
 techs:

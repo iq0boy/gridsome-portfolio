@@ -5,9 +5,9 @@ shortName: Back end
 shortDescription: Development of API's and server side application
 featured: true
 onResume: true
+order: 2
 techs:
   - tech1
-  - tech7
   - tech2
   - tech13
   - tech16

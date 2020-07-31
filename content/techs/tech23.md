@@ -5,6 +5,7 @@ shortDescription: A multi-paradigm numerical computing environment and proprieta
 url: https://www.mathworks.com/products/matlab.html
 logo: ../../static/uploads/logo-matlab.svg
 featured: false
+order: 25
 ---
 MATLAB® combines a desktop environment tuned for iterative analysis and design processes with a programming language that expresses matrix and array mathematics directly.
 

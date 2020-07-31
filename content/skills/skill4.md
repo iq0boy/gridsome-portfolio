@@ -5,8 +5,8 @@ shortName: App
 shortDescription: Development and testing of software
 featured: false
 onResume: true
+order: 3
 techs:
-  - tech7
   - tech9
   - tech11
   - tech18

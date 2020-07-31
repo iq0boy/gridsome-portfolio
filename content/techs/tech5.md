@@ -4,6 +4,7 @@ title: CSS
 shortDescription: Style sheet language used for describing the presentation of a document.
 logo: ../../static/uploads/logo-css.svg
 featured: false
+order: 6
 ---
 Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
 

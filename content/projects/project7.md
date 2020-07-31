@@ -7,10 +7,10 @@ shortDescription: "A Web application to manage soccer games with friends build w
 featured: true
 onResume: true
 skills:
-  - skill3
   - skill6
   - skill12
   - skill13
+  - skill14
 techs:
   - tech3
   - tech5

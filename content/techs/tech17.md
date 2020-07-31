@@ -5,6 +5,7 @@ shortDescription: Open-source CSS framework directed at responsive, mobile-first
 url: https://www.getbootstrap.com/
 logo: ../../static/uploads/logo-bootstrap.svg
 featured: false
+order: 9
 ---
 Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
 

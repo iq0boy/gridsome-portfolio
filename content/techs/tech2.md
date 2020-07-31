@@ -5,6 +5,7 @@ shortDescription: Powerful but easy to use full stack framework dedicated to API
 url: https://api-platform.com
 logo: ../../static/uploads/logo-api-platform.svg
 featured: true
+order: 13
 ---
 API Platform is a powerful but easy to use full stack framework dedicated to API-driven projects.
 

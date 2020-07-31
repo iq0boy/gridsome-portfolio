@@ -5,6 +5,7 @@ shortDescription: A free, open source CSS framework based on Flexbox and used by
 url: https://bulma.io/
 logo: ../../static/uploads/logo-bulma.svg
 featured: true
+order: 8
 ---
 Bulma is a CSS frameworks that allow developers to quickly build web interfaces with ease.
 

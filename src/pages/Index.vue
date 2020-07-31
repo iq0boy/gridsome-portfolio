@@ -157,7 +157,7 @@
 
           <div class="flex justify-center">
             <ul
-              class="list-none mb-0 mt-10 mx-auto grid grid-rows-2 grid-cols-3 sm:grid-cols-6 sm:grid-rows-none w-4/5"
+              class="list-none mb-0 mt-10 mx-auto grid grid-rows-2 grid-cols-4 lg:grid-cols-8 lg:grid-rows-none w-4/5"
             >
               <li
                 v-for="tech in $page.allTech.edges"
@@ -245,7 +245,7 @@
 
 <page-query>
 query {
-    allTech(filter: {featured: {eq: true}}) {
+  allTech(filter: {featured: {eq: true}}, sortBy: "order", order: ASC) {
       edges {
         node {
           id
@@ -255,7 +255,7 @@ query {
         }
       }
     },
-      allSkill(
+    allSkill(
       filter: {featured: {eq: true}},
       sortBy: "id"
     )
@@ -283,11 +283,6 @@ import pluralize from 'pluralize'
 export default {
   metaInfo: {
     title: 'Home',
-  },
-  methods: {
-    getPluralizedLabel(label, count) {
-      return pluralize(label, count)
-    },
   },
   components: {
     TechBadge,

@@ -5,6 +5,7 @@ shortDescription: Strapi is the leading open-source headlessCMS. It’s 100% Jav
 url: https://strapi.io/
 logo: ../../static/uploads/logo-strapi.svg
 featured: true
+order: 15
 ---
 Strapi enables content-rich experiences to be created, managed and exposed to any digital product, channel or device.
 Strapi helps you define, structure and create any content models and APIs.

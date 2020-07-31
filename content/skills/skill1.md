@@ -5,6 +5,7 @@ shortName: B.A.
 shortDescription: Analysis modelization and translation of business needs
 featured: false
 onResume: true
+order: 8
 techs:
 ---
 Analyse, modeling and translation of a business needs with the UML toolbox (entity relationship diagram, activity diagram, class diagram...).

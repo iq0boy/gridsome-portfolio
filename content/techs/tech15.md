@@ -5,6 +5,7 @@ shortDescription: Gridsome is a Vue.js powered Jamstack framework for building s
 url: https://gridsome.org
 logo: ../../static/uploads/logo-gridsome.svg
 featured: true
+order: 4
 ---
 **Gridsome is a Jamstack framework**. Jamstack lets you build fast and secure sites and apps delivered by pre-rendering files and serving them directly from a CDN, removing the requirement to manage or run web servers.
 

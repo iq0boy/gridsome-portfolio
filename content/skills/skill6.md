@@ -2,11 +2,13 @@
 id: skill6
 title: Database management
 shortName: Database
-shortDescription: Data definition, update, retrieval and administration
+shortDescription: Data definition, update, retrieval and database administration
 featured: false
 onResume: true
+order: 5
 techs:
   - tech8
+  - tech25
 ---
 Management of a set of related data stored in databases, with dedicated software that allow user access and interact with them (Database Management Systems).
 Usage of relational(MariaDB, MySQL, PostgresSQL), and NoSQL(MongoDB, Redis) database systems.

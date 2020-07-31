@@ -3,11 +3,12 @@ id: project6
 title: Portfolio
 status: work in progress
 createdAt: 2020-05-01T00:00:00.000Z
-shortDescription: "My own portfolio built with the Jamstack"
+shortDescription: "My own portfolio built with Gridsome, Tailwind, and NetlifyCMS"
 featured: true
 onResume: true
 skills:
   - skill12
+  - skill14
 techs:
   - tech3
   - tech5

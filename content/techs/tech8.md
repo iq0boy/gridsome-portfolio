@@ -5,6 +5,7 @@ shortDescription: Relational database management system
 url: https://www.mysql.com/
 logo: ../../static/uploads/logo-mysql.svg
 featured: false
+order: 22
 ---
 MySQL is a relational database management system (RDBMS).
 

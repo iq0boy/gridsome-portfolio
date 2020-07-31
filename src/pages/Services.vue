@@ -8,7 +8,7 @@
       </PageTitle>
 
       <serviceCard
-        v-for="(skill, index) in sortedSkills"
+        v-for="(skill, index) in $page.allSkill.edges"
         :key="index"
         :title="skill.node.title"
         :previousTitle="getPreviousTitle(index)"
@@ -35,18 +35,7 @@
 
 <page-query>
 query {
-  allTech {
-    totalCount
-    edges {
-      node {
-        id
-        title
-        path
-        logo(background:"rgba(0,0,0,0)", quality:100)
-      }
-    }
-  }
-  allSkill {
+  allSkill(sortBy: "order", order: ASC) {
     edges {
       node {
         id
@@ -54,7 +43,7 @@ query {
         shortName
         title
         shortDescription
-        techs {
+        techs (sortBy: "order", order: ASC) {
           id
           title
           path
@@ -82,28 +71,12 @@ export default {
     TechBadge,
     ServiceCard,
   },
-  computed: {
-    sortedSkills: function () {
-      let pageQueryCopy = JSON.parse(JSON.stringify(this.$page.allSkill.edges))
-      return pageQueryCopy.sort(function (e1, e2) {
-        const skillA = e1.node
-        const skillB = e2.node
-        let decision = 0
-        if (skillA.techs.length < skillB.techs.length) {
-          decision = 1
-        } else if (skillA.techs.length > skillB.techs.length) {
-          decision = -1
-        }
-        return decision
-      })
-    },
-  },
   methods: {
     getPreviousTitle(index) {
-      return this.sortedSkills[index - 1]?.node?.title
+      return this.$page.allSkill.edges[index - 1]?.node?.title
     },
     getNextTitle(index) {
-      return this.sortedSkills[index + 1]?.node?.title
+      return this.$page.allSkill.edges[index + 1]?.node?.title
     },
   },
 }

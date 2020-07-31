@@ -8,11 +8,11 @@ featured: true
 onResume: true
 skills:
   - skill1
-  - skill3
   - skill6
   - skill7
   - skill12
   - skill13
+  - skill14
 techs:
   - tech1
   - tech2

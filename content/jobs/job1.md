@@ -9,7 +9,6 @@ employerLogo: ../../static/uploads/logo-utopix.png
 location: La Hulpe
 skills:
   - skill1
-  - skill3
   - skill6
   - skill13
   - skill14
@@ -21,6 +20,7 @@ techs:
   - tech12
   - tech13
   - tech19
+  - tech25
 ---
 Analysis of the current system, its structure and implementation in order to improve code quality, reliability, robustness, and performance.
 

@@ -5,6 +5,7 @@ shortDescription: A progressive framework based on Vue.js to create modern web a
 url: https://nuxtjs.org/
 logo: ../../static/uploads/logo-nuxt.svg
 featured: true
+order: 3
 ---
 It is based on Vue.js official libraries (vue, vue-router and vuex) and powerful development tools (webpack, Babel and PostCSS).
   

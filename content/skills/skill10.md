@@ -5,6 +5,7 @@ shortName: Security
 shortDescription: Vulnerability analysis and protection of systems and networks
 featured: false
 onResume: true
+order: 11
 techs:
 ---
 Principles and techniques of IT security. Security of networks, Cryptography principles, VPNs.

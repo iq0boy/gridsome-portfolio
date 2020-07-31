@@ -1,10 +1,11 @@
 ---
 id: skill8
-title: Network
-shortName: Network
-shortDescription: Cisco Routing and Switching configuration
+title: Networking
+shortName: Networking
+shortDescription: Configuration, management and troubleshooting of networks
 featured: false
 onResume: true
+order: 10
 techs:
 ---
 Understand and manipulate communication across devices, underlying protocols, conceptual models (OSI).

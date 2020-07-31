@@ -5,6 +5,7 @@ shortName: Front end
 shortDescription: Development of web user interfaces based on modern frameworks
 featured: true
 onResume: true
+order: 1
 techs:
   - tech3
   - tech4

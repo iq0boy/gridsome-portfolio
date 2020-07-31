@@ -5,6 +5,7 @@ shortDescription: Open source content management for your Git workflow
 url: https://www.netlifycms.org/
 logo: ../../static/uploads/logo-netlify-cms.svg
 featured: true
+order: 16
 ---
 Static + content management = ♥
 Get the speed, security, and scalability of a static site, while still providing a convenient editing interface for content.

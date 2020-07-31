@@ -4,6 +4,7 @@ title: JavaScript
 shortDescription: High-level multi-paradigm language.
 logo: ../../static/uploads/logo-js.svg
 featured: false
+order: 1
 ---
 JavaScript (often abbreviated as JS), is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
 

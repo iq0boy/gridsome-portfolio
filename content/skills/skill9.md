@@ -5,6 +5,7 @@ shortName: Physics
 shortDescription: Electricity, electronics, analog and digital signal processing
 featured: false
 onResume: true
+order: 7
 techs:
   - tech23
 ---

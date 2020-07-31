@@ -199,7 +199,7 @@
               </h2>
               <ul>
                 <li
-                  v-for="skill in sortedSkills"
+                  v-for="skill in $page.allSkill.edges"
                   :key="skill.node.id"
                   class="mb-2 leading-tight"
                 >
@@ -291,13 +291,13 @@ query {
       }
     }
   }
-  allSkill(filter: {onResume: {eq: true}}) {
+  allSkill(filter: {onResume: {eq: true}}, sortBy: "order", order: ASC) {
     edges {
       node {
         id
         title
         shortDescription
-        techs {
+        techs(sortBy: "order", order: ASC) {
           id
           title
           logo(width:24, height:24, fit:contain, background:"rgba(0,0,0,0)", quality:10)
@@ -342,22 +342,6 @@ export default {
     print: function () {
       window.print()
       return false
-    },
-  },
-  computed: {
-    sortedSkills: function () {
-      let pageQueryCopy = JSON.parse(JSON.stringify(this.$page.allSkill.edges))
-      return pageQueryCopy.sort(function (e1, e2) {
-        const skillA = e1.node
-        const skillB = e2.node
-        let decision = 0
-        if (skillA.techs.length < skillB.techs.length) {
-          decision = 1
-        } else if (skillA.techs.length > skillB.techs.length) {
-          decision = -1
-        }
-        return decision
-      })
     },
   },
 }
