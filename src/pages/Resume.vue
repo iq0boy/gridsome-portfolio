@@ -19,7 +19,7 @@
 
       <div id="cv" class="mx-auto border p-4 flex flex-col shadow-lg">
         <header>
-          <div class="flex justify-between bg-gray-700 text-white p-2">
+          <div class="flex justify-between bg-gray-700 text-white p-4">
             <div>
               <h1 class="m-0 text-2xl text-red-400">
                 Joseph <span class="uppercase">Pire</span>
@@ -28,24 +28,25 @@
             </div>
             <div>
               <p>
-                <span class="opacity-50"><PhoneIcon /></span>+32 (0) 473 57 34
-                07
+                <span class="opacity-50 mr-1"><PhoneIcon/></span>+32 (0) 473 57 34 07
               </p>
               <p>
-                <span class="opacity-50"><MailIcon /></span
+                <span class="opacity-50 mr-1"><MailIcon /></span
                 >josephpire.dev@gmail.com
               </p>
               <p>
-                <span class="opacity-50"><globeIcon /></span>Louvain-la-Neuve,
-                Belgique
+                <span class="opacity-50 mr-1"><globeIcon /></span>www.josephpire.be
+              </p>
+              <p>
+                <span class="opacity-50 mr-1"><PinIcon /></span>Louvain-la-Neuve, Belgique
               </p>
             </div>
           </div>
-          <div class="profile bg-gray-800 text-white p-2">
+          <div class="profile bg-gray-800 text-white p-4">
             <h2
               class="m-0 flex justify-center items-center text-base text-red-400 mb-2"
             >
-              <VCardIcon></VCardIcon><span class="capitalize">Profile</span>
+              <VCardIcon></VCardIcon><span class="capitalize ml-1">Profile</span>
             </h2>
             <p class="text-center">
               Freshly graduated, autonomous curious and hard worker.
@@ -64,7 +65,7 @@
               <h2
                 class="m-0 flex justify-start items-center text-base text-red-400 mb-2"
               >
-                <GraduationIcon />Education
+                <GraduationIcon /><span class="ml-1">Education</span>
               </h2>
               <ul>
                 <li
@@ -88,7 +89,7 @@
               <h2
                 class="m-0 flex justify-start items-center text-base text-red-400 mb-2"
               >
-                <PriceIcon />Formation
+                <PriceIcon /><span class="ml-1">Formation</span>
               </h2>
               <ul>
                 <li
@@ -113,7 +114,7 @@
               <h2
                 class="m-0 flex justify-start items-center text-base text-red-400 mb-2"
               >
-                <LanguageIcon />Languages
+                <LanguageIcon /><span class="ml-1">Languages</span>
               </h2>
               <ul>
                 <li
@@ -130,7 +131,7 @@
               <h2
                 class="m-0 flex justify-start items-center text-base text-red-400 mb-2"
               >
-                <HeartIcon />Interests
+                <HeartIcon /><span class="ml-1">Interests</span>
               </h2>
               <p>
                 <span
@@ -149,7 +150,7 @@
               <h2
                 class="m-0 flex justify-start items-center text-base text-red-400 mb-2"
               >
-                <BriefCaseIcon />Working Experience
+                <BriefCaseIcon /><span class="ml-1">Working Experience</span>
               </h2>
               <ul>
                 <li
@@ -172,7 +173,7 @@
               <h2
                 class="m-0 flex justify-start items-center text-base text-red-400 mb-2"
               >
-                <BoxIcon />Projects
+                <BoxIcon /><span class="ml-1">Projects</span>
               </h2>
               <ul>
                 <li
@@ -195,7 +196,7 @@
               <h2
                 class="m-0 flex justify-start items-center text-base text-red-400 mb-2"
               >
-                <ToolsIcon />Skills
+                <ToolsIcon /><span class="ml-1">Skills</span>
               </h2>
               <ul>
                 <li
@@ -312,6 +313,7 @@ query {
 import Button from '~/components/Button'
 import BoxIcon from '~/assets/icons/box.svg?inline'
 import BriefCaseIcon from '~/assets/icons/briefcase.svg?inline'
+import PinIcon from '~/assets/icons/pin.svg?inline'
 import GlobeIcon from '~/assets/icons/globe.svg?inline'
 import GraduationIcon from '~/assets/icons/graduation-cap.svg?inline'
 import HeartIcon from '~/assets/icons/heart.svg?inline'
@@ -328,6 +330,7 @@ export default {
     Button,
     BoxIcon,
     BriefCaseIcon,
+    PinIcon,
     GlobeIcon,
     GraduationIcon,
     HeartIcon,
