@@ -94,7 +94,7 @@
 
 <page-query>
 query {
-  allJob(sortBy:"endedAt", order: DESC) {
+  allJob(sortBy:"endedAt", order: ASC) {
     edges {
       node {
         id

@@ -1,37 +1,37 @@
 ---
-id: job3
-title: Web Developer - internship
-shortDescription: Development of a new module for the iT.SCHOOL project
-startedAt: 2018-02-01T22:16:00.000Z
-endedAt: 2018-05-15T21:16:00.000Z
-employer: Keyros S.A.
-employerLogo: ../../static/uploads/logo-it-school.png
-location: Louvain-la-Neuve
+id: job1
+title: Back end Developer
+shortDescription: Analysis, development, monitoring, testing and debugging of an API built with Symfony and API Platform
+startedAt: 2019-11-25T22:21:00.000Z
+endedAt: 2020-03-15T21:21:00.000Z
+employer: Utopix Pictures
+employerLogo: ../../static/uploads/logo-utopix.png
+location: La Hulpe
 skills:
+  - skill1
   - skill6
-  - skill7
-  - skill12
   - skill13
   - skill14
 techs:
   - tech1
-  - tech4
-  - tech5 
-  - tech6
-  - tech7
+  - tech2
   - tech8
+  - tech10
   - tech12
   - tech13
-  - tech17
   - tech19
+  - tech25
 ---
-Starting from raw specification, I have made an analysis of the requirements, in order to conceptualize a model
-which I translated to UML use case diagram.
+Analysis of the current system, its structure and implementation in order to improve code quality, reliability, robustness, and performance.
 
-From this use case diagram I have implemented the model in entity classes in the Symfony Framework.
-I implemented the business logic, and the business specifications in a dedicated application layer in order to 
-build the API which would be consumed later buy the different interfaces of the applications.
+Implementation of GraphQl in the existing API.
 
-I used the tools (Metronic Bootstrap) to build those interfaces to fit with the other modules in a responsive design. 
+Setup of test fixtures and automated tests to cover the core functionality of the back-end. End to end testing with symfony Panther driving an emulated web browser with selenium and its web browser api.  
 
-Finally, I have developed the functional tests to cover this codebase, before deploying on a virtualized server. 
+Integration with different third-party systems (HubSpot, Slack, Twilio, Google API, Gmail).
+
+Design and implementation of a development environment under Debian.
+
+Setup and testing performance analysis tools with Prometheus InfluxDB and Grafana.
+
+Setup of a command bus to dispatch and handle heavy tasks asynchronously with symfony messenger.
