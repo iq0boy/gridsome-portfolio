@@ -7,7 +7,7 @@
     class="max-w-4xl flex flex-row items-center w-full my-16 lg:my-8"
   >
     <!--  Side Image -->
-    <div class="hidden lg:block lg:w-2/5">
+    <div class="hidden lg:block lg:w-2/5 side-image">
       <figure
         v-bind:class="{
           'items-end lg:rounded-lg lg:rounded-r-none': !ltr,
@@ -111,18 +111,30 @@ body[data-theme='dark'] {
       color: white;
     }
     p {
-      color: #7e7d99;
+      //color: #7e7d99;
+      color: #b4b4c8;
     }
   }
   .card-date {
     color: #d0cde1;
   }
+  .side-image {
+    filter: opacity(0.6);
+  }
+}
+.side-image {
+  filter: brightness(0.9);
 }
 
 img {
   filter: grayscale(0.9) opacity(0.5);
 }
-li:hover img {
-  filter: grayscale(0.8) opacity(1);
+li:hover {
+  img {
+    filter: grayscale(0.8) opacity(1);
+  }
+  .side-image {
+    filter: opacity(1)
+  }
 }
 </style>

@@ -124,10 +124,12 @@ body[data-theme='light'] .service-card {
 }
 
 body[data-theme='dark'] .service-card {
-  background-color: #1a202c;
+  //background-color: #1a202c;
+  background-color: #2f2e41;
 
   .card-description {
-    color: #7e7d99;
+    //color: #7e7d99;
+    color: #b4b4c8;
   }
 }
 </style>

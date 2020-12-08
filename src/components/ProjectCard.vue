@@ -46,7 +46,8 @@ body[data-theme='light'] .project-card {
 body[data-theme='dark'] .project-card {
   background-color: #2f2e41;
   .card-description {
-    color: #7e7d99;
+    //color: #7e7d99;
+    color: #b4b4c8;
   }
 }
 </style>
