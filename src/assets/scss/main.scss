@@ -70,8 +70,9 @@ blockquote {
 
 
 body[data-theme="dark"] {
-    background-color: #080607;
     @apply text-gray-300;
+  //background-color: #080607;
+  background-color: #1a202c;
     .content-detail {
       @apply text-white;
     }
