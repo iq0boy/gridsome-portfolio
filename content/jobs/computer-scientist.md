@@ -3,7 +3,6 @@ id: job4
 title: Computer Scientist
 shortDescription: System Administrator, Developper, Analyst, Support
 startedAt: 2020-09-07T18:37:51.295Z
-endedAt: 2020-12-08T19:46:40.198Z
 employer: UCLouvain
 employerLogo: /uploads/logo-uclouvain.png
 location: Louvain-La-Neuve
