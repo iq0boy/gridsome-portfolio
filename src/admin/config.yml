@@ -114,7 +114,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "ShortDescription", name: "shortDescription", widget: "text"}
       - {label: "Started At", name: "startedAt", widget: "datetime"}
-      - {label: "Ended At", name: "endedAt", widget: "datetime"}
+      - {label: "Ended At", name: "endedAt", widget: "datetime", required: false}
       - {label: "Employer", name: "employer", widget: "string"}
       - {label: "Employer Logo", name: "employerLogo", widget: "image", required: true}
       - {label: "Location", name: "location", widget: "string"}
