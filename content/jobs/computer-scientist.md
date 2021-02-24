@@ -3,6 +3,7 @@ id: job4
 title: Computer Scientist
 shortDescription: System Administrator, Developper, Analyst, Support
 startedAt: 2020-09-07T18:37:51.295Z
+endedAt: 2021-02-24T21:37:39.337Z
 employer: UCLouvain
 employerLogo: /uploads/logo-uclouvain.png
 location: Louvain-La-Neuve
@@ -28,8 +29,8 @@ skills:
   - skill4
   - skill9
 ---
-I started this new mission in early september. I worked on several projects in various fields including software development, network, devOps, and support.\
-\
-My role is to assists differents teams and brings some help in various IT related Tasks.\
-\
+I started this new mission in early september. I worked on several projects in various fields including software development, network, devOps, and support.
+
+My role is to assists differents teams and brings some help in various IT related Tasks.
+
 The last project i was working on is a Django application dedicated to help techs people to share informations and automating tasks they are working on.
