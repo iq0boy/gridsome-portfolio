@@ -44,7 +44,7 @@ module.exports = function (api) {
   api.createPages(async ({ graphql, createPage }) => {
     const { data } = await graphql(`
       {
-        allJob(sortBy: "endedAt", order: DESC) {
+        allJob(sortBy: "id", order: DESC) {
           edges {
             previous {
               id
