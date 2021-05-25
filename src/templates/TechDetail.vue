@@ -25,7 +25,7 @@
               :src="$page.tech.logo"
               :alt="$page.tech.title"
               :title="$page.tech.title"
-              immediate="true"
+              :immediate="true"
             />
           </div>
 

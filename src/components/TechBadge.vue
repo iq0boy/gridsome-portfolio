@@ -1,11 +1,13 @@
 <template>
-  <Badge
-    :path="path"
-    :label="label"
-    :scale="scale"
-  >
-    <template >
-      <g-image :src="logo" :alt="title" :title="title" immediate="true" :class="{ grayscale: grayScale }"/>
+  <Badge :path="path" :label="label" :scale="scale">
+    <template>
+      <g-image
+        :src="logo"
+        :alt="title"
+        :title="title"
+        :immediate="true"
+        :class="{ grayscale: grayScale }"
+      />
     </template>
   </Badge>
 </template>

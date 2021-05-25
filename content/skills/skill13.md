@@ -13,6 +13,7 @@ techs:
   - tech16
   - tech22
   - tech24
+  - tech26
 ---
 Conception, development, testing and deployment of APIs and back-end applications.
 

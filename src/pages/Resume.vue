@@ -28,17 +28,20 @@
             </div>
             <div>
               <p>
-                <span class="opacity-50 mr-1"><PhoneIcon/></span>+32 (0) 473 57 34 07
+                <span class="opacity-50 mr-1"><PhoneIcon /></span>+32 (0) 473 57
+                34 07
               </p>
               <p>
                 <span class="opacity-50 mr-1"><MailIcon /></span
                 >josephpire.dev@gmail.com
               </p>
               <p>
-                <span class="opacity-50 mr-1"><globeIcon /></span>www.josephpire.be
+                <span class="opacity-50 mr-1"><globeIcon /></span
+                >www.josephpire.be
               </p>
               <p>
-                <span class="opacity-50 mr-1"><PinIcon /></span>Louvain-la-Neuve, Belgique
+                <span class="opacity-50 mr-1"><PinIcon /></span
+                >Louvain-la-Neuve, Belgique
               </p>
             </div>
           </div>
@@ -46,7 +49,8 @@
             <h2
               class="m-0 flex justify-center items-center text-base text-red-400 mb-2"
             >
-              <VCardIcon></VCardIcon><span class="capitalize ml-1">Profile</span>
+              <VCardIcon></VCardIcon
+              ><span class="capitalize ml-1">Profile</span>
             </h2>
             <p class="text-center">
               Freshly graduated, autonomous curious and hard worker.
@@ -280,7 +284,7 @@ query {
       }
     }
   }
-  allJob(sortBy:"endedAt", order: DESC) {
+  allJob(sortBy:"id", order: DESC, limit: 3) {
     edges {
       node {
         id
