@@ -134,7 +134,7 @@ li:hover {
     filter: grayscale(0.8) opacity(1);
   }
   .side-image {
-    filter: opacity(1)
+    filter: opacity(1);
   }
 }
 </style>

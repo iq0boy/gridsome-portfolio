@@ -5,7 +5,7 @@ shortDescription: Sysadmin, Developper, Analyst, Support
 startedAt: 2020-09-07T18:37:51.295Z
 endedAt: null
 employer: UCLouvain
-employerLogo: /uploads/logo-uclouvain.png
+employerLogo: ../../static/uploads/logo-uclouvain.png
 location: Louvain-La-Neuve
 techs:
   - tech11
