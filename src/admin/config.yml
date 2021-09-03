@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: PireJoseph/gridsome-portfolio
-  branch: dev
+  branch: master
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
