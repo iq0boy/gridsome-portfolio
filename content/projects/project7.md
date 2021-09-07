@@ -4,8 +4,8 @@ title: StreetFoot
 shortDescription: A Web application to manage soccer games with friends build with Nuxt and Bulma
 status: work in progress
 createdAt: 2020-07-10T00:00:00.000Z
-featured: false
-onResume: false
+featured: true
+onResume: true
 techs:
   - tech3
   - tech5
