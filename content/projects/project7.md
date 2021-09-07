@@ -5,7 +5,7 @@ shortDescription: A Web application to manage soccer games with friends build wi
 status: work in progress
 createdAt: 2020-07-10T00:00:00.000Z
 featured: true
-onResume: true
+onResume: false
 techs:
   - tech3
   - tech5
