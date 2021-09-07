@@ -20,11 +20,13 @@ skills:
   - skill4
   - skill7
 ---
-The purpose of this application is to attract new customers to a business.\
-It works as a digital loyalty card. Connecting to the user CRM in order to analyse data and send code by SMS to customers reaching milestone in a salon.\
+The purpose of this application is to attract new customers to a business.
+
+It works as a digital loyalty card. Connecting to the user CRM in order to analyse data and send code by SMS to customers reaching milestone in a salon.
+
+The user can create and customize multiple campaigns, with a customized message and a visit threshold.
+
+When the customer reaches a threshold, he received the SMS with a code giving him a reduction on his next visit, and giving him the opportunity to invite someone for free.
+
 \
-The user can create and customize multiple campaigns, with a customized message and a visit threshold.\
-When the customer reaches a threshold, he received the SMS with a code giving him a reduction on his next visit, and giving him the opportunity to invite someone for free.\
-\
-This app has been built with JavaScript.\
-The user interface with Nuxtjs and Tailwind, and the admin interface with Strapi.
+This app has been built with JavaScript. The user interface with Nuxtjs and Tailwind, and the admin interface with Strapi.
