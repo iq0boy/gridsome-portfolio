@@ -1,16 +1,11 @@
 ---
 id: project7
 title: StreetFoot
+shortDescription: A Web application to manage soccer games with friends build with Nuxt and Bulma
 status: work in progress
 createdAt: 2020-07-10T00:00:00.000Z
-shortDescription: "A Web application to manage soccer games with friends build with Nuxt and Bulma"
-featured: true
-onResume: true
-skills:
-  - skill6
-  - skill12
-  - skill13
-  - skill14
+featured: false
+onResume: false
 techs:
   - tech3
   - tech5
@@ -22,6 +17,11 @@ techs:
   - tech21
   - tech22
   - tech24
+skills:
+  - skill6
+  - skill12
+  - skill13
+  - skill14
 ---
 The purpose of this project was to make a small web project to learn Nuxt, its ecosystem, and Bulma with Buefy.
 
