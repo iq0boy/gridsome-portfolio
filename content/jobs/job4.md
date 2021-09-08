@@ -1,6 +1,6 @@
 ---
 id: job4
-title: DevOps
+title: Computer Scientist
 shortDescription: Sysadmin, Developper, Analyst, Support
 startedAt: 2020-09-07T18:37:51.295Z
 endedAt: null
