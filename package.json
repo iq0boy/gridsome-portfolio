@@ -21,7 +21,7 @@
     "gridsome-plugin-tailwindcss": "^2.2.41",
     "gridsome-source-static-meta": "github:noxify/gridsome-source-static-meta#master",
     "netlify-cms": "^2.10.50",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "pluralize": "^8.0.0",
     "sass-loader": "^8.0.2",
     "tailwindcss": "^1.2.0"
