@@ -11,7 +11,7 @@
         <a
           id="pdf"
           class="m-4"
-          :href="'Joseph Pire - CV 2020.pdf'"
+          :href="'/Joseph Pire - CV 2020.pdf'"
           target="_blank"
           ><Button :label="'Get PDF'" :classes="['bg-rose', 'w-full']"
         /></a>
